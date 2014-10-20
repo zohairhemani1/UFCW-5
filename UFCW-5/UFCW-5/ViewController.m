@@ -25,7 +25,7 @@
 {
     [super viewDidLoad];
     menuItemsArray = [[NSMutableArray alloc]initWithObjects:
-              @"News",@"Negotiation Updates",@"Member Resources",@"Upcoming Events",@"Stay Connected",@"Shop Union",@"Office Locations", nil];
+              @"Union News",@"Negotiation Updates",@"Member Resources",@"Upcoming Events",@"Stay Connected",@"Shop Union",@"Office Locations", nil];
    MenuItemIcons = [[NSArray alloc] initWithObjects:@"news",@"negotiation-updates",@"member",@"events",@"connected",@"shopunion",@"location", nil];
     
 }
