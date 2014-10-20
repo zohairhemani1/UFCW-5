@@ -22,6 +22,7 @@
 		19219DEB19F24A69002D6742 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19219DE919F24A69002D6742 /* InfoPlist.strings */; };
 		19219DED19F24A69002D6742 /* UFCW_5Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19219DEC19F24A69002D6742 /* UFCW_5Tests.m */; };
 		197621DF19F25E14005C8494 /* Calibri.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 197621DE19F25E14005C8494 /* Calibri.ttf */; };
+		DCF7721D19F543FF000B5C6D /* SubPage.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF7721C19F543FF000B5C6D /* SubPage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		19219DEA19F24A69002D6742 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		19219DEC19F24A69002D6742 /* UFCW_5Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UFCW_5Tests.m; sourceTree = "<group>"; };
 		197621DE19F25E14005C8494 /* Calibri.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Calibri.ttf; sourceTree = "<group>"; };
+		DCF7721B19F543FF000B5C6D /* SubPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SubPage.h; path = ../SubPage.h; sourceTree = "<group>"; };
+		DCF7721C19F543FF000B5C6D /* SubPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SubPage.m; path = ../SubPage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 				19219DD319F24A69002D6742 /* Main.storyboard */,
 				19219DD619F24A69002D6742 /* ViewController.h */,
 				19219DD719F24A69002D6742 /* ViewController.m */,
+				DCF7721B19F543FF000B5C6D /* SubPage.h */,
+				DCF7721C19F543FF000B5C6D /* SubPage.m */,
 				19219DD919F24A69002D6742 /* Images.xcassets */,
 				19219DC819F24A69002D6742 /* Supporting Files */,
 			);
@@ -264,6 +269,7 @@
 				19219DD819F24A69002D6742 /* ViewController.m in Sources */,
 				19219DD219F24A69002D6742 /* AppDelegate.m in Sources */,
 				19219DCE19F24A69002D6742 /* main.m in Sources */,
+				DCF7721D19F543FF000B5C6D /* SubPage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
