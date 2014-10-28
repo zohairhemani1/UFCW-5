@@ -14,6 +14,7 @@
 @interface UnionNews (){
     NSArray * NewsUnionArray;
     checkInternet *checkInternetObj;
+    UIActivityIndicatorView *loader;
 }
 
 @end
@@ -39,10 +40,28 @@
     checkInternetObj = [[checkInternet alloc] init];
     [checkInternetObj viewWillAppear:YES];
 
+    loader = [checkInternetObj indicatorprogress:loader];
+    [self.view addSubview:loader];
+    [loader bringSubviewToFront:self.view];
+    
+    dispatch_queue_t myqueue = dispatch_queue_create("myqueue", NULL);
+    dispatch_async(myqueue, ^(void) {
+        
+        [loader startAnimating];
+        WebService *NewsUnionService = [[WebService alloc] init];
+        NewsUnionArray = [[NSArray alloc] initWithArray:[NewsUnionService FilePath:BaseURL NewsUnion parameterOne:nil]];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // Update UI on main queue
+            
+            [self.unionTable reloadData];
+            [loader stopAnimating];
+        });
+        
+    });
     
     
-    WebService *NewsUnionService = [[WebService alloc] init];
-    NewsUnionArray = [[NSArray alloc] initWithArray:[NewsUnionService FilePath:BaseURL NewsUnion parameterOne:nil]];
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
