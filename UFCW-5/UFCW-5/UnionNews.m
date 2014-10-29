@@ -10,11 +10,17 @@
 #import "Constants.h"
 #import "WebService.h"
 #import "checkInternet.h"
+#import <CoreText/CoreText.h>
 
 @interface UnionNews (){
     NSArray * NewsUnionArray;
     checkInternet *checkInternetObj;
     UIActivityIndicatorView *loader;
+    NSString *descriptionFromJson;
+    NSMutableAttributedString *attrString;
+    int bTag;
+    int bClosingTag;
+    int length;
 }
 
 @end
@@ -51,6 +57,7 @@
         WebService *NewsUnionService = [[WebService alloc] init];
         NewsUnionArray = [[NSArray alloc] initWithArray:[NewsUnionService FilePath:BaseURL NewsUnion parameterOne:nil]];
         
+        //NSString *subString = [@"" substringToIndex:rangeOfYourString.location];
         dispatch_async(dispatch_get_main_queue(), ^{
             // Update UI on main queue
             
@@ -103,8 +110,29 @@
     }
     
     
-    cell.textLabel.text = [[NewsUnionArray valueForKey:@"description"] objectAtIndex:indexPath.section];
     
+    
+    descriptionFromJson = [[NewsUnionArray valueForKey:@"description"] objectAtIndex:indexPath.section];
+    
+    NSRange range = NSMakeRange(0, [descriptionFromJson length]);
+    
+    bTag = [self stringToParse:descriptionFromJson matchString:@"<b>" rangeToParse:range];
+    bClosingTag = [self stringToParse:descriptionFromJson matchString:@"</b>" rangeToParse:range];
+    length = bClosingTag - bTag;
+        
+    NSRange boldedRange = NSMakeRange(bTag, length);
+        
+    attrString = [[NSMutableAttributedString alloc] initWithString:descriptionFromJson];
+        
+    [attrString beginEditing];
+    [attrString addAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica-Bold" size:12.0f]} range:boldedRange];
+    [attrString endEditing];
+     
+    
+    
+    //draw attrString here...
+    //cell.textLabel.text = [[NewsUnionArray valueForKey:@"description"] objectAtIndex:indexPath.section];
+    cell.textLabel.attributedText = attrString;
     return cell;
 }
 
@@ -112,6 +140,54 @@
 {
     tableView.sectionHeaderHeight = 30;
     return [[NewsUnionArray valueForKey:@"title"] objectAtIndex:section];
+}
+
+-(int) stringToParse:(NSString*)stringToParse matchString:(NSString*)matchString rangeToParse:(NSRange)rangeToParse
+{
+    
+    NSString *searchKeyword = matchString;
+    NSRange range = rangeToParse;
+    
+    NSRange rangeOfYourString = [[stringToParse substringWithRange:range] rangeOfString:searchKeyword];
+    
+    if(rangeOfYourString.location == NSNotFound)
+    {
+        NSLog(@"No Match Found");
+    }
+    else
+    {
+    
+        if([matchString  isEqual: @"</b>"])
+        {
+            unsigned long int endingIndex = rangeOfYourString.location;
+            unsigned long int totalLengthToParse = (([stringToParse length] - endingIndex));
+            
+            NSRange nextRange = NSMakeRange(endingIndex, totalLengthToParse);
+            
+            NSString *remaingStringToParse = [stringToParse substringWithRange:nextRange];
+            NSRange newRange = NSMakeRange(0, [remaingStringToParse length]);
+            
+            NSLog(@"RemaingStringToParse: %@",remaingStringToParse);
+            
+            [self stringToParse:remaingStringToParse matchString:@"<b>" rangeToParse:newRange];
+            
+            
+        }
+        else
+        {
+            NSRange newRange = NSMakeRange(rangeOfYourString.location, [stringToParse length]-rangeOfYourString.location);
+            NSString *remString = [stringToParse substringWithRange:newRange];
+            NSLog(@"Bold Tag: %@", remString);
+            
+            NSRange nRange = NSMakeRange(0, [remString length]);
+            
+            [self stringToParse:remString matchString:@"</b>" rangeToParse:nRange];
+            
+
+        }
+    }
+    
+    return rangeOfYourString.location;
 }
 
 
