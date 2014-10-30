@@ -21,6 +21,10 @@
     int bTag;
     int bClosingTag;
     int length;
+    NSMutableArray *boldRangeArray;
+    NSMutableDictionary *boldRangeDict;
+    NSMutableArray * boldRangePointsArray;
+    NSMutableArray * unBoldRangePointsArray;
 }
 
 @end
@@ -40,6 +44,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    boldRangeArray = [[NSMutableArray alloc] init];
+    boldRangeDict = [[NSMutableDictionary alloc]init];
+    boldRangePointsArray = [[NSMutableArray alloc] init];
+    unBoldRangePointsArray = [[NSMutableArray alloc] init];
+    bTag = 0;
+    bClosingTag = 0;
     self.unionTable.delegate =self;
     self.unionTable.dataSource = self;
     
@@ -109,29 +119,85 @@
                 UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    
-    
-    
     descriptionFromJson = [[NewsUnionArray valueForKey:@"description"] objectAtIndex:indexPath.section];
+    attrString = [[NSMutableAttributedString alloc] initWithString:descriptionFromJson];
+    [attrString beginEditing];
     
     NSRange range = NSMakeRange(0, [descriptionFromJson length]);
     
-    bTag = [self stringToParse:descriptionFromJson matchString:@"<b>" rangeToParse:range];
-    bClosingTag = [self stringToParse:descriptionFromJson matchString:@"</b>" rangeToParse:range];
-    length = bClosingTag - bTag;
-        
-    NSRange boldedRange = NSMakeRange(bTag, length);
-        
-    attrString = [[NSMutableAttributedString alloc] initWithString:descriptionFromJson];
-        
-    [attrString beginEditing];
-    [attrString addAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica-Bold" size:12.0f]} range:boldedRange];
+    [self stringToParse:descriptionFromJson matchString:@"<b>" rangeToParse:range];
+    NSLog(@"First Btag: %i",bTag);
+    
+    [boldRangeDict setObject:[NSNumber numberWithInt:bTag+bClosingTag] forKey:@"bold"];
+    
     [attrString endEditing];
-     
+    
+   // cell.textLabel.text = [[NewsUnionArray valueForKey:@"description"] objectAtIndex:indexPath.section];
+    
+    NSRange boldedRange = NSMakeRange(0, 5);
+    [attrString addAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica-Bold" size:12.0f]} range:boldedRange];
+    
+    NSRange boldedRangee = NSMakeRange(10, 15);
+    [attrString addAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica-Bold" size:12.0f]} range:boldedRangee];
+    
+    //[boldRangePointsArray removeObjectAtIndex:[boldRangePointsArray count]-1];
     
     
-    //draw attrString here...
-    //cell.textLabel.text = [[NewsUnionArray valueForKey:@"description"] objectAtIndex:indexPath.section];
+    //NSLog(@"random: %@", boldRangePointsArray);
+    //NSLog(@"random: %@", unBoldRangePointsArray);
+    
+    for (int i = 0; i < unBoldRangePointsArray.count; i++) {
+        for(int j = i; j < unBoldRangePointsArray.count; j++) {
+            if (i != j) {
+                NSInteger _first = [[boldRangePointsArray objectAtIndex:i] integerValue];
+                NSInteger _second = [[boldRangePointsArray objectAtIndex:j] integerValue];
+                
+                NSInteger __first = [[unBoldRangePointsArray objectAtIndex:i] integerValue];
+                NSInteger __second = [[unBoldRangePointsArray objectAtIndex:j] integerValue];
+                
+                if (_second < _first) {
+                    [boldRangePointsArray exchangeObjectAtIndex:i withObjectAtIndex:j];
+                }
+                if (__second < __first) {
+                    [unBoldRangePointsArray exchangeObjectAtIndex:i withObjectAtIndex:j];
+                }
+            }
+        }
+    }
+    
+   // NSLog(@"sorted : %@", boldRangePointsArray);
+    //NSLog(@"sorted : %@", unBoldRangePointsArray);
+    
+    
+    
+    
+    
+    for (int i=1; i<[unBoldRangePointsArray count]; i++)
+    {
+        NSLog(@"B: %@ at index %i",[boldRangePointsArray objectAtIndex:i],i);
+        NSLog(@"UnBold: %@ at index %i",[unBoldRangePointsArray objectAtIndex:i],i);
+        
+        int boldCurrentIndex = [[boldRangePointsArray objectAtIndex:i]intValue];
+        int unBoldLastIndex = [[unBoldRangePointsArray objectAtIndex:i-1]intValue];
+        int unboldCurrentIndex = [[unBoldRangePointsArray objectAtIndex:i]intValue];
+        int boldLastIndex = [[boldRangePointsArray objectAtIndex:i-1]intValue];
+        
+        int boldAddedValue = boldCurrentIndex + unBoldLastIndex;
+        int unboldAddedValue = unboldCurrentIndex + boldLastIndex;
+        
+        NSLog(@"boldAddedValue: %i",boldAddedValue);
+        NSLog(@"unboldAddedValue: %i",unboldAddedValue);
+        
+        [boldRangePointsArray setObject:[NSNumber numberWithInt:boldAddedValue] atIndexedSubscript:i];
+        [unBoldRangePointsArray setObject:[NSNumber numberWithInt:unboldAddedValue] atIndexedSubscript:i];
+        
+    }
+    
+    
+    NSLog(@"after offset : %@", boldRangePointsArray);
+    NSLog(@"after offset : %@", unBoldRangePointsArray);
+    
+    
     cell.textLabel.attributedText = attrString;
     return cell;
 }
@@ -159,6 +225,7 @@
     
         if([matchString  isEqual: @"</b>"])
         {
+            
             unsigned long int endingIndex = rangeOfYourString.location;
             unsigned long int totalLengthToParse = (([stringToParse length] - endingIndex));
             
@@ -167,24 +234,45 @@
             NSString *remaingStringToParse = [stringToParse substringWithRange:nextRange];
             NSRange newRange = NSMakeRange(0, [remaingStringToParse length]);
             
-            NSLog(@"RemaingStringToParse: %@",remaingStringToParse);
+            NSLog(@"UnBold tag remaining string: %@",remaingStringToParse);
             
-            [self stringToParse:remaingStringToParse matchString:@"<b>" rangeToParse:newRange];
+            bTag = [self stringToParse:remaingStringToParse matchString:@"<b>" rangeToParse:newRange];
+            
+            NSLog(@"Btag: %i",bTag);
+            
+            [boldRangePointsArray addObject:[NSNumber numberWithInt:bTag]];
             
             
         }
         else
         {
+            // b tag detected
+            
+            NSRange tempRange = NSMakeRange(0, [descriptionFromJson length]);
+            int temp = rangeOfYourString.location;
+            
+            if([NSStringFromRange(tempRange) isEqualToString:NSStringFromRange(rangeToParse)])
+            {
+                NSLog(@"Hello World");
+                bTag = temp;
+                //[boldRangePointsArray addObject:[NSNumber numberWithInt:bTag]];
+            }
+            
             NSRange newRange = NSMakeRange(rangeOfYourString.location, [stringToParse length]-rangeOfYourString.location);
             NSString *remString = [stringToParse substringWithRange:newRange];
-            NSLog(@"Bold Tag: %@", remString);
+            NSLog(@"Bold Tag Remaining String: %@", remString);
             
             NSRange nRange = NSMakeRange(0, [remString length]);
             
-            [self stringToParse:remString matchString:@"</b>" rangeToParse:nRange];
+            bClosingTag = [self stringToParse:remString matchString:@"</b>" rangeToParse:nRange];
+            NSLog(@"BClosingtag: %i",bClosingTag);
+            
+            [unBoldRangePointsArray addObject:[NSNumber numberWithInt:bClosingTag]];
             
 
         }
+       
+        
     }
     
     return rangeOfYourString.location;
