@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1920252E1A03751D004C79F7 /* DetailedNewsWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1920252D1A03751D004C79F7 /* DetailedNewsWebView.m */; };
 		19219DC219F24A69002D6742 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19219DC119F24A69002D6742 /* Foundation.framework */; };
 		19219DC419F24A69002D6742 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19219DC319F24A69002D6742 /* CoreGraphics.framework */; };
 		19219DC619F24A69002D6742 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19219DC519F24A69002D6742 /* UIKit.framework */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1920252C1A03751D004C79F7 /* DetailedNewsWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailedNewsWebView.h; sourceTree = "<group>"; };
+		1920252D1A03751D004C79F7 /* DetailedNewsWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailedNewsWebView.m; sourceTree = "<group>"; };
 		19219DBE19F24A69002D6742 /* UFCW-5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UFCW-5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19219DC119F24A69002D6742 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		19219DC319F24A69002D6742 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -108,6 +111,8 @@
 		19219DB519F24A69002D6742 = {
 			isa = PBXGroup;
 			children = (
+				1920252C1A03751D004C79F7 /* DetailedNewsWebView.h */,
+				1920252D1A03751D004C79F7 /* DetailedNewsWebView.m */,
 				191796F119F2557100D73A84 /* Fonts */,
 				19219DC719F24A69002D6742 /* UFCW-5 */,
 				19219DE619F24A69002D6742 /* UFCW-5Tests */,
@@ -312,6 +317,7 @@
 				19219DCE19F24A69002D6742 /* main.m in Sources */,
 				DC05E85919F6B38C00944CDB /* UnionNews.m in Sources */,
 				DCF7721D19F543FF000B5C6D /* SubPage.m in Sources */,
+				1920252E1A03751D004C79F7 /* DetailedNewsWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

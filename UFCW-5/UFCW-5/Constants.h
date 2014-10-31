@@ -11,6 +11,8 @@
 
 #define BaseURL @"http://fajjemobile.info/ufcw5/WebServices/"
 #define NewsUnion @"NewsUnion.php"
+#define DETAILED_NEWS_URL @"view.php?news_id="
+#define BASEURL_WEBDASHBOARD @"http://fajjemobile.info/ufcw5/"
 
 
 
