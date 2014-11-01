@@ -120,7 +120,7 @@
     }
     
     descriptionFromJson = [[NewsUnionArray valueForKey:@"description"] objectAtIndex:indexPath.section];
-    attrString = [[NSMutableAttributedString alloc] initWithString:descriptionFromJson];
+    /*attrString = [[NSMutableAttributedString alloc] initWithString:descriptionFromJson];
     [attrString beginEditing];
     
     NSRange range = NSMakeRange(0, [descriptionFromJson length]);
@@ -198,7 +198,8 @@
     NSLog(@"after offset : %@", unBoldRangePointsArray);
     
     
-    cell.textLabel.attributedText = attrString;
+    cell.textLabel.attributedText = attrString;*/
+    cell.textLabel.text = descriptionFromJson;
     return cell;
 }
 
@@ -208,7 +209,7 @@
     return [[NewsUnionArray valueForKey:@"title"] objectAtIndex:section];
 }
 
--(int) stringToParse:(NSString*)stringToParse matchString:(NSString*)matchString rangeToParse:(NSRange)rangeToParse
+/*-(int) stringToParse:(NSString*)stringToParse matchString:(NSString*)matchString rangeToParse:(NSRange)rangeToParse
 {
     
     NSString *searchKeyword = matchString;
@@ -276,7 +277,7 @@
     }
     
     return rangeOfYourString.location;
-}
+}*/
 
 
 /*
