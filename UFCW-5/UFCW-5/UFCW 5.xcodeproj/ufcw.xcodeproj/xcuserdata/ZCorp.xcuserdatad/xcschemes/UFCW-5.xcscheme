@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "19219DBD19F24A69002D6742"
                BuildableName = "UFCW-5.app"
-               BlueprintName = "UFCW-5"
-               ReferencedContainer = "container:UFCW-5.xcodeproj">
+               BlueprintName = "ufcw"
+               ReferencedContainer = "container:ufcw.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "19219DDE19F24A69002D6742"
                BuildableName = "UFCW-5Tests.xctest"
-               BlueprintName = "UFCW-5Tests"
-               ReferencedContainer = "container:UFCW-5.xcodeproj">
+               BlueprintName = "ufcwTests"
+               ReferencedContainer = "container:ufcw.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "19219DBD19F24A69002D6742"
             BuildableName = "UFCW-5.app"
-            BlueprintName = "UFCW-5"
-            ReferencedContainer = "container:UFCW-5.xcodeproj">
+            BlueprintName = "ufcw"
+            ReferencedContainer = "container:ufcw.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "19219DBD19F24A69002D6742"
             BuildableName = "UFCW-5.app"
-            BlueprintName = "UFCW-5"
-            ReferencedContainer = "container:UFCW-5.xcodeproj">
+            BlueprintName = "ufcw"
+            ReferencedContainer = "container:ufcw.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "19219DBD19F24A69002D6742"
             BuildableName = "UFCW-5.app"
-            BlueprintName = "UFCW-5"
-            ReferencedContainer = "container:UFCW-5.xcodeproj">
+            BlueprintName = "ufcw"
+            ReferencedContainer = "container:ufcw.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
