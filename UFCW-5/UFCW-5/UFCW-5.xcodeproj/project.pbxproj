@@ -26,6 +26,9 @@
 		DC05E85919F6B38C00944CDB /* UnionNews.m in Sources */ = {isa = PBXBuildFile; fileRef = DC05E85819F6B38C00944CDB /* UnionNews.m */; };
 		DC21700A19FA35CF00207D57 /* checkInternet.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21700719FA35CF00207D57 /* checkInternet.m */; };
 		DC21700B19FA35CF00207D57 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21700919FA35CF00207D57 /* Reachability.m */; };
+		DC54F2E61A0687300079C758 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC54F2E31A0687300079C758 /* Bolts.framework */; };
+		DC54F2E71A0687300079C758 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC54F2E41A0687300079C758 /* Parse.framework */; };
+		DC54F2E81A0687300079C758 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC54F2E51A0687300079C758 /* ParseFacebookUtils.framework */; };
 		DCDFEC8919F92DF400BB9E3C /* WebService.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDFEC8819F92DF400BB9E3C /* WebService.m */; };
 		DCF7721D19F543FF000B5C6D /* SubPage.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF7721C19F543FF000B5C6D /* SubPage.m */; };
 /* End PBXBuildFile section */
@@ -69,6 +72,9 @@
 		DC21700719FA35CF00207D57 /* checkInternet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = checkInternet.m; path = ../checkInternet.m; sourceTree = "<group>"; };
 		DC21700819FA35CF00207D57 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = ../Reachability.h; sourceTree = "<group>"; };
 		DC21700919FA35CF00207D57 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = ../Reachability.m; sourceTree = "<group>"; };
+		DC54F2E31A0687300079C758 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		DC54F2E41A0687300079C758 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		DC54F2E51A0687300079C758 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		DCDFEC8719F92DF400BB9E3C /* WebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebService.h; sourceTree = "<group>"; };
 		DCDFEC8819F92DF400BB9E3C /* WebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebService.m; sourceTree = "<group>"; };
 		DCDFEC8C19F9503400BB9E3C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = ../Constants.h; sourceTree = "<group>"; };
@@ -83,7 +89,10 @@
 			files = (
 				19219DC419F24A69002D6742 /* CoreGraphics.framework in Frameworks */,
 				19219DC619F24A69002D6742 /* UIKit.framework in Frameworks */,
+				DC54F2E81A0687300079C758 /* ParseFacebookUtils.framework in Frameworks */,
 				19219DC219F24A69002D6742 /* Foundation.framework in Frameworks */,
+				DC54F2E61A0687300079C758 /* Bolts.framework in Frameworks */,
+				DC54F2E71A0687300079C758 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +140,9 @@
 		19219DC019F24A69002D6742 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC54F2E31A0687300079C758 /* Bolts.framework */,
+				DC54F2E41A0687300079C758 /* Parse.framework */,
+				DC54F2E51A0687300079C758 /* ParseFacebookUtils.framework */,
 				19219DC119F24A69002D6742 /* Foundation.framework */,
 				19219DC319F24A69002D6742 /* CoreGraphics.framework */,
 				19219DC519F24A69002D6742 /* UIKit.framework */,
@@ -442,6 +454,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UFCW-5/UFCW-5-Prefix.pch";
 				INFOPLIST_FILE = "UFCW-5/UFCW-5-Info.plist";
@@ -455,6 +471,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UFCW-5/UFCW-5-Prefix.pch";
 				INFOPLIST_FILE = "UFCW-5/UFCW-5-Info.plist";
