@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "SubPage.h"
+#import "UnionNews.h"
 
 @interface ViewController ()
 {
@@ -26,7 +27,7 @@
     [super viewDidLoad];
     menuItemsArray = [[NSMutableArray alloc]initWithObjects:
               @"Union News",@"Negotiation Updates",@"Member Resources",@"Upcoming Events",@"Stay Connected",@"Shop Union",@"Office Locations", nil];
-   MenuItemIcons = [[NSArray alloc] initWithObjects:@"news",@"negotiation-updates",@"member",@"events",@"connected",@"shopunion",@"location", nil];
+   MenuItemIcons = [[NSArray alloc] initWithObjects:@"news",@"negotiation",@"member",@"events",@"connected",@"shopunion",@"location", nil];
     
 }
 
@@ -61,9 +62,6 @@
     NSString *stringForCell;
  
     stringForCell= [menuItemsArray objectAtIndex:indexPath.row];
-//    cell.textLabel.font = [UIFont fontWithName:@"Calibri" size:18];
-//    [cell.textLabel setText:stringForCell];
-//    cell.textLabel.textColor = [UIColor colorWithRed:168.0f/255.05 green:175.0f/255.0f blue:181.0f/255.0f alpha:1.0f];
     
     MenuIconImageView = [[UIImageView alloc]initWithFrame:CGRectMake(15, 10, 25, 25)];
     
@@ -83,23 +81,18 @@
 
 #pragma mark - TableView delegate
 
-//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:
-//(NSIndexPath *)indexPath{
-//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-//    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-//    NSLog(@"Section:%d Row:%d selected and its data is %@",
-//          indexPath.section,indexPath.row,cell.textLabel.text);
-//}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self performSegueWithIdentifier:[menuItemsArray objectAtIndex:indexPath.row] sender:self];
+    [self performSegueWithIdentifier:@"Union News" sender:self];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
-   // SubPage *s = segue.destinationViewController;
+    NSIndexPath *indexPath = [menuItems indexPathForSelectedRow];
     
+    UnionNews *news = segue.destinationViewController;
+    news.category = [MenuItemIcons objectAtIndex:indexPath.row];
 }
 
 

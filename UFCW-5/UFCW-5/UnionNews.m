@@ -10,6 +10,7 @@
 #import "Constants.h"
 #import "WebService.h"
 #import "checkInternet.h"
+#import "DetailedNewsWebView.h"
 #import <CoreText/CoreText.h>
 
 @interface UnionNews (){
@@ -17,14 +18,7 @@
     checkInternet *checkInternetObj;
     UIActivityIndicatorView *loader;
     NSString *descriptionFromJson;
-    NSMutableAttributedString *attrString;
-    int bTag;
-    int bClosingTag;
-    int length;
-    NSMutableArray *boldRangeArray;
-    NSMutableDictionary *boldRangeDict;
-    NSMutableArray * boldRangePointsArray;
-    NSMutableArray * unBoldRangePointsArray;
+   
 }
 
 @end
@@ -44,12 +38,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    boldRangeArray = [[NSMutableArray alloc] init];
-    boldRangeDict = [[NSMutableDictionary alloc]init];
-    boldRangePointsArray = [[NSMutableArray alloc] init];
-    unBoldRangePointsArray = [[NSMutableArray alloc] init];
-    bTag = 0;
-    bClosingTag = 0;
+    NSLog(@"Cat: %@", self.category);
+   
     self.unionTable.delegate =self;
     self.unionTable.dataSource = self;
     
@@ -65,7 +55,8 @@
         
         [loader startAnimating];
         WebService *NewsUnionService = [[WebService alloc] init];
-        NewsUnionArray = [[NSArray alloc] initWithArray:[NewsUnionService FilePath:BaseURL NewsUnion parameterOne:nil]];
+        NSLog(@"the category is %@",self.category);
+        NewsUnionArray = [[NSArray alloc] initWithArray:[NewsUnionService FilePath:BaseURL NEWS_CATEGORY parameterOne:self.category]];
         
         //NSString *subString = [@"" substringToIndex:rangeOfYourString.location];
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -120,86 +111,7 @@
     }
     
     descriptionFromJson = [[NewsUnionArray valueForKey:@"description"] objectAtIndex:indexPath.section];
-    /*attrString = [[NSMutableAttributedString alloc] initWithString:descriptionFromJson];
-    [attrString beginEditing];
-    
-    NSRange range = NSMakeRange(0, [descriptionFromJson length]);
-    
-    [self stringToParse:descriptionFromJson matchString:@"<b>" rangeToParse:range];
-    NSLog(@"First Btag: %i",bTag);
-    
-    [boldRangeDict setObject:[NSNumber numberWithInt:bTag+bClosingTag] forKey:@"bold"];
-    
-    [attrString endEditing];
-    
-   // cell.textLabel.text = [[NewsUnionArray valueForKey:@"description"] objectAtIndex:indexPath.section];
-    
-    NSRange boldedRange = NSMakeRange(0, 5);
-    [attrString addAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica-Bold" size:12.0f]} range:boldedRange];
-    
-    NSRange boldedRangee = NSMakeRange(10, 15);
-    [attrString addAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica-Bold" size:12.0f]} range:boldedRangee];
-    
-    //[boldRangePointsArray removeObjectAtIndex:[boldRangePointsArray count]-1];
-    
-    
-    //NSLog(@"random: %@", boldRangePointsArray);
-    //NSLog(@"random: %@", unBoldRangePointsArray);
-    
-    for (int i = 0; i < unBoldRangePointsArray.count; i++) {
-        for(int j = i; j < unBoldRangePointsArray.count; j++) {
-            if (i != j) {
-                NSInteger _first = [[boldRangePointsArray objectAtIndex:i] integerValue];
-                NSInteger _second = [[boldRangePointsArray objectAtIndex:j] integerValue];
-                
-                NSInteger __first = [[unBoldRangePointsArray objectAtIndex:i] integerValue];
-                NSInteger __second = [[unBoldRangePointsArray objectAtIndex:j] integerValue];
-                
-                if (_second < _first) {
-                    [boldRangePointsArray exchangeObjectAtIndex:i withObjectAtIndex:j];
-                }
-                if (__second < __first) {
-                    [unBoldRangePointsArray exchangeObjectAtIndex:i withObjectAtIndex:j];
-                }
-            }
-        }
-    }
-    
-   // NSLog(@"sorted : %@", boldRangePointsArray);
-    //NSLog(@"sorted : %@", unBoldRangePointsArray);
-    
-    
-    
-    
-    
-    for (int i=1; i<[unBoldRangePointsArray count]; i++)
-    {
-        NSLog(@"B: %@ at index %i",[boldRangePointsArray objectAtIndex:i],i);
-        NSLog(@"UnBold: %@ at index %i",[unBoldRangePointsArray objectAtIndex:i],i);
-        
-        int boldCurrentIndex = [[boldRangePointsArray objectAtIndex:i]intValue];
-        int unBoldLastIndex = [[unBoldRangePointsArray objectAtIndex:i-1]intValue];
-        int unboldCurrentIndex = [[unBoldRangePointsArray objectAtIndex:i]intValue];
-        int boldLastIndex = [[boldRangePointsArray objectAtIndex:i-1]intValue];
-        
-        int boldAddedValue = boldCurrentIndex + unBoldLastIndex;
-        int unboldAddedValue = unboldCurrentIndex + boldLastIndex;
-        
-        NSLog(@"boldAddedValue: %i",boldAddedValue);
-        NSLog(@"unboldAddedValue: %i",unboldAddedValue);
-        
-        [boldRangePointsArray setObject:[NSNumber numberWithInt:boldAddedValue] atIndexedSubscript:i];
-        [unBoldRangePointsArray setObject:[NSNumber numberWithInt:unboldAddedValue] atIndexedSubscript:i];
-        
-    }
-    
-    
-    NSLog(@"after offset : %@", boldRangePointsArray);
-    NSLog(@"after offset : %@", unBoldRangePointsArray);
-    
-    
-    cell.textLabel.attributedText = attrString;*/
-    cell.textLabel.text = descriptionFromJson;
+        cell.textLabel.text = descriptionFromJson;
     return cell;
 }
 
@@ -209,76 +121,22 @@
     return [[NewsUnionArray valueForKey:@"title"] objectAtIndex:section];
 }
 
-/*-(int) stringToParse:(NSString*)stringToParse matchString:(NSString*)matchString rangeToParse:(NSRange)rangeToParse
+#pragma mark - TableView delegate
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    NSString *searchKeyword = matchString;
-    NSRange range = rangeToParse;
-    
-    NSRange rangeOfYourString = [[stringToParse substringWithRange:range] rangeOfString:searchKeyword];
-    
-    if(rangeOfYourString.location == NSNotFound)
-    {
-        NSLog(@"No Match Found");
-    }
-    else
-    {
-    
-        if([matchString  isEqual: @"</b>"])
-        {
-            
-            unsigned long int endingIndex = rangeOfYourString.location;
-            unsigned long int totalLengthToParse = (([stringToParse length] - endingIndex));
-            
-            NSRange nextRange = NSMakeRange(endingIndex, totalLengthToParse);
-            
-            NSString *remaingStringToParse = [stringToParse substringWithRange:nextRange];
-            NSRange newRange = NSMakeRange(0, [remaingStringToParse length]);
-            
-            NSLog(@"UnBold tag remaining string: %@",remaingStringToParse);
-            
-            bTag = [self stringToParse:remaingStringToParse matchString:@"<b>" rangeToParse:newRange];
-            
-            NSLog(@"Btag: %i",bTag);
-            
-            [boldRangePointsArray addObject:[NSNumber numberWithInt:bTag]];
-            
-            
-        }
-        else
-        {
-            // b tag detected
-            
-            NSRange tempRange = NSMakeRange(0, [descriptionFromJson length]);
-            int temp = rangeOfYourString.location;
-            
-            if([NSStringFromRange(tempRange) isEqualToString:NSStringFromRange(rangeToParse)])
-            {
-                NSLog(@"Hello World");
-                bTag = temp;
-                //[boldRangePointsArray addObject:[NSNumber numberWithInt:bTag]];
-            }
-            
-            NSRange newRange = NSMakeRange(rangeOfYourString.location, [stringToParse length]-rangeOfYourString.location);
-            NSString *remString = [stringToParse substringWithRange:newRange];
-            NSLog(@"Bold Tag Remaining String: %@", remString);
-            
-            NSRange nRange = NSMakeRange(0, [remString length]);
-            
-            bClosingTag = [self stringToParse:remString matchString:@"</b>" rangeToParse:nRange];
-            NSLog(@"BClosingtag: %i",bClosingTag);
-            
-            [unBoldRangePointsArray addObject:[NSNumber numberWithInt:bClosingTag]];
-            
+    //[self performSegueWithIdentifier:@"newsWebView" sender:self];
+}
 
-        }
-       
-        
-    }
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
-    return rangeOfYourString.location;
-}*/
-
+    NSIndexPath *indexPath = [self.unionTable indexPathForSelectedRow];
+    
+    DetailedNewsWebView *webView = segue.destinationViewController;
+    //webView.newsID = [[self.unionTable indexPathForSelectedRow] row];
+    webView.newsID = [[NewsUnionArray valueForKey:@"news_id"] objectAtIndex:[indexPath section]];
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -318,15 +176,8 @@
 }
 */
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
+
 
 @end

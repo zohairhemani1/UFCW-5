@@ -85,7 +85,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="h2U-IZ-RMx" kind="push" identifier="newsWebview" id="oeR-0v-qua"/>
+                                    <segue destination="h2U-IZ-RMx" kind="push" identifier="newsWebView" id="Cb6-NA-XUv"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

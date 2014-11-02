@@ -41,8 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1920252C1A03751D004C79F7 /* DetailedNewsWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailedNewsWebView.h; sourceTree = "<group>"; };
-		1920252D1A03751D004C79F7 /* DetailedNewsWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailedNewsWebView.m; sourceTree = "<group>"; };
+		1920252C1A03751D004C79F7 /* DetailedNewsWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailedNewsWebView.h; path = ../DetailedNewsWebView.h; sourceTree = "<group>"; };
+		1920252D1A03751D004C79F7 /* DetailedNewsWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailedNewsWebView.m; path = ../DetailedNewsWebView.m; sourceTree = "<group>"; };
 		19219DBE19F24A69002D6742 /* UFCW-5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UFCW-5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19219DC119F24A69002D6742 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		19219DC319F24A69002D6742 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -111,8 +111,6 @@
 		19219DB519F24A69002D6742 = {
 			isa = PBXGroup;
 			children = (
-				1920252C1A03751D004C79F7 /* DetailedNewsWebView.h */,
-				1920252D1A03751D004C79F7 /* DetailedNewsWebView.m */,
 				191796F119F2557100D73A84 /* Fonts */,
 				19219DC719F24A69002D6742 /* UFCW-5 */,
 				19219DE619F24A69002D6742 /* UFCW-5Tests */,
@@ -144,6 +142,7 @@
 		19219DC719F24A69002D6742 /* UFCW-5 */ = {
 			isa = PBXGroup;
 			children = (
+				19219DD319F24A69002D6742 /* Main.storyboard */,
 				DC21700D19FA35EC00207D57 /* Models */,
 				DC21700C19FA35DA00207D57 /* Views */,
 				19219DD919F24A69002D6742 /* Images.xcassets */,
@@ -184,12 +183,13 @@
 		DC21700C19FA35DA00207D57 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				19219DD619F24A69002D6742 /* ViewController.h */,
+				DC05E85719F6B38C00944CDB /* UnionNews.h */,
+				1920252C1A03751D004C79F7 /* DetailedNewsWebView.h */,
+				19219DD019F24A69002D6742 /* AppDelegate.h */,
 				DC21700619FA35CF00207D57 /* checkInternet.h */,
 				DC21700819FA35CF00207D57 /* Reachability.h */,
 				DCDFEC8C19F9503400BB9E3C /* Constants.h */,
-				DC05E85719F6B38C00944CDB /* UnionNews.h */,
-				19219DD019F24A69002D6742 /* AppDelegate.h */,
-				19219DD619F24A69002D6742 /* ViewController.h */,
 				DCDFEC8719F92DF400BB9E3C /* WebService.h */,
 				DCF7721B19F543FF000B5C6D /* SubPage.h */,
 			);
@@ -199,11 +199,11 @@
 		DC21700D19FA35EC00207D57 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1920252D1A03751D004C79F7 /* DetailedNewsWebView.m */,
 				DC21700719FA35CF00207D57 /* checkInternet.m */,
 				DC21700919FA35CF00207D57 /* Reachability.m */,
 				DC05E85819F6B38C00944CDB /* UnionNews.m */,
 				19219DD119F24A69002D6742 /* AppDelegate.m */,
-				19219DD319F24A69002D6742 /* Main.storyboard */,
 				19219DD719F24A69002D6742 /* ViewController.m */,
 				DCDFEC8819F92DF400BB9E3C /* WebService.m */,
 				DCF7721C19F543FF000B5C6D /* SubPage.m */,

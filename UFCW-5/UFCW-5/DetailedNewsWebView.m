@@ -27,6 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"NEWS ID: %@",self.newsID);
     [_DetailedNewsWebView loadRequest:[self getURLRequest]];
 }
 
@@ -37,7 +38,8 @@
 }
 
 -(NSURLRequest *)getURLRequest{
-    NSString *fullURL = [BASEURL_WEBDASHBOARD DETAILED_NEWS_URL stringByAppendingString:@"134"];
+    
+    NSString *fullURL = [BASEURL_WEBDASHBOARD DETAILED_NEWS_URL stringByAppendingString:self.newsID];
     NSURL *url = [NSURL URLWithString:fullURL];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     return requestObj;

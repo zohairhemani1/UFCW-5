@@ -14,5 +14,6 @@
 //@property (nonatomic, weak) IBOutlet UILabel *descriptionLabel;
 //@property (nonatomic, weak) IBOutlet UIImageView *thumbnailImageView;
 @property (strong, nonatomic) IBOutlet UITableView *unionTable;
+@property (weak,nonatomic) NSString *category;
 
 @end

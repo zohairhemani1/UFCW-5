@@ -10,5 +10,6 @@
 
 @interface DetailedNewsWebView : UIViewController
 @property (weak, nonatomic) IBOutlet UIWebView *DetailedNewsWebView;
+@property (weak,nonatomic) NSString * newsID;
 
 @end
