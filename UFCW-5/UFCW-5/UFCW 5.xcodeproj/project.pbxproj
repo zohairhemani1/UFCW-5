@@ -32,6 +32,7 @@
 		19219DEB19F24A69002D6742 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19219DE919F24A69002D6742 /* InfoPlist.strings */; };
 		19219DED19F24A69002D6742 /* UFCW_5Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19219DEC19F24A69002D6742 /* UFCW_5Tests.m */; };
 		197621DF19F25E14005C8494 /* Calibri.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 197621DE19F25E14005C8494 /* Calibri.ttf */; };
+		19E8DCD21A0B9A1200A20898 /* OfficeLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E8DCD11A0B9A1200A20898 /* OfficeLocations.m */; };
 		DC05E85919F6B38C00944CDB /* UnionNews.m in Sources */ = {isa = PBXBuildFile; fileRef = DC05E85819F6B38C00944CDB /* UnionNews.m */; };
 		DC21700A19FA35CF00207D57 /* checkInternet.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21700719FA35CF00207D57 /* checkInternet.m */; };
 		DC21700B19FA35CF00207D57 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21700919FA35CF00207D57 /* Reachability.m */; };
@@ -84,6 +85,8 @@
 		19219DEA19F24A69002D6742 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		19219DEC19F24A69002D6742 /* UFCW_5Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UFCW_5Tests.m; sourceTree = "<group>"; };
 		197621DE19F25E14005C8494 /* Calibri.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Calibri.ttf; sourceTree = "<group>"; };
+		19E8DCD01A0B9A1200A20898 /* OfficeLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfficeLocations.h; sourceTree = "<group>"; };
+		19E8DCD11A0B9A1200A20898 /* OfficeLocations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfficeLocations.m; sourceTree = "<group>"; };
 		DC05E85719F6B38C00944CDB /* UnionNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnionNews.h; path = ../UnionNews.h; sourceTree = "<group>"; };
 		DC05E85819F6B38C00944CDB /* UnionNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnionNews.m; path = ../UnionNews.m; sourceTree = "<group>"; };
 		DC21700619FA35CF00207D57 /* checkInternet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = checkInternet.h; path = ../checkInternet.h; sourceTree = "<group>"; };
@@ -232,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				19219DD619F24A69002D6742 /* ViewController.h */,
+				19E8DCD01A0B9A1200A20898 /* OfficeLocations.h */,
 				DC05E85719F6B38C00944CDB /* UnionNews.h */,
 				1920252C1A03751D004C79F7 /* DetailedNewsWebView.h */,
 				19219DD019F24A69002D6742 /* AppDelegate.h */,
@@ -247,6 +251,7 @@
 		DC21700D19FA35EC00207D57 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				19E8DCD11A0B9A1200A20898 /* OfficeLocations.m */,
 				1920252D1A03751D004C79F7 /* DetailedNewsWebView.m */,
 				DC21700719FA35CF00207D57 /* checkInternet.m */,
 				DC21700919FA35CF00207D57 /* Reachability.m */,
@@ -362,6 +367,7 @@
 				DC21700B19FA35CF00207D57 /* Reachability.m in Sources */,
 				19219DD819F24A69002D6742 /* ViewController.m in Sources */,
 				19219DD219F24A69002D6742 /* AppDelegate.m in Sources */,
+				19E8DCD21A0B9A1200A20898 /* OfficeLocations.m in Sources */,
 				19219DCE19F24A69002D6742 /* main.m in Sources */,
 				DC05E85919F6B38C00944CDB /* UnionNews.m in Sources */,
 				DCF7721D19F543FF000B5C6D /* SubPage.m in Sources */,

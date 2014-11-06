@@ -43,8 +43,8 @@
                     <navigationItem key="navigationItem" title="Main Menu" id="Tqu-t8-wgf"/>
                     <connections>
                         <outlet property="menuItems" destination="it9-rZ-Gtq" id="bDB-dI-sx1"/>
-                        <segue destination="dMx-Sz-Qwy" kind="push" identifier="Negotiation Updates" id="HK5-ar-0ov"/>
-                        <segue destination="eV5-OE-LyK" kind="push" identifier="Member Resources" id="tdD-yV-yQS"/>
+                        <segue destination="dMx-Sz-Qwy" kind="push" identifier="Stay Connected" id="HK5-ar-0ov"/>
+                        <segue destination="eV5-OE-LyK" kind="push" identifier="Offline Locations" id="tdD-yV-yQS"/>
                         <segue destination="h98-HW-mTh" kind="push" identifier="Union News" id="x4t-Gd-X57"/>
                     </connections>
                 </viewController>
@@ -132,9 +132,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LV8-Gi-mY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1697" y="55"/>
+            <point key="canvasLocation" x="1696" y="45"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Stay Connected-->
         <scene sceneID="R3h-Bm-vbz">
             <objects>
                 <viewController id="dMx-Sz-Qwy" sceneMemberID="viewController">
@@ -145,27 +145,20 @@
                     <view key="view" contentMode="scaleToFill" id="B1t-EF-qMz">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgI-L1-LT1">
-                                <rect key="frame" x="86" y="269" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="2nd">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wCW-U9-Miy"/>
+                    <navigationItem key="navigationItem" title="Stay Connected" id="wCW-U9-Miy">
+                        <barButtonItem key="backBarButtonItem" title="Main Menu" id="Bu3-gy-xzt"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IWp-iJ-cIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1155" y="800"/>
+            <point key="canvasLocation" x="1199" y="790"/>
         </scene>
-        <!--View Controller-->
+        <!--Office Locations - Office Locations-->
         <scene sceneID="74O-i3-0il">
             <objects>
-                <viewController id="eV5-OE-LyK" sceneMemberID="viewController">
+                <viewController restorationIdentifier="Office Locations" storyboardIdentifier="Office Locations" title="Office Locations" id="eV5-OE-LyK" customClass="OfficeLocations" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YRE-0e-LOu"/>
                         <viewControllerLayoutGuide type="bottom" id="hjY-rl-KqO"/>
@@ -173,13 +166,30 @@
                     <view key="view" contentMode="scaleToFill" id="hl7-ce-exC">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Office Locations" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="V7P-pV-bcP">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="eV5-OE-LyK" id="vUU-BY-nrt"/>
+                                    <outlet property="delegate" destination="eV5-OE-LyK" id="5GU-jk-ULj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="KbH-ZC-mMe"/>
+                    <navigationItem key="navigationItem" title="Office Locations" id="KbH-ZC-mMe">
+                        <barButtonItem key="backBarButtonItem" title="Main Menu" id="VXI-4I-eoj"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="officeLocations" destination="V7P-pV-bcP" id="Wt0-C7-Roq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="baa-Gq-xtx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1150" y="-638"/>
+            <point key="canvasLocation" x="1199" y="-644"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y03-XC-8ng">

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "19219DBD19F24A69002D6742"
-               BuildableName = "UFCW-5.app"
+               BuildableName = "UFCW 5.app"
                BlueprintName = "UFCW 5"
                ReferencedContainer = "container:UFCW 5.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "19219DDE19F24A69002D6742"
-               BuildableName = "UFCW-5Tests.xctest"
+               BuildableName = "UFCW 5Tests.xctest"
                BlueprintName = "UFCW 5Tests"
                ReferencedContainer = "container:UFCW 5.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "19219DBD19F24A69002D6742"
-            BuildableName = "UFCW-5.app"
+            BuildableName = "UFCW 5.app"
             BlueprintName = "UFCW 5"
             ReferencedContainer = "container:UFCW 5.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "19219DBD19F24A69002D6742"
-            BuildableName = "UFCW-5.app"
+            BuildableName = "UFCW 5.app"
             BlueprintName = "UFCW 5"
             ReferencedContainer = "container:UFCW 5.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "19219DBD19F24A69002D6742"
-            BuildableName = "UFCW-5.app"
+            BuildableName = "UFCW 5.app"
             BlueprintName = "UFCW 5"
             ReferencedContainer = "container:UFCW 5.xcodeproj">
          </BuildableReference>

@@ -27,7 +27,7 @@
     [super viewDidLoad];
     menuItemsArray = [[NSMutableArray alloc]initWithObjects:
               @"Union News",@"Negotiation Updates",@"Member Resources",@"Upcoming Events",@"Stay Connected",@"Shop Union",@"Office Locations", nil];
-   MenuItemIcons = [[NSArray alloc] initWithObjects:@"news",@"negotiation",@"member",@"events",@"connected",@"shopunion",@"location", nil];
+    MenuItemIcons = [[NSArray alloc] initWithObjects:@"news",@"negotiation",@"member",@"events",@"connected",@"shopunion",@"location", nil];
     
 }
 
@@ -54,6 +54,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
                              cellIdentifier];
+    
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:
                 UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
@@ -71,7 +72,7 @@
     MenuItemLabel = [[UILabel alloc]initWithFrame:CGRectMake(50, 10, 200, 30)];
     MenuItemLabel.text = stringForCell;
     MenuItemLabel.font = [UIFont fontWithName:@"Calibri" size:18];
-    MenuItemLabel.textColor = [UIColor colorWithRed:168.0f/255.05 green:175.0f/255.0f blue:181.0f/255.0f alpha:1.0f];
+    MenuItemLabel.textColor = [UIColor colorWithRed:168.0f/255.0f green:175.0f/255.0f blue:181.0f/255.0f alpha:1.0f];
     
     [cell addSubview:MenuItemLabel];
     
@@ -84,15 +85,29 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self performSegueWithIdentifier:@"Union News" sender:self];
+    if(indexPath.row == 4)
+    {
+        [self performSegueWithIdentifier:@"Stay Connected" sender:self];
+    }
+    else if(indexPath.row == 6)
+    {
+        [self performSegueWithIdentifier:@"Offline Locations" sender:self];
+    }
+    else
+    {
+        [self performSegueWithIdentifier:@"Union News" sender:self];
+    }
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
     NSIndexPath *indexPath = [menuItems indexPathForSelectedRow];
     
-    UnionNews *news = segue.destinationViewController;
-    news.category = [MenuItemIcons objectAtIndex:indexPath.row];
+    if(indexPath.row != 4 && indexPath.row !=6)
+    {
+        UnionNews *news = segue.destinationViewController;
+        news.category = [MenuItemIcons objectAtIndex:indexPath.row];
+    }
 }
 
 
