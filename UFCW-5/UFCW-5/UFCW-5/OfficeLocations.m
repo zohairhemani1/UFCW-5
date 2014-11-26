@@ -7,11 +7,18 @@
 //
 
 #import "OfficeLocations.h"
+#import "WebService.h"
+#import "checkInternet.h"
+#import "Constants.h"
 
 @interface OfficeLocations (){
     UILabel *OfficeTitle;
     UILabel *OfficeAddress;
     UILabel *OfficePhone;
+    checkInternet *checkInternetObj;
+    UIActivityIndicatorView *loader;
+    NSArray *officeLocationArray;
+
 }
 
 @end
@@ -22,6 +29,31 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    checkInternetObj = [[checkInternet alloc] init];
+    [checkInternetObj viewWillAppear:YES];
+    
+    loader = [checkInternetObj indicatorprogress:loader];
+    [self.view addSubview:loader];
+    [loader bringSubviewToFront:self.view];
+    
+    dispatch_queue_t myqueue = dispatch_queue_create("myqueue", NULL);
+    dispatch_async(myqueue, ^(void) {
+        
+        [loader startAnimating];
+        WebService *officeLocation = [[WebService alloc] init];
+        officeLocationArray = [[NSArray alloc] initWithArray:[officeLocation FilePath:BaseURL OFFICE_LOCATION parameterOne:nil]];
+        
+        //NSString *subString = [@"" substringToIndex:rangeOfYourString.location];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // Update UI on main queue
+            
+            [self->officeLocations reloadData];
+            [loader stopAnimating];
+        });
+        
+    });
+
  
 
 }
@@ -43,7 +75,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 5;
+    return [officeLocationArray count];
 }
 
 
@@ -61,21 +93,21 @@
     }
     
     OfficeTitle = [[UILabel alloc]initWithFrame:CGRectMake(20, 20, 200, 20)];
-    OfficeTitle.text = @"Avialdo Office.";
+    OfficeTitle.text = [[officeLocationArray valueForKey:@"office_title"] objectAtIndex:indexPath.row];
     OfficeTitle.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:18];
     
     [cell addSubview:OfficeTitle];
     
     
     OfficeAddress = [[UILabel alloc] initWithFrame:CGRectMake(20, 30, 300, 90)];
-    OfficeAddress.text = @"343/3 D-3, 3rd Floor, Afshan Apartments, Karachi, Pakistan";
-    OfficeAddress.numberOfLines = 2;
+    OfficeAddress.text = [[officeLocationArray valueForKey:@"address"] objectAtIndex:indexPath.row];
+    OfficeAddress.numberOfLines = 3;
     OfficeAddress.font = [UIFont fontWithName:@"Calibri" size:18];
     [cell addSubview:OfficeAddress];
     
     
     OfficePhone = [[UILabel alloc] initWithFrame:CGRectMake(20, 100, 200, 20)];
-    OfficePhone.text = @"Ph: +92-343-2637576";
+    OfficePhone.text = [[officeLocationArray valueForKey:@"phone_no"] objectAtIndex:indexPath.row];
     [cell addSubview:OfficePhone];
     
     
