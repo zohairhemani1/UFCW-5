@@ -54,8 +54,6 @@
         
     });
 
- 
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -84,32 +82,31 @@
     
     static NSString *cellIdentifier = @"Office Locations";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
-                             cellIdentifier];
+    UITableViewCell *cell;
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:
                 UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    OfficeTitle = [[UILabel alloc]initWithFrame:CGRectMake(20, 20, 200, 20)];
+    OfficeTitle = [[UILabel alloc]initWithFrame:CGRectMake(20, 10, 200, 15)];
     OfficeTitle.text = [[officeLocationArray valueForKey:@"office_title"] objectAtIndex:indexPath.row];
-    OfficeTitle.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:18];
+    OfficeTitle.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:16];
     
     [cell addSubview:OfficeTitle];
     
     
-    OfficeAddress = [[UILabel alloc] initWithFrame:CGRectMake(20, 30, 300, 90)];
+    OfficeAddress = [[UILabel alloc] initWithFrame:CGRectMake(20, 30, 300, 35)];
     OfficeAddress.text = [[officeLocationArray valueForKey:@"address"] objectAtIndex:indexPath.row];
     OfficeAddress.numberOfLines = 3;
-    OfficeAddress.font = [UIFont fontWithName:@"Calibri" size:18];
+    OfficeAddress.font = [UIFont fontWithName:@"Calibri" size:16];
     [cell addSubview:OfficeAddress];
     
     
-    OfficePhone = [[UILabel alloc] initWithFrame:CGRectMake(20, 100, 200, 20)];
+    OfficePhone = [[UILabel alloc] initWithFrame:CGRectMake(20, 70, 200, 15)];
     OfficePhone.text = [[officeLocationArray valueForKey:@"phone_no"] objectAtIndex:indexPath.row];
+    OfficePhone.font = [UIFont fontWithName:@"Calibri" size:16];
     [cell addSubview:OfficePhone];
-    
     
     
     return cell;

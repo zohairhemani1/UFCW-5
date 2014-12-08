@@ -22,7 +22,6 @@
     UILabel * phoneNumberTwo;
     UILabel * faxNumber;
     UILabel * email;
-    
 
 }
 
@@ -97,32 +96,31 @@
     
     static NSString *cellIdentifier = @"Stay Connected";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
-                             cellIdentifier];
+    UITableViewCell *cell;
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:
                 UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    name = [[UILabel alloc]initWithFrame:CGRectMake(20, 20, 200, 20)];
+    name = [[UILabel alloc]initWithFrame:CGRectMake(20, 10, 200, 15)];
     name.text = @"Zohair Hemani";
-    name.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:18];
+    name.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:16];
     
     [cell addSubview:name];
     
     
-    address = [[UILabel alloc] initWithFrame:CGRectMake(20, 30, 300, 90)];
+    address = [[UILabel alloc] initWithFrame:CGRectMake(20, 30, 300, 35)];
     address.text = [[stayConnectedArray valueForKey:@"address"] objectAtIndex:indexPath.row];
     address.numberOfLines = 3;
-    address.font = [UIFont fontWithName:@"Calibri" size:18];
+    address.font = [UIFont fontWithName:@"Calibri" size:16];
     [cell addSubview:address];
     
     
-    phoneNumberOne = [[UILabel alloc] initWithFrame:CGRectMake(20, 100, 200, 20)];
+    phoneNumberOne = [[UILabel alloc] initWithFrame:CGRectMake(20, 70, 200, 15)];
     phoneNumberOne.text = [[stayConnectedArray valueForKey:@"phone_no1"] objectAtIndex:indexPath.row];
+    phoneNumberOne.font= [UIFont fontWithName:@"Calibri" size:16];
     [cell addSubview:phoneNumberOne];
-    
     
     
     return cell;
