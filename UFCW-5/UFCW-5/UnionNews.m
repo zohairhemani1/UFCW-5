@@ -56,7 +56,7 @@
         [loader startAnimating];
         WebService *NewsUnionService = [[WebService alloc] init];
         NSLog(@"the category is %@",self.category);
-        NewsUnionArray = [[NSArray alloc] initWithArray:[NewsUnionService FilePath:BaseURL NEWS_CATEGORY parameterOne:self.category]];
+        NewsUnionArray = [[NSArray alloc] initWithArray:[NewsUnionService FilePath:BaseURL NEWS_CATEGORY parameterOne:self.category parameterTwo:APP_ID]];
         
         //NSString *subString = [@"" substringToIndex:rangeOfYourString.location];
         dispatch_async(dispatch_get_main_queue(), ^{

@@ -13,16 +13,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    [[UINavigationBar appearance] setTitleTextAttributes: @{
-                                                            NSForegroundColorAttributeName: [UIColor whiteColor],
-                                                            NSFontAttributeName: [UIFont fontWithName:@"Calibri" size:18.0f]
-                                                            }];
     [Parse setApplicationId:@"Lr8VBQHTUyzw4RoFpcyHQnCcHJAQb1PPhBVzDtqK"
                   clientKey:@"CHhHCo1TO0shdXvmhFywuNbFDVpalWvj9s6FqcM2"];
-    [application registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
-                                                     UIRemoteNotificationTypeAlert |
-                                                     UIRemoteNotificationTypeSound)];
+    // Register for Push Notitications
+    //-- Set Notification
+    
+        // iOS < 8 Notifications
+        [application registerForRemoteNotificationTypes:
+         (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound)];
+    
     return YES;
 }
 							
@@ -55,6 +54,7 @@
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     // Store the deviceToken in the current installation and save it to Parse.
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+  
     [currentInstallation setDeviceTokenFromData:deviceToken];
     [currentInstallation saveInBackground];
 }

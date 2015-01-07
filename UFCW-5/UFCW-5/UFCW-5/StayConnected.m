@@ -55,7 +55,7 @@
         
         [loader startAnimating];
         WebService *stayConnectedRest = [[WebService alloc] init];
-        stayConnectedArray = [[NSArray alloc] initWithArray:[stayConnectedRest FilePath:BaseURL STAY_CONNECTED parameterOne:nil]];
+        stayConnectedArray = [[NSArray alloc] initWithArray:[stayConnectedRest FilePath:BaseURL STAY_CONNECTED parameterOne:APP_ID]];
         
         //NSString *subString = [@"" substringToIndex:rangeOfYourString.location];
         dispatch_async(dispatch_get_main_queue(), ^{

@@ -42,7 +42,7 @@
         
         [loader startAnimating];
         WebService *officeLocation = [[WebService alloc] init];
-        officeLocationArray = [[NSArray alloc] initWithArray:[officeLocation FilePath:BaseURL OFFICE_LOCATION parameterOne:nil]];
+        officeLocationArray = [[NSArray alloc] initWithArray:[officeLocation FilePath:BaseURL OFFICE_LOCATION parameterOne:APP_ID]];
         
         //NSString *subString = [@"" substringToIndex:rangeOfYourString.location];
         dispatch_async(dispatch_get_main_queue(), ^{

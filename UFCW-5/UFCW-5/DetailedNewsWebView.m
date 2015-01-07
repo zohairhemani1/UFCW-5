@@ -39,7 +39,8 @@
 
 -(NSURLRequest *)getURLRequest{
     
-    NSString *fullURL = [BASEURL_WEBDASHBOARD DETAILED_NEWS_URL stringByAppendingString:self.newsID];
+    NSString *fullURL = [[[BaseURL DETAILED_NEWS_URL stringByAppendingString:self.newsID] stringByAppendingString:DETAILED_NEWS_URL_SECOND_PARAMETER]stringByAppendingString:APP_ID];
+    NSLog(@"url: %@", fullURL);
     NSURL *url = [NSURL URLWithString:fullURL];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     return requestObj;
