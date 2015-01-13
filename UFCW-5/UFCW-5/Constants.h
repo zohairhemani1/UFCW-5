@@ -18,5 +18,8 @@
 #define APP_ID @"1"
 #define LOGO_NAME @"ufcw5_logo.png"
 #define DETAILED_NEWS_URL_SECOND_PARAMETER @"&&app_id="
+#define NAV_RED_COLOR 0
+#define NAV_GREEN_COLOR 43
+#define NAV_BLUE_COLOR 127
 
 #endif

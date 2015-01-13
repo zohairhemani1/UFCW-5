@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "SubPage.h"
 #import "UnionNews.h"
+#import "Constants.h"
 
 @interface ViewController ()
 {
@@ -28,6 +29,8 @@
     menuItemsArray = [[NSMutableArray alloc]initWithObjects:
               @"Union News",@"Negotiation Updates",@"Member Resources",@"Upcoming Events",@"Stay Connected",@"Shop Union",@"Office Locations", nil];
     MenuItemIcons = [[NSArray alloc] initWithObjects:@"news",@"negotiation",@"member",@"events",@"connected",@"shopunion",@"location", nil];
+    
+    [ImageView setBackgroundColor:[UIColor colorWithRed:NAV_RED_COLOR/255.0 green:NAV_GREEN_COLOR/255.0 blue:NAV_BLUE_COLOR/255.0 alpha:1.0]];
     
 }
 

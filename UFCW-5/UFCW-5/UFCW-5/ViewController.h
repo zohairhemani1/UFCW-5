@@ -14,6 +14,7 @@ UITableViewDelegate>
     
     IBOutlet UITableView *menuItems;
     NSMutableArray *menuItemsArray;
+    __weak IBOutlet UIView *ImageView;
 
 }
 @end

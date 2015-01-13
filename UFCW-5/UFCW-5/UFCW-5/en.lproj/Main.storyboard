@@ -44,6 +44,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="aXV-wF-k5k"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="ImageView" destination="Rxs-FZ-2ga" id="sLd-QW-uhY"/>
                         <outlet property="menuItems" destination="it9-rZ-Gtq" id="bDB-dI-sx1"/>
                         <segue destination="dMx-Sz-Qwy" kind="push" identifier="Stay Connected" id="HK5-ar-0ov"/>
                         <segue destination="eV5-OE-LyK" kind="push" identifier="Offline Locations" id="tdD-yV-yQS"/>
