@@ -7,16 +7,24 @@
 //
 
 #import "WebService.h"
+#import "checkInternet.h"
 
-@implementation WebService
+@implementation WebService{
+    checkInternet *checkInternetObj;
+    NSArray *jsonArray;
+}
+
 
 -(NSArray*)FilePath:(NSString*)filepath parameterOne:(NSString*)parameterOne parameterTwo:(NSString*)parameterTwo parameterThree:(NSString*)parameterThree
 {
+    checkInternetObj = [[checkInternet alloc] init];
+    NSLog(@"out of condition %d",[checkInternetObj internetstatus]);
+    if([checkInternetObj internetstatus] == TRUE && [checkInternetObj hoststatus]== TRUE){
+        NSLog(@"in condition %d",[checkInternetObj internetstatus]);
     NSURL *jsonFileUrl = [NSURL URLWithString:filepath];
     
     // Create the NSURLConnection
     NSString * storedNumber = [[NSUserDefaults standardUserDefaults] stringForKey:@"password"];
-    
     
     // Posting the values of edit text field to database to query the results.
     
@@ -37,15 +45,14 @@
     // Log Response
    // NSString *response = [[NSString alloc] initWithBytes:[returnData bytes] length:[returnData length] encoding:NSUTF8StringEncoding];
     
-    NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData: returnData options: NSJSONReadingMutableContainers error: &err];
-    
-    
+    jsonArray = [NSJSONSerialization JSONObjectWithData: returnData options: NSJSONReadingMutableContainers error: &err];
     
     //NSLog(@"%@",response);
     NSLog(@"JsonArray %@", jsonArray);
-    
+    }
     // return response;
     return jsonArray;
+    
 }
 
 -(NSArray*)FilePath:(NSString*)filepath parameterOne:(NSString*)parameterOne

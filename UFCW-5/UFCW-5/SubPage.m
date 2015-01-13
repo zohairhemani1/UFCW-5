@@ -7,8 +7,11 @@
 //
 
 #import "SubPage.h"
+#import "checkInternet.h"
 
-@interface SubPage ()
+@interface SubPage (){
+    checkInternet *checkInternetObj;
+}
 
 @end
 
@@ -26,6 +29,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    checkInternetObj = [[checkInternet alloc] init];
+    [checkInternetObj viewWillAppear:YES];
+    
     // Do any additional setup after loading the view.
     NSLog(@"Hello World From SubPage");
 }

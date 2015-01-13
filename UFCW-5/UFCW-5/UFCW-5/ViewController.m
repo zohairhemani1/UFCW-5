@@ -10,6 +10,7 @@
 #import "SubPage.h"
 #import "UnionNews.h"
 #import "Constants.h"
+#import "checkInternet.h"
 
 @interface ViewController ()
 {
@@ -17,6 +18,7 @@
     UIImage * MenuIconImage;
     UIImageView *MenuIconImageView;
     UILabel *MenuItemLabel;
+    checkInternet *checkInternetObj;
 }
 
 @end
@@ -26,6 +28,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    checkInternetObj = [[checkInternet alloc] init];
+    [checkInternetObj viewWillAppear:YES];
+    
     menuItemsArray = [[NSMutableArray alloc]initWithObjects:
               @"Union News",@"Negotiation Updates",@"Member Resources",@"Upcoming Events",@"Stay Connected",@"Shop Union",@"Office Locations", nil];
     MenuItemIcons = [[NSArray alloc] initWithObjects:@"news",@"negotiation",@"member",@"events",@"connected",@"shopunion",@"location", nil];

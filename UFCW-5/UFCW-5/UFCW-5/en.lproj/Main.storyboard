@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12E4022" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="jbf-g1-SpV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="jbf-g1-SpV">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Main Menu-->
+        <!--Main Menu-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -18,18 +19,15 @@
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rxs-FZ-2ga">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="fx8-dP-olU">
                                         <rect key="frame" x="49" y="-38" width="222" height="160"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.16862745100000001" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="it9-rZ-Gtq">
                                 <rect key="frame" x="0.0" y="83" width="320" height="421"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <connections>
@@ -55,7 +53,7 @@
             </objects>
             <point key="canvasLocation" x="640" y="45"/>
         </scene>
-        <!--Union News - News Union-->
+        <!--News Union-->
         <scene sceneID="s08-PI-oVq">
             <objects>
                 <tableViewController id="h98-HW-mTh" customClass="UnionNews" sceneMemberID="viewController">
@@ -122,7 +120,6 @@
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="abI-Zr-4Oa">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
@@ -137,7 +134,7 @@
             </objects>
             <point key="canvasLocation" x="1696" y="45"/>
         </scene>
-        <!--Stay Connected - Stay Connected-->
+        <!--Stay Connected-->
         <scene sceneID="R3h-Bm-vbz">
             <objects>
                 <viewController restorationIdentifier="Stay Connected" storyboardIdentifier="Stay Connected" id="dMx-Sz-Qwy" customClass="StayConnected" sceneMemberID="viewController">
@@ -151,7 +148,6 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Stay Connected" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="6eI-R6-tfd">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <connections>
@@ -173,7 +169,7 @@
             </objects>
             <point key="canvasLocation" x="1199" y="790"/>
         </scene>
-        <!--Office Locations - Office Locations-->
+        <!--Office Locations-->
         <scene sceneID="74O-i3-0il">
             <objects>
                 <viewController restorationIdentifier="Office Locations" storyboardIdentifier="Office Locations" title="Office Locations" id="eV5-OE-LyK" customClass="OfficeLocations" sceneMemberID="viewController">
@@ -185,9 +181,8 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Office Locations" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="V7P-pV-bcP">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="418"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Office Locations" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="V7P-pV-bcP">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <connections>
@@ -197,6 +192,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="V7P-pV-bcP" firstAttribute="top" secondItem="YRE-0e-LOu" secondAttribute="bottom" id="A3s-8u-bAx"/>
+                            <constraint firstItem="V7P-pV-bcP" firstAttribute="bottom" secondItem="hjY-rl-KqO" secondAttribute="top" id="T7z-tf-A7d"/>
+                            <constraint firstAttribute="trailing" secondItem="V7P-pV-bcP" secondAttribute="trailing" id="eez-JQ-f4J"/>
+                            <constraint firstItem="V7P-pV-bcP" firstAttribute="leading" secondItem="hl7-ce-exC" secondAttribute="leading" id="h7l-Wd-DDx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Office Locations" id="KbH-ZC-mMe">
                         <barButtonItem key="backBarButtonItem" title="Main Menu" id="VXI-4I-eoj"/>
@@ -236,10 +237,10 @@
     <resources>
         <image name="logo" width="289" height="80"/>
     </resources>
-    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

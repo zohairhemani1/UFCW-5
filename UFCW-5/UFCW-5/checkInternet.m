@@ -8,7 +8,10 @@
 
 #import "checkInternet.h"
 
-@interface checkInternet ()
+@interface checkInternet (){
+    CGFloat screenWidth;
+    CGFloat screenHeight;
+}
 
 @end
 BOOL alertTime= YES;
@@ -31,6 +34,8 @@ UIAlertView *alertbox;
     [super viewDidLoad];
     first_time =YES;
     alertTime=YES;
+    hostActive = NO;
+    
 	// Do any additional setup after loading the view.
 }
 
@@ -46,6 +51,10 @@ UIAlertView *alertbox;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkNetworkStatus:) name:kReachabilityChangedNotification object:nil];
     // check if a pathway to a random host exists
+    
+    internetReachable = [Reachability reachabilityForInternetConnection];
+    [internetReachable startNotifier];
+    
     hostReachable = [Reachability reachabilityWithHostName:@"www.apple.com"];
     [hostReachable startNotifier];
 
@@ -55,14 +64,47 @@ UIAlertView *alertbox;
 -(void) checkNetworkStatus:(NSNotification *)notice
 {
     // called after network status changes
-    
-    NetworkStatus internetStatus = [hostReachable currentReachabilityStatus];
+    NetworkStatus internetStatus = [internetReachable currentReachabilityStatus];
     switch (internetStatus)
     {
         case NotReachable:
         {
             NSLog(@"The internet is down.");
             internetActive = NO;
+            if(alertTime == YES){
+                
+                alertTime= NO;
+                
+                alertbox = [[UIAlertView alloc]initWithTitle:@"Internet Issue" message:@" It seems your Internet connection is Down!!" delegate:self cancelButtonTitle:Nil otherButtonTitles:@"Try again", nil];
+                [alertbox show];
+                
+            }
+            break;
+        }
+        case ReachableViaWiFi:
+        {
+            NSLog(@"The internet is working via WIFI.");
+            internetActive = YES;
+            
+            break;
+        }
+        case ReachableViaWWAN:
+        {
+            NSLog(@"The internet is working via WWAN.");
+            internetActive = YES;
+            
+            break;
+        }
+    }
+    
+    
+    NetworkStatus hostStatus = [hostReachable currentReachabilityStatus];
+    switch (hostStatus)
+    {
+        case NotReachable:
+        {
+            NSLog(@"The internet is down.");
+            hostActive = NO;
             
             if(alertTime == YES){
                 
@@ -79,14 +121,14 @@ UIAlertView *alertbox;
         case ReachableViaWiFi:
         {
             NSLog(@"The internet is working via WIFI.");
-            internetActive = YES;
+            hostActive = YES;
            
             break;
         }
         case ReachableViaWWAN:
         {
             NSLog(@"The internet is working via WWAN.");
-            internetActive = YES;
+            hostActive = YES;
             
             break;
         }
@@ -100,9 +142,13 @@ UIAlertView *alertbox;
 
 -(UIActivityIndicatorView *)indicatorprogress:(UIActivityIndicatorView *)progressing{
  
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    screenWidth = screenRect.size.width;
+    screenHeight = screenRect.size.height;
+    
     progressing = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    progressing.frame = CGRectMake(0.0, 0.0, 50.0, 50.0);
-    progressing.center = self.view.center;
+    progressing.frame = CGRectMake((screenWidth/2)-25, (screenHeight/2)-25, 50.0, 50.0);
+    //progressing.center = self.view.center;
     [self.view addSubview:progressing];
     [progressing bringSubviewToFront:self.view];
     //[progressing setBackgroundColor:[UIColor blackColor]];
@@ -113,17 +159,6 @@ UIAlertView *alertbox;
     return progressing;
 }
 
-//- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-//    if (buttonIndex == 0) {
-//        
-//        if (internetActive==NO){
-//            alertbox = [[UIAlertView alloc]initWithTitle:@"Internet Issue" message:@" It seems your Internet connection is Down!!" delegate:self cancelButtonTitle:Nil otherButtonTitles:@"Try again", nil];
-//            
-//            [alertbox show];
-//        }
-//    }
-//    
-//}
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 0) {
@@ -134,5 +169,9 @@ UIAlertView *alertbox;
 
 - (BOOL) internetstatus{
     return internetActive;
+}
+
+- (BOOL) hoststatus{
+    return hostActive;
 }
 @end

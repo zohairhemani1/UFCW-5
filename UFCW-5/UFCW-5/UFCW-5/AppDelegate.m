@@ -14,14 +14,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+        // use registerUserNotificationSettings
+        
+        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+        [application registerForRemoteNotifications];
+        
+    } else {
+        // use registerForRemoteNotifications
+        
+        [application registerForRemoteNotificationTypes:
+                  (UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert)];
+    }
+    
     [Parse setApplicationId:@"Lr8VBQHTUyzw4RoFpcyHQnCcHJAQb1PPhBVzDtqK"
                   clientKey:@"CHhHCo1TO0shdXvmhFywuNbFDVpalWvj9s6FqcM2"];
     // Register for Push Notitications
     //-- Set Notification
-    
-        // iOS < 8 Notifications
-        [application registerForRemoteNotificationTypes:
-         (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound)];
     
     //for back button text colour//
     [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0]];

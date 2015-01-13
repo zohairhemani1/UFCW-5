@@ -8,8 +8,11 @@
 
 #import "DetailedNewsWebView.h"
 #import "Constants.h"
+#import "checkInternet.h"
 
-@interface DetailedNewsWebView ()
+@interface DetailedNewsWebView (){
+    checkInternet *checkInternetObj;
+}
 
 @end
 
@@ -27,8 +30,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    checkInternetObj = [[checkInternet alloc] init];
+    [checkInternetObj viewWillAppear:YES];
+    
     NSLog(@"NEWS ID: %@",self.newsID);
-    [_DetailedNewsWebView loadRequest:[self getURLRequest]];
+    if([checkInternetObj internetstatus] == true){
+        [_DetailedNewsWebView loadRequest:[self getURLRequest]];
+    }
 }
 
 - (void)didReceiveMemoryWarning

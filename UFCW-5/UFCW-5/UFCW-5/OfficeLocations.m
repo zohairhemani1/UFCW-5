@@ -29,6 +29,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:YES];
     
     checkInternetObj = [[checkInternet alloc] init];
     [checkInternetObj viewWillAppear:YES];
@@ -41,19 +46,21 @@
     dispatch_async(myqueue, ^(void) {
         
         [loader startAnimating];
-        WebService *officeLocation = [[WebService alloc] init];
-        officeLocationArray = [[NSArray alloc] initWithArray:[officeLocation FilePath:BaseURL OFFICE_LOCATION parameterOne:APP_ID]];
-        
-        //NSString *subString = [@"" substringToIndex:rangeOfYourString.location];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            // Update UI on main queue
+        if([checkInternetObj internetstatus] == TRUE){
+            [loader startAnimating];
+            WebService *officeLocation = [[WebService alloc] init];
+            officeLocationArray = [[NSArray alloc] initWithArray:[officeLocation FilePath:BaseURL OFFICE_LOCATION parameterOne:APP_ID]];
+        }
+            //NSString *subString = [@"" substringToIndex:rangeOfYourString.location];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // Update UI on main queue
+                
+                [self->officeLocations reloadData];
+                [loader stopAnimating];
+            });
             
-            [self->officeLocations reloadData];
-            [loader stopAnimating];
         });
-        
-    });
-
+    
 }
 
 - (void)didReceiveMemoryWarning

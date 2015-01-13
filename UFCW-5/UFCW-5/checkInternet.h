@@ -12,6 +12,7 @@
 Reachability *hostReachable;
 Reachability *internetReachable;
 BOOL internetActive;
+BOOL hostActive;
 BOOL first_time;
 
 @interface checkInternet : UIViewController<UIAlertViewDelegate>
@@ -20,5 +21,5 @@ BOOL first_time;
 //- (void) checkNetworkStatus;
 - (UIActivityIndicatorView *)indicatorprogress:(UIActivityIndicatorView *)progressing;
 - (BOOL) internetstatus;
-
+- (BOOL) hoststatus;
 @end

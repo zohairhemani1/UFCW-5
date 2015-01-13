@@ -43,9 +43,19 @@
     self.unionTable.delegate =self;
     self.unionTable.dataSource = self;
     
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:YES];
+    
     checkInternetObj = [[checkInternet alloc] init];
     [checkInternetObj viewWillAppear:YES];
-
+    
     loader = [checkInternetObj indicatorprogress:loader];
     [self.view addSubview:loader];
     [loader bringSubviewToFront:self.view];
@@ -54,10 +64,11 @@
     dispatch_async(myqueue, ^(void) {
         
         [loader startAnimating];
-        WebService *NewsUnionService = [[WebService alloc] init];
-        NSLog(@"the category is %@",self.category);
-        NewsUnionArray = [[NSArray alloc] initWithArray:[NewsUnionService FilePath:BaseURL NEWS_CATEGORY parameterOne:self.category parameterTwo:APP_ID]];
-        
+        if([checkInternetObj internetstatus] == TRUE && [checkInternetObj hoststatus]== TRUE){
+            WebService *NewsUnionService = [[WebService alloc] init];
+            NSLog(@"the category is %@",self.category);
+            NewsUnionArray = [[NSArray alloc] initWithArray:[NewsUnionService FilePath:BaseURL NEWS_CATEGORY parameterOne:self.category parameterTwo:APP_ID]];
+        }
         //NSString *subString = [@"" substringToIndex:rangeOfYourString.location];
         dispatch_async(dispatch_get_main_queue(), ^{
             // Update UI on main queue
@@ -68,14 +79,6 @@
         
     });
     
-    
-    
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning

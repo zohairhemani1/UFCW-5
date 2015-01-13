@@ -12,7 +12,7 @@
 #import "Constants.h"
 
 @interface StayConnected (){
-     NSArray *stayConnectedArray;
+    NSArray *stayConnectedArray;
     checkInternet *checkInternetObj;
     UIActivityIndicatorView *loader;
     UILabel * name;
@@ -22,7 +22,6 @@
     UILabel * phoneNumberTwo;
     UILabel * faxNumber;
     UILabel * email;
-
 }
 
 @end
@@ -41,7 +40,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:YES];
     
     checkInternetObj = [[checkInternet alloc] init];
     [checkInternetObj viewWillAppear:YES];
@@ -54,9 +57,10 @@
     dispatch_async(myqueue, ^(void) {
         
         [loader startAnimating];
-        WebService *stayConnectedRest = [[WebService alloc] init];
-        stayConnectedArray = [[NSArray alloc] initWithArray:[stayConnectedRest FilePath:BaseURL STAY_CONNECTED parameterOne:APP_ID]];
-        
+        if([checkInternetObj internetstatus] == TRUE){
+            WebService *stayConnectedRest = [[WebService alloc] init];
+            stayConnectedArray = [[NSArray alloc] initWithArray:[stayConnectedRest FilePath:BaseURL STAY_CONNECTED parameterOne:APP_ID]];
+        }
         //NSString *subString = [@"" substringToIndex:rangeOfYourString.location];
         dispatch_async(dispatch_get_main_queue(), ^{
             // Update UI on main queue
@@ -66,7 +70,6 @@
         });
         
     });
-    
 
 }
 
