@@ -32,6 +32,8 @@
     checkInternetObj = [[checkInternet alloc] init];
     [checkInternetObj viewWillAppear:YES];
     
+    self.logo_image.image = [UIImage imageNamed:LOGO_NAME];
+    
     menuItemsArray = [[NSMutableArray alloc]initWithObjects:
               @"Union News",@"Negotiation Updates",@"Member Resources",@"Upcoming Events",@"Stay Connected",@"Shop Union",@"Office Locations", nil];
     MenuItemIcons = [[NSArray alloc] initWithObjects:@"news",@"negotiation",@"member",@"events",@"connected",@"shopunion",@"location", nil];

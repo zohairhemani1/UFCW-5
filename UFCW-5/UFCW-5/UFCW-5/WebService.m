@@ -19,7 +19,8 @@
 {
     checkInternetObj = [[checkInternet alloc] init];
     NSLog(@"out of condition %d",[checkInternetObj internetstatus]);
-    if([checkInternetObj internetstatus] == TRUE && [checkInternetObj hoststatus]== TRUE){
+    
+    if([checkInternetObj internetstatus] == TRUE){
         NSLog(@"in condition %d",[checkInternetObj internetstatus]);
     NSURL *jsonFileUrl = [NSURL URLWithString:filepath];
     

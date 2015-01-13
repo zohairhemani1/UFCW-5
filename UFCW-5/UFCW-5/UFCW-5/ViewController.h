@@ -17,4 +17,5 @@ UITableViewDelegate>
     __weak IBOutlet UIView *ImageView;
 
 }
+@property (weak, nonatomic) IBOutlet UIImageView *logo_image;
 @end

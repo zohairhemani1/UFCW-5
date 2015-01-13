@@ -20,7 +20,7 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rxs-FZ-2ga">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="fx8-dP-olU">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fx8-dP-olU">
                                         <rect key="frame" x="49" y="-38" width="222" height="160"/>
                                     </imageView>
                                 </subviews>
@@ -43,6 +43,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="ImageView" destination="Rxs-FZ-2ga" id="sLd-QW-uhY"/>
+                        <outlet property="logo_image" destination="fx8-dP-olU" id="FnJ-cT-jcd"/>
                         <outlet property="menuItems" destination="it9-rZ-Gtq" id="bDB-dI-sx1"/>
                         <segue destination="dMx-Sz-Qwy" kind="push" identifier="Stay Connected" id="HK5-ar-0ov"/>
                         <segue destination="eV5-OE-LyK" kind="push" identifier="Offline Locations" id="tdD-yV-yQS"/>
@@ -234,9 +235,6 @@
             <point key="canvasLocation" x="114" y="45"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="logo" width="289" height="80"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

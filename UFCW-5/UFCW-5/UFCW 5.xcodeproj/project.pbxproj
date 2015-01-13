@@ -26,12 +26,12 @@
 		19219DD219F24A69002D6742 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19219DD119F24A69002D6742 /* AppDelegate.m */; };
 		19219DD819F24A69002D6742 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19219DD719F24A69002D6742 /* ViewController.m */; };
 		19219DDA19F24A69002D6742 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19219DD919F24A69002D6742 /* Images.xcassets */; };
-		195AF9291A6394B500AD6D56 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 195AF9281A6394B500AD6D56 /* home.png */; };
 		196E1E0B1A25C60B00D0688D /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 196E1E091A25C60B00D0688D /* splash.png */; };
 		196E1E0C1A25C60B00D0688D /* splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 196E1E0A1A25C60B00D0688D /* splash@2x.png */; };
 		196E1E121A25D8EE00D0688D /* StayConnected.m in Sources */ = {isa = PBXBuildFile; fileRef = 196E1E111A25D8EE00D0688D /* StayConnected.m */; };
 		197621DF19F25E14005C8494 /* Calibri.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 197621DE19F25E14005C8494 /* Calibri.ttf */; };
 		19E8DCD21A0B9A1200A20898 /* OfficeLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E8DCD11A0B9A1200A20898 /* OfficeLocations.m */; };
+		B7A0CBFF1A65480C002803B4 /* unitedLatinos.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A0CBFE1A65480C002803B4 /* unitedLatinos.png */; };
 		DC05E85919F6B38C00944CDB /* UnionNews.m in Sources */ = {isa = PBXBuildFile; fileRef = DC05E85819F6B38C00944CDB /* UnionNews.m */; };
 		DC21700A19FA35CF00207D57 /* checkInternet.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21700719FA35CF00207D57 /* checkInternet.m */; };
 		DC21700B19FA35CF00207D57 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21700919FA35CF00207D57 /* Reachability.m */; };
@@ -71,7 +71,6 @@
 		19219DE819F24A69002D6742 /* UFCW 5Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UFCW 5Tests-Info.plist"; sourceTree = "<group>"; };
 		19219DEA19F24A69002D6742 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		19219DEC19F24A69002D6742 /* UFCW_5Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UFCW_5Tests.m; sourceTree = "<group>"; };
-		195AF9281A6394B500AD6D56 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		196E1E091A25C60B00D0688D /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		196E1E0A1A25C60B00D0688D /* splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash@2x.png"; sourceTree = "<group>"; };
 		196E1E101A25D8EE00D0688D /* StayConnected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StayConnected.h; sourceTree = "<group>"; };
@@ -80,6 +79,7 @@
 		199F61BC1A612D95002FA3CA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19E8DCD01A0B9A1200A20898 /* OfficeLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfficeLocations.h; sourceTree = "<group>"; };
 		19E8DCD11A0B9A1200A20898 /* OfficeLocations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfficeLocations.m; sourceTree = "<group>"; };
+		B7A0CBFE1A65480C002803B4 /* unitedLatinos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unitedLatinos.png; sourceTree = "<group>"; };
 		DC05E85719F6B38C00944CDB /* UnionNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnionNews.h; path = ../UnionNews.h; sourceTree = "<group>"; };
 		DC05E85819F6B38C00944CDB /* UnionNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnionNews.m; path = ../UnionNews.m; sourceTree = "<group>"; };
 		DC21700619FA35CF00207D57 /* checkInternet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = checkInternet.h; path = ../checkInternet.h; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 		19219DB519F24A69002D6742 = {
 			isa = PBXGroup;
 			children = (
-				195AF9281A6394B500AD6D56 /* home.png */,
+				B7A0CBFE1A65480C002803B4 /* unitedLatinos.png */,
 				196E1E091A25C60B00D0688D /* splash.png */,
 				196E1E0A1A25C60B00D0688D /* splash@2x.png */,
 				191796F119F2557100D73A84 /* Fonts */,
@@ -315,11 +315,11 @@
 			files = (
 				19162FEB1A5972CA00751C14 /* Main.storyboard in Resources */,
 				19219DDA19F24A69002D6742 /* Images.xcassets in Resources */,
-				195AF9291A6394B500AD6D56 /* home.png in Resources */,
 				196E1E0C1A25C60B00D0688D /* splash@2x.png in Resources */,
 				197621DF19F25E14005C8494 /* Calibri.ttf in Resources */,
 				19219DCC19F24A69002D6742 /* InfoPlist.strings in Resources */,
 				196E1E0B1A25C60B00D0688D /* splash.png in Resources */,
+				B7A0CBFF1A65480C002803B4 /* unitedLatinos.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,8 +390,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Steve Jones (GXCMNN84DL)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: 44Connections Corp (66QY56XQA9)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: 44Connections Corp (66QY56XQA9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Steve Jones (GXCMNN84DL)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -409,7 +409,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "788cd97c-d5d4-4ac0-a580-70907d58fc0b";
+				PROVISIONING_PROFILE = "e17010bb-954e-40ec-8cbc-bc7972b25de4";
 				SDKROOT = iphoneos;
 				STRINGS_FILE_OUTPUT_ENCODING = "UTF-16";
 			};
@@ -431,8 +431,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Steve Jones (GXCMNN84DL)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: 44Connections Corp (66QY56XQA9)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: 44Connections Corp (66QY56XQA9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Steve Jones (GXCMNN84DL)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -443,7 +443,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PROVISIONING_PROFILE = "788cd97c-d5d4-4ac0-a580-70907d58fc0b";
+				PROVISIONING_PROFILE = "e17010bb-954e-40ec-8cbc-bc7972b25de4";
 				SDKROOT = iphoneos;
 				STRINGS_FILE_OUTPUT_ENCODING = "UTF-16";
 				VALIDATE_PRODUCT = YES;
@@ -455,7 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Steve Jones (GXCMNN84DL)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: 44Connections Corp (66QY56XQA9)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Steve Jones (GXCMNN84DL)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -465,7 +465,7 @@
 				GCC_PREFIX_HEADER = "UFCW-5/UFCW 5-Prefix.pch";
 				INFOPLIST_FILE = "UFCW-5/UFCW 5-Info.plist";
 				PRODUCT_NAME = "UFCW 5";
-				PROVISIONING_PROFILE = "070d9352-8680-420a-a2ec-2f6285d7df90";
+				PROVISIONING_PROFILE = "e17010bb-954e-40ec-8cbc-bc7972b25de4";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -476,7 +476,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Steve Jones (GXCMNN84DL)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: 44Connections Corp (66QY56XQA9)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Steve Jones (GXCMNN84DL)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -486,7 +486,7 @@
 				GCC_PREFIX_HEADER = "UFCW-5/UFCW 5-Prefix.pch";
 				INFOPLIST_FILE = "UFCW-5/UFCW 5-Info.plist";
 				PRODUCT_NAME = "UFCW 5";
-				PROVISIONING_PROFILE = "070d9352-8680-420a-a2ec-2f6285d7df90";
+				PROVISIONING_PROFILE = "e17010bb-954e-40ec-8cbc-bc7972b25de4";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

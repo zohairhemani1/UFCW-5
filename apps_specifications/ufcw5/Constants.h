@@ -16,7 +16,7 @@
 #define OFFICE_LOCATION @"office_location.php"
 #define STAY_CONNECTED @"stay_connected.php"
 #define APP_ID @"1"
-#define LOGO_NAME @"logo.png"
+#define LOGO_NAME @"ufcw5_logo.png"
 #define DETAILED_NEWS_URL_SECOND_PARAMETER @"&&app_id="
 #define NAV_RED_COLOR 0
 #define NAV_GREEN_COLOR 43

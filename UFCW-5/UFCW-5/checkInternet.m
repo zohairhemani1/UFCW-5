@@ -34,7 +34,7 @@ UIAlertView *alertbox;
     [super viewDidLoad];
     first_time =YES;
     alertTime=YES;
-    hostActive = NO;
+    //hostActive = NO;
     
 	// Do any additional setup after loading the view.
 }
@@ -147,7 +147,7 @@ UIAlertView *alertbox;
     screenHeight = screenRect.size.height;
     
     progressing = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    progressing.frame = CGRectMake((screenWidth/2)-25, (screenHeight/2)-25, 50.0, 50.0);
+    progressing.frame = CGRectMake((screenWidth/2)-25, (screenHeight/2)-100, 50.0, 50.0);
     //progressing.center = self.view.center;
     [self.view addSubview:progressing];
     [progressing bringSubviewToFront:self.view];
