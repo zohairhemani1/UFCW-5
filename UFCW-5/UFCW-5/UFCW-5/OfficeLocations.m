@@ -10,15 +10,16 @@
 #import "WebService.h"
 #import "checkInternet.h"
 #import "Constants.h"
+#import "Map.h"
 
-@interface OfficeLocations (){
+@interface OfficeLocations ()
+{
     UILabel *OfficeTitle;
     UILabel *OfficeAddress;
     UILabel *OfficePhone;
     checkInternet *checkInternetObj;
     UIActivityIndicatorView *loader;
     NSArray *officeLocationArray;
-
 }
 
 @end
@@ -55,7 +56,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 // Update UI on main queue
                 
-                [self->officeLocations reloadData];
+                [self.office reloadData];
                 [loader stopAnimating];
             });
             
@@ -94,6 +95,9 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:
                 UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
     }
     
     OfficeTitle = [[UILabel alloc]initWithFrame:CGRectMake(20, 10, 200, 15)];
@@ -103,7 +107,7 @@
     [cell addSubview:OfficeTitle];
     
     
-    OfficeAddress = [[UILabel alloc] initWithFrame:CGRectMake(20, 30, 300, 35)];
+    OfficeAddress = [[UILabel alloc] initWithFrame:CGRectMake(20, 30, 270, 35)];
     OfficeAddress.text = [[officeLocationArray valueForKey:@"address"] objectAtIndex:indexPath.row];
     OfficeAddress.numberOfLines = 3;
     OfficeAddress.font = [UIFont fontWithName:@"Calibri" size:16];
@@ -115,10 +119,13 @@
     OfficePhone.font = [UIFont fontWithName:@"Calibri" size:16];
     [cell addSubview:OfficePhone];
     
-    
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"toMap" sender:self];
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -158,15 +165,17 @@
 }
 */
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    NSIndexPath *indexPath = [self.office indexPathForSelectedRow];
+    
+    if ([segue.identifier isEqualToString:@"toMap"]) {
+        Map *m = segue.destinationViewController;
+        m.address = [[officeLocationArray valueForKey:@"address"] objectAtIndex:indexPath.row];
+        m.office_name = [[officeLocationArray valueForKey:@"office_title"] objectAtIndex:indexPath.row];
+    }
 }
-*/
+
 
 @end

@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface OfficeLocations : UIViewController<UITableViewDataSource,
-UITableViewDelegate>{
-    IBOutlet UITableView *officeLocations;
-}
+UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *office;
 
 @end
