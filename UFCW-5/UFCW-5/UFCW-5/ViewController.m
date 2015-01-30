@@ -35,8 +35,8 @@
     self.logo_image.image = [UIImage imageNamed:LOGO_NAME];
     
     menuItemsArray = [[NSMutableArray alloc]initWithObjects:
-              @"Union News",@"Negotiation Updates",@"Member Resources",@"Upcoming Events",@"Stay Connected",@"Shop Union",@"Office Locations", nil];
-    MenuItemIcons = [[NSArray alloc] initWithObjects:@"news",@"negotiation",@"member",@"events",@"connected",@"shopunion",@"location", nil];
+              @"Union News",@"Negotiation Updates",@"Member Resources",@"Upcoming Events",@"Contact my Rep",@"Stay Connected",@"Shop Union",@"Office Locations", nil];
+    MenuItemIcons = [[NSArray alloc] initWithObjects:@"news",@"negotiation",@"member",@"events",@"connected",@"connected",@"shopunion",@"location", nil];
     
     [ImageView setBackgroundColor:[UIColor colorWithRed:NAV_RED_COLOR/255.0 green:NAV_GREEN_COLOR/255.0 blue:NAV_BLUE_COLOR/255.0 alpha:1.0]];
     
@@ -98,6 +98,10 @@
 {
     if(indexPath.row == 4)
     {
+        [self performSegueWithIdentifier:@"Contact_my_rep" sender:self];
+    }
+    else if(indexPath.row == 5)
+    {
         [self performSegueWithIdentifier:@"Stay Connected" sender:self];
     }
     else if(indexPath.row == 6)
@@ -114,7 +118,7 @@
     
     NSIndexPath *indexPath = [menuItems indexPathForSelectedRow];
     
-    if(indexPath.row != 4 && indexPath.row !=6)
+    if(indexPath.row != 4 && indexPath.row !=6 && indexPath.row !=5)
     {
         UnionNews *news = segue.destinationViewController;
         news.category = [MenuItemIcons objectAtIndex:indexPath.row];

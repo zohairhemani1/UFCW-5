@@ -15,12 +15,6 @@
 
 @interface Map (){
     checkInternet *c;
-    float srcLat;
-    float srcLon;
-    float destLat;
-    float destLon;
-    NSString *srcText;
-    NSString *destText;
     
     UIImage *img;
     NSString *profilePic ;

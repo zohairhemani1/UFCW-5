@@ -124,6 +124,20 @@
     return [[NewsUnionArray valueForKey:@"title"] objectAtIndex:section];
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    
+    UILabel *myLabel = [[UILabel alloc] init];
+    myLabel.frame = CGRectMake(5, 0, 320, 20);
+    myLabel.font = [UIFont boldSystemFontOfSize:13];
+    myLabel.text = [[NewsUnionArray valueForKey:@"title"] objectAtIndex:section];
+    
+    UIView *headerView = [[UIView alloc] init];
+    [headerView setBackgroundColor:[UIColor lightTextColor]];
+    [headerView addSubview:myLabel];
+    
+    return headerView;
+}
+
 #pragma mark - TableView delegate
 
 
