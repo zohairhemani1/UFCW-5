@@ -83,14 +83,14 @@ UIAlertView *alertbox;
         }
         case ReachableViaWiFi:
         {
-            NSLog(@"The internet is working via WIFI.");
+           // NSLog(@"The internet is working via WIFI.");
             internetActive = YES;
             
             break;
         }
         case ReachableViaWWAN:
         {
-            NSLog(@"The internet is working via WWAN.");
+            // NSLog(@"The internet is working via WWAN.");
             internetActive = YES;
             
             break;
@@ -120,14 +120,14 @@ UIAlertView *alertbox;
         }
         case ReachableViaWiFi:
         {
-            NSLog(@"The internet is working via WIFI.");
+           // NSLog(@"The internet is working via WIFI.");
             hostActive = YES;
            
             break;
         }
         case ReachableViaWWAN:
         {
-            NSLog(@"The internet is working via WWAN.");
+          //  NSLog(@"The internet is working via WWAN.");
             hostActive = YES;
             
             break;

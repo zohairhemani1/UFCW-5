@@ -23,6 +23,7 @@
     if([checkInternetObj internetstatus] == TRUE){
         NSLog(@"in condition %d",[checkInternetObj internetstatus]);
     NSURL *jsonFileUrl = [NSURL URLWithString:filepath];
+        NSLog(@"URL: %@", jsonFileUrl);
     
     // Create the NSURLConnection
     NSString * storedNumber = [[NSUserDefaults standardUserDefaults] stringForKey:@"password"];

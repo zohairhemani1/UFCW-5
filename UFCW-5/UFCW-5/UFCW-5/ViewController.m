@@ -35,8 +35,8 @@
     self.logo_image.image = [UIImage imageNamed:LOGO_NAME];
     
     menuItemsArray = [[NSMutableArray alloc]initWithObjects:
-              @"Union News",@"Negotiation Updates",@"Member Resources",@"Upcoming Events",@"Contact my Rep",@"Stay Connected",@"Shop Union",@"Office Locations", nil];
-    MenuItemIcons = [[NSArray alloc] initWithObjects:@"news",@"negotiation",@"member",@"events",@"connected",@"connected",@"shopunion",@"location", nil];
+              @"Union News",@"Negotiation Updates",@"Member Resources",@"Upcoming Events",@"Contact Representatives",@"Stay Connected",@"Office Locations",@"Shop Union", nil];
+    MenuItemIcons = [[NSArray alloc] initWithObjects:@"news",@"negotiation",@"member",@"events",@"contact",@"connected",@"location",@"union", nil];
     
     [ImageView setBackgroundColor:[UIColor colorWithRed:NAV_RED_COLOR/255.0 green:NAV_GREEN_COLOR/255.0 blue:NAV_BLUE_COLOR/255.0 alpha:1.0]];
     
@@ -106,7 +106,7 @@
     }
     else if(indexPath.row == 6)
     {
-        [self performSegueWithIdentifier:@"Offline Locations" sender:self];
+        [self performSegueWithIdentifier:@"Office Location" sender:self];
     }
     else
     {
@@ -122,6 +122,7 @@
     {
         UnionNews *news = segue.destinationViewController;
         news.category = [MenuItemIcons objectAtIndex:indexPath.row];
+        news.title = [menuItemsArray objectAtIndex:indexPath.row];
     }
 }
 

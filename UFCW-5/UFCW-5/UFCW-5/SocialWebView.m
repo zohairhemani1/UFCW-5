@@ -8,6 +8,7 @@
 
 #import "SocialWebView.h"
 #import "checkInternet.h"
+#import "StayConnected.h"
 
 @interface SocialWebView ()
 {
@@ -56,22 +57,8 @@
     
     NSString *fullURL;
     
-    if(viewNumber == 0)
-    {
-        fullURL = @"https://twitter.com";
-    }
-    else if (viewNumber == 1)
-    {
-        fullURL = @"https://www.facebook.com";
-    }
-    else if (viewNumber == 2)
-    {
-        fullURL = @"https://www.youtube.com";
-    }
-    else
-    {
-        fullURL = @"https://instagram.com";
-    }
+    fullURL = [[[StayConnected social_links_array_function] valueForKey:@"link"] objectAtIndex:viewNumber];
+    
     NSLog(@"url: %@", fullURL);
     NSURL *url = [NSURL URLWithString:fullURL];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];

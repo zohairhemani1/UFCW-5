@@ -15,6 +15,7 @@
 #define BASEURL_WEBDASHBOARD @"http://fajjemobile.info/ufcw5/mobile_app/"
 #define OFFICE_LOCATION @"office_location.php"
 #define STAY_CONNECTED @"stay_connected.php"
+#define SOCIAL_LINKS @"social_networks.php"
 #define APP_ID @"1"
 #define LOGO_NAME @"logo.png"
 #define DETAILED_NEWS_URL_SECOND_PARAMETER @"&&app_id="

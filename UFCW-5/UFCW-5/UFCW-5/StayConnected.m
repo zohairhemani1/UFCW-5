@@ -9,9 +9,12 @@
 #import "StayConnected.h"
 #import "SocialWebView.h"
 #import "checkInternet.h"
+#import "WebService.h"
+#import "Constants.h"
 
 
 @interface StayConnected (){
+    
     NSArray *stayConnectedArray;
     checkInternet *checkInternetObj;
     UIActivityIndicatorView *loader;
@@ -25,6 +28,18 @@
 @end
 
 @implementation StayConnected
+
+static NSArray *social_links_array;
+
+
++(NSArray *) social_links_array_function
+{
+    if(social_links_array == NULL)
+    {
+        social_links_array = [[NSArray alloc] init];
+    }
+    return social_links_array;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -44,7 +59,11 @@
     
     SocialItemsArray = [[NSMutableArray alloc]initWithObjects:
                       @"Twitter",@"Facebook",@"Youtube",@"Instagram",nil];
-    SocialItemIcons = [[NSArray alloc] initWithObjects:@"news",@"negotiation",@"member",@"events", nil];
+    SocialItemIcons = [[NSArray alloc] initWithObjects:@"twitter",@"facebook",@"youtube",@"youtube", nil];
+    
+    WebService *social_links = [[WebService alloc] init];
+    social_links_array = [social_links FilePath:BaseURL SOCIAL_LINKS parameterOne:APP_ID];
+    
     
 }
 
@@ -59,20 +78,19 @@
 #pragma mark - Table View Data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:
 (NSInteger)section{
-    return [SocialItemsArray count];
+    return [[StayConnected social_links_array_function] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:
 (NSIndexPath *)indexPath{
     
-    SocialIconImage = [UIImage imageNamed:[SocialItemIcons objectAtIndex:indexPath.row]];
+    SocialIconImage = [UIImage imageNamed:[[[StayConnected social_links_array_function] valueForKey:@"name"] objectAtIndex:indexPath.row]];
     
     tableView.separatorColor = [UIColor colorWithRed:204.0f/255.0f green:208.0f/255.0f blue:211.0f/255.0f alpha:1.0f];
     
     static NSString *cellIdentifier = @"cellID";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
-                             cellIdentifier];
+    UITableViewCell *cell;
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:
@@ -83,7 +101,7 @@
     
     NSString *stringForCell;
     
-    stringForCell= [SocialItemsArray objectAtIndex:indexPath.row];
+    stringForCell= [[[StayConnected social_links_array_function] valueForKey:@"name"] objectAtIndex:indexPath.row];
     
     SocialIconImageView = [[UIImageView alloc]initWithFrame:CGRectMake(15, 10, 25, 25)];
     
@@ -115,8 +133,7 @@
     SocialWebView *s = segue.destinationViewController;
     if([segue.identifier isEqualToString:@"callWebView"])
     {
-        s.webViewNumber = indexPath.row;
-        
+        s.webViewNumber = (int)indexPath.row;
         
     }
 }

@@ -127,8 +127,8 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
     UILabel *myLabel = [[UILabel alloc] init];
-    myLabel.frame = CGRectMake(5, 0, 320, 20);
-    myLabel.font = [UIFont boldSystemFontOfSize:13];
+    myLabel.frame = CGRectMake(15, 3, 300, 20);
+    myLabel.font = [UIFont boldSystemFontOfSize:14];
     myLabel.text = [[NewsUnionArray valueForKey:@"title"] objectAtIndex:section];
     
     UIView *headerView = [[UIView alloc] init];
