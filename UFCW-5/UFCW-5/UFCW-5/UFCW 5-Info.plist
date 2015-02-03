@@ -19,17 +19,6 @@
 			<key>UIPrerenderedIcon</key>
 			<false/>
 		</dict>
-		<key>UINewsstandIcon</key>
-		<dict>
-			<key>CFBundleIconFiles</key>
-			<array>
-				<string></string>
-			</array>
-			<key>UINewsstandBindingEdge</key>
-			<string>UINewsstandBindingEdgeLeft</string>
-			<key>UINewsstandBindingType</key>
-			<string>UINewsstandBindingTypeMagazine</string>
-		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
 	<string>com.44connections.ufcw</string>
@@ -44,7 +33,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.3</string>
+	<string>1.0.4</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
