@@ -57,12 +57,36 @@ static NSArray *social_links_array;
     self.stay_connected.delegate = self;
     self.stay_connected.dataSource = self;
     
+    checkInternetObj = [[checkInternet alloc] init];
+    [checkInternetObj viewWillAppear:YES];
+    
+    loader = [checkInternetObj indicatorprogress:loader];
+    [self.view addSubview:loader];
+    [loader bringSubviewToFront:self.view];
+    
     SocialItemsArray = [[NSMutableArray alloc]initWithObjects:
                       @"Twitter",@"Facebook",@"Youtube",@"Instagram",nil];
     SocialItemIcons = [[NSArray alloc] initWithObjects:@"twitter",@"facebook",@"youtube",@"youtube", nil];
     
-    WebService *social_links = [[WebService alloc] init];
-    social_links_array = [social_links FilePath:BaseURL SOCIAL_LINKS parameterOne:APP_ID];
+    dispatch_queue_t myqueue = dispatch_queue_create("myqueue", NULL);
+    dispatch_async(myqueue, ^(void) {
+        
+        [loader startAnimating];
+        if([checkInternetObj internetstatus] == TRUE){
+            WebService *social_links = [[WebService alloc] init];
+            social_links_array = [social_links FilePath:BaseURL SOCIAL_LINKS parameterOne:APP_ID];
+        }
+        //NSString *subString = [@"" substringToIndex:rangeOfYourString.location];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // Update UI on main queue
+            
+            [self.stay_connected reloadData];
+            [loader stopAnimating];
+        });
+        
+    });
+
+    
     
     
 }

@@ -22,6 +22,7 @@
     UILabel * phoneNumberTwo;
     UILabel * faxNumber;
     UILabel * email;
+
 }
 
 @end
@@ -40,7 +41,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+   
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -70,6 +71,18 @@
         });
         
     });
+    
+//    NSString *phNo = @"+919876543210";
+//    NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt:%@",phNo]];
+//    
+//    if ([[UIApplication sharedApplication] canOpenURL:phoneUrl]) {
+//        [[UIApplication sharedApplication] openURL:phoneUrl];
+//    } else
+//    {
+//        //calert = [[UIAlertView alloc]initWithTitle:@"Alert" message:@"Call facility is not available!!!" delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+//        //[calert show];
+//    }
+
 
 }
 
@@ -101,13 +114,14 @@
     
     UITableViewCell *cell;
     
-    if (cell == nil) {
+    if (cell == nil)
+    {
         cell = [[UITableViewCell alloc]initWithStyle:
                 UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
     name = [[UILabel alloc]initWithFrame:CGRectMake(20, 10, 200, 15)];
-    name.text = @"Zohair Hemani";
+    name.text = [[stayConnectedArray valueForKey:@"name"] objectAtIndex:indexPath.row];
     name.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:16];
     
     [cell addSubview:name];
@@ -121,10 +135,21 @@
     
     
     phoneNumberOne = [[UILabel alloc] initWithFrame:CGRectMake(20, 70, 200, 15)];
-    phoneNumberOne.text = [[stayConnectedArray valueForKey:@"phone_no1"] objectAtIndex:indexPath.row];
+    phoneNumberOne.text = [@"Cell: " stringByAppendingString:[[stayConnectedArray valueForKey:@"phone_no1"] objectAtIndex:indexPath.row]];
     phoneNumberOne.font= [UIFont fontWithName:@"Calibri" size:16];
     [cell addSubview:phoneNumberOne];
+
+    email = [[UILabel alloc] initWithFrame:CGRectMake(20, 90, 200, 15)];
+    email.text = [@"Email: " stringByAppendingString:[[stayConnectedArray valueForKey:@"email"] objectAtIndex:indexPath.row]];
+    email.font= [UIFont fontWithName:@"Calibri" size:16];
+    [cell addSubview:email];
     
+    faxNumber = [[UILabel alloc] initWithFrame:CGRectMake(20, 110, 200, 15)];
+    faxNumber.text = [@"Fax: " stringByAppendingString:[[stayConnectedArray valueForKey:@"fax_no"] objectAtIndex:indexPath.row]];
+    faxNumber.font= [UIFont fontWithName:@"Calibri" size:16];
+    [cell addSubview:faxNumber];
+
+
     
     return cell;
 }
