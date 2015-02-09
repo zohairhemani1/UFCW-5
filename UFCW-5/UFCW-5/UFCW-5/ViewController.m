@@ -31,6 +31,7 @@
     
     checkInternetObj = [[checkInternet alloc] init];
     [checkInternetObj viewWillAppear:YES];
+    [self setMenuTitle:@"Main Menu"];
     
     self.logo_image.image = [UIImage imageNamed:LOGO_NAME];
     
@@ -124,6 +125,19 @@
         news.category = [MenuItemIcons objectAtIndex:indexPath.row];
         news.title = [menuItemsArray objectAtIndex:indexPath.row];
     }
+}
+
+- (void)setMenuTitle:(NSString*)Title
+{
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
+    label.backgroundColor = [UIColor clearColor];
+    label.font = [UIFont boldSystemFontOfSize:18.0];
+    label.textAlignment = NSTextAlignmentCenter;
+    // ^-Use UITextAlignmentCenter for older SDKs.
+    label.textColor = [UIColor colorWithRed:NAV_TITLE_RED_COLOR/255.0 green:NAV_TITLE_GREEN_COLOR/255.0 blue:NAV_TITLE_BLUE_COLOR/255.0 alpha:1.0]; // change this color
+    self.navigationItem.titleView = label;
+    label.text = NSLocalizedString(Title, @"");
+    [label sizeToFit];
 }
 
 

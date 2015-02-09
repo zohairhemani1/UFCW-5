@@ -60,7 +60,7 @@
         [loader startAnimating];
         if([checkInternetObj internetstatus] == TRUE){
             WebService *stayConnectedRest = [[WebService alloc] init];
-            stayConnectedArray = [[NSArray alloc] initWithArray:[stayConnectedRest FilePath:BaseURL STAY_CONNECTED parameterOne:APP_ID]];
+            stayConnectedArray = [[NSArray alloc] initWithArray:[stayConnectedRest FilePath:BaseURL CONTACT_REPRESENTATIVES parameterOne:APP_ID]];
         }
         //NSString *subString = [@"" substringToIndex:rangeOfYourString.location];
         dispatch_async(dispatch_get_main_queue(), ^{

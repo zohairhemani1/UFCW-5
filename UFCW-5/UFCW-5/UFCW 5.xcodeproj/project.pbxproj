@@ -157,15 +157,7 @@
 		19219DB519F24A69002D6742 = {
 			isa = PBXGroup;
 			children = (
-				B7FA01091A78EB9900F049BB /* ufcwIcon.png */,
-				B72FB4A31A66BADD00C40825 /* MyLaunchImage-568h@2x.png */,
-				B72FB49F1A66B7D400C40825 /* MyLaunchImage.png */,
-				B72FB4A01A66B7D400C40825 /* MyLaunchImage@2x.png */,
-				B72FB49B1A66B59C00C40825 /* united_icon.png */,
-				B7A0CBFE1A65480C002803B4 /* unitedLatinos.png */,
-				196E1E091A25C60B00D0688D /* splash.png */,
-				196E1E0A1A25C60B00D0688D /* splash@2x.png */,
-				B7FA01071A78E7BA00F049BB /* splash-568h@2x.png */,
+				B7259AD31A88EBA2006C38B8 /* Images */,
 				191796F119F2557100D73A84 /* Fonts */,
 				19219DC719F24A69002D6742 /* UFCW-5 */,
 				19219DE619F24A69002D6742 /* UFCW-5Tests */,
@@ -245,6 +237,22 @@
 				19219DE919F24A69002D6742 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B7259AD31A88EBA2006C38B8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B7FA01091A78EB9900F049BB /* ufcwIcon.png */,
+				B72FB4A31A66BADD00C40825 /* MyLaunchImage-568h@2x.png */,
+				B72FB49F1A66B7D400C40825 /* MyLaunchImage.png */,
+				B72FB4A01A66B7D400C40825 /* MyLaunchImage@2x.png */,
+				B72FB49B1A66B59C00C40825 /* united_icon.png */,
+				B7A0CBFE1A65480C002803B4 /* unitedLatinos.png */,
+				196E1E091A25C60B00D0688D /* splash.png */,
+				196E1E0A1A25C60B00D0688D /* splash@2x.png */,
+				B7FA01071A78E7BA00F049BB /* splash-568h@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		DC21700C19FA35DA00207D57 /* Views */ = {
