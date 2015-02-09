@@ -98,7 +98,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="8kN-bh-3D8">
-                        <barButtonItem key="backBarButtonItem" title="Main Menu" id="R8m-2n-xFA"/>
+                        <barButtonItem key="backBarButtonItem" title="Back" id="R8m-2n-xFA"/>
                     </navigationItem>
                     <connections>
                         <outlet property="unionTable" destination="8NI-Tt-fXk" id="hzc-HF-dvk"/>
@@ -136,7 +136,7 @@
             </objects>
             <point key="canvasLocation" x="1710" y="45"/>
         </scene>
-        <!--Contact My Rep-->
+        <!--Contact Representatives-->
         <scene sceneID="R3h-Bm-vbz">
             <objects>
                 <viewController restorationIdentifier="Stay Connected" storyboardIdentifier="Stay Connected" id="dMx-Sz-Qwy" customClass="ContactMyRep" sceneMemberID="viewController">
@@ -160,9 +160,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Contact My Rep" id="wCW-U9-Miy">
-                        <barButtonItem key="backBarButtonItem" title="Main Menu" id="Bu3-gy-xzt"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Contact Representatives" id="wCW-U9-Miy"/>
                     <connections>
                         <outlet property="stayConnected" destination="6eI-R6-tfd" id="2NO-wB-kAa"/>
                     </connections>

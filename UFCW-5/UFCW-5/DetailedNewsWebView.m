@@ -34,7 +34,7 @@
     checkInternetObj = [[checkInternet alloc] init];
     [checkInternetObj viewWillAppear:YES];
     
-    self.title =@"hello";
+    //self.title =@"hello";
     
     NSLog(@"NEWS ID: %@",self.newsID);
     if([checkInternetObj internetstatus] == true){
