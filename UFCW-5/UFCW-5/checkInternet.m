@@ -75,7 +75,7 @@ UIAlertView *alertbox;
                 
                 alertTime= NO;
                 
-                alertbox = [[UIAlertView alloc]initWithTitle:@"Internet Issue" message:@" It seems your Internet connection is Down!!" delegate:self cancelButtonTitle:Nil otherButtonTitles:@"Try again", nil];
+                alertbox = [[UIAlertView alloc]initWithTitle:@"Network Problem" message:@" It seems your Internet connection is Down" delegate:self cancelButtonTitle:Nil otherButtonTitles:@"Try again", nil];
                 [alertbox show];
                 
             }
@@ -110,7 +110,7 @@ UIAlertView *alertbox;
                 
                 alertTime= NO;
             
-                alertbox = [[UIAlertView alloc]initWithTitle:@"Internet Issue" message:@" It seems your Internet connection is Down!!" delegate:self cancelButtonTitle:Nil otherButtonTitles:@"Try again", nil];
+                alertbox = [[UIAlertView alloc]initWithTitle:@"Network Issue" message:@" It seems your Internet connection is Down" delegate:self cancelButtonTitle:Nil otherButtonTitles:@"Try again", nil];
             [alertbox show];
             
             }

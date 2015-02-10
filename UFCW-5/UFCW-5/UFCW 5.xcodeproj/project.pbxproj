@@ -26,22 +26,14 @@
 		19219DD219F24A69002D6742 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19219DD119F24A69002D6742 /* AppDelegate.m */; };
 		19219DD819F24A69002D6742 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19219DD719F24A69002D6742 /* ViewController.m */; };
 		19219DDA19F24A69002D6742 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19219DD919F24A69002D6742 /* Images.xcassets */; };
-		196E1E0B1A25C60B00D0688D /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 196E1E091A25C60B00D0688D /* splash.png */; };
-		196E1E0C1A25C60B00D0688D /* splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 196E1E0A1A25C60B00D0688D /* splash@2x.png */; };
 		196E1E121A25D8EE00D0688D /* ContactMyRep.m in Sources */ = {isa = PBXBuildFile; fileRef = 196E1E111A25D8EE00D0688D /* ContactMyRep.m */; };
 		197621DF19F25E14005C8494 /* Calibri.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 197621DE19F25E14005C8494 /* Calibri.ttf */; };
 		19E8DCD21A0B9A1200A20898 /* OfficeLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E8DCD11A0B9A1200A20898 /* OfficeLocations.m */; };
-		B72FB49E1A66B59C00C40825 /* united_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B72FB49B1A66B59C00C40825 /* united_icon.png */; };
-		B72FB4A11A66B7D400C40825 /* MyLaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = B72FB49F1A66B7D400C40825 /* MyLaunchImage.png */; };
-		B72FB4A21A66B7D400C40825 /* MyLaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B72FB4A01A66B7D400C40825 /* MyLaunchImage@2x.png */; };
-		B72FB4A41A66BADD00C40825 /* MyLaunchImage-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B72FB4A31A66BADD00C40825 /* MyLaunchImage-568h@2x.png */; };
+		B7259AD51A88EEE3006C38B8 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = B7259AD41A88EEE3006C38B8 /* Images */; };
 		B771CFAD1A78C7F800B3982C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B771CFAC1A78C7F800B3982C /* MapKit.framework */; };
 		B773ADAB1A7BD2A000127E5B /* StayConnected.m in Sources */ = {isa = PBXBuildFile; fileRef = B773ADAA1A7BD2A000127E5B /* StayConnected.m */; };
 		B773ADAE1A7BDCD200127E5B /* SocialWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = B773ADAD1A7BDCD200127E5B /* SocialWebView.m */; };
 		B777613B1A77F296008C2C00 /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = B777613A1A77F296008C2C00 /* Map.m */; };
-		B7A0CBFF1A65480C002803B4 /* unitedLatinos.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A0CBFE1A65480C002803B4 /* unitedLatinos.png */; };
-		B7FA01081A78E7BA00F049BB /* splash-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FA01071A78E7BA00F049BB /* splash-568h@2x.png */; };
-		B7FA010A1A78EB9900F049BB /* ufcwIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FA01091A78EB9900F049BB /* ufcwIcon.png */; };
 		DC05E85919F6B38C00944CDB /* UnionNews.m in Sources */ = {isa = PBXBuildFile; fileRef = DC05E85819F6B38C00944CDB /* UnionNews.m */; };
 		DC21700A19FA35CF00207D57 /* checkInternet.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21700719FA35CF00207D57 /* checkInternet.m */; };
 		DC21700B19FA35CF00207D57 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21700919FA35CF00207D57 /* Reachability.m */; };
@@ -81,18 +73,13 @@
 		19219DE819F24A69002D6742 /* UFCW 5Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UFCW 5Tests-Info.plist"; sourceTree = "<group>"; };
 		19219DEA19F24A69002D6742 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		19219DEC19F24A69002D6742 /* UFCW_5Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UFCW_5Tests.m; sourceTree = "<group>"; };
-		196E1E091A25C60B00D0688D /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
-		196E1E0A1A25C60B00D0688D /* splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash@2x.png"; sourceTree = "<group>"; };
 		196E1E101A25D8EE00D0688D /* ContactMyRep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactMyRep.h; sourceTree = "<group>"; };
 		196E1E111A25D8EE00D0688D /* ContactMyRep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactMyRep.m; sourceTree = "<group>"; };
 		197621DE19F25E14005C8494 /* Calibri.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Calibri.ttf; sourceTree = "<group>"; };
 		199F61BC1A612D95002FA3CA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19E8DCD01A0B9A1200A20898 /* OfficeLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfficeLocations.h; sourceTree = "<group>"; };
 		19E8DCD11A0B9A1200A20898 /* OfficeLocations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfficeLocations.m; sourceTree = "<group>"; };
-		B72FB49B1A66B59C00C40825 /* united_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = united_icon.png; sourceTree = "<group>"; };
-		B72FB49F1A66B7D400C40825 /* MyLaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyLaunchImage.png; sourceTree = "<group>"; };
-		B72FB4A01A66B7D400C40825 /* MyLaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MyLaunchImage@2x.png"; sourceTree = "<group>"; };
-		B72FB4A31A66BADD00C40825 /* MyLaunchImage-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MyLaunchImage-568h@2x.png"; sourceTree = "<group>"; };
+		B7259AD41A88EEE3006C38B8 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		B771CFAC1A78C7F800B3982C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B773ADA91A7BD26E00127E5B /* StayConnected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StayConnected.h; sourceTree = "<group>"; };
 		B773ADAA1A7BD2A000127E5B /* StayConnected.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StayConnected.m; sourceTree = "<group>"; };
@@ -100,9 +87,6 @@
 		B773ADAD1A7BDCD200127E5B /* SocialWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialWebView.m; sourceTree = "<group>"; };
 		B77761391A77F296008C2C00 /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
 		B777613A1A77F296008C2C00 /* Map.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Map.m; sourceTree = "<group>"; };
-		B7A0CBFE1A65480C002803B4 /* unitedLatinos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unitedLatinos.png; sourceTree = "<group>"; };
-		B7FA01071A78E7BA00F049BB /* splash-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-568h@2x.png"; sourceTree = "<group>"; };
-		B7FA01091A78EB9900F049BB /* ufcwIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ufcwIcon.png; sourceTree = "<group>"; };
 		DC05E85719F6B38C00944CDB /* UnionNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnionNews.h; path = ../UnionNews.h; sourceTree = "<group>"; };
 		DC05E85819F6B38C00944CDB /* UnionNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnionNews.m; path = ../UnionNews.m; sourceTree = "<group>"; };
 		DC21700619FA35CF00207D57 /* checkInternet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = checkInternet.h; path = ../checkInternet.h; sourceTree = "<group>"; };
@@ -157,7 +141,6 @@
 		19219DB519F24A69002D6742 = {
 			isa = PBXGroup;
 			children = (
-				B7259AD31A88EBA2006C38B8 /* Images */,
 				191796F119F2557100D73A84 /* Fonts */,
 				19219DC719F24A69002D6742 /* UFCW-5 */,
 				19219DE619F24A69002D6742 /* UFCW-5Tests */,
@@ -214,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				19219DC919F24A69002D6742 /* UFCW 5-Info.plist */,
+				B7259AD41A88EEE3006C38B8 /* Images */,
 				19219DCA19F24A69002D6742 /* InfoPlist.strings */,
 				19219DCD19F24A69002D6742 /* main.m */,
 				19219DCF19F24A69002D6742 /* UFCW 5-Prefix.pch */,
@@ -237,22 +221,6 @@
 				19219DE919F24A69002D6742 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		B7259AD31A88EBA2006C38B8 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				B7FA01091A78EB9900F049BB /* ufcwIcon.png */,
-				B72FB4A31A66BADD00C40825 /* MyLaunchImage-568h@2x.png */,
-				B72FB49F1A66B7D400C40825 /* MyLaunchImage.png */,
-				B72FB4A01A66B7D400C40825 /* MyLaunchImage@2x.png */,
-				B72FB49B1A66B59C00C40825 /* united_icon.png */,
-				B7A0CBFE1A65480C002803B4 /* unitedLatinos.png */,
-				196E1E091A25C60B00D0688D /* splash.png */,
-				196E1E0A1A25C60B00D0688D /* splash@2x.png */,
-				B7FA01071A78E7BA00F049BB /* splash-568h@2x.png */,
-			);
-			name = Images;
 			sourceTree = "<group>";
 		};
 		DC21700C19FA35DA00207D57 /* Views */ = {
@@ -359,18 +327,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				19162FEB1A5972CA00751C14 /* Main.storyboard in Resources */,
-				B7FA01081A78E7BA00F049BB /* splash-568h@2x.png in Resources */,
-				B72FB4A11A66B7D400C40825 /* MyLaunchImage.png in Resources */,
+				B7259AD51A88EEE3006C38B8 /* Images in Resources */,
 				19219DDA19F24A69002D6742 /* Images.xcassets in Resources */,
-				B7FA010A1A78EB9900F049BB /* ufcwIcon.png in Resources */,
-				196E1E0C1A25C60B00D0688D /* splash@2x.png in Resources */,
-				B72FB4A41A66BADD00C40825 /* MyLaunchImage-568h@2x.png in Resources */,
 				197621DF19F25E14005C8494 /* Calibri.ttf in Resources */,
-				B72FB4A21A66B7D400C40825 /* MyLaunchImage@2x.png in Resources */,
 				19219DCC19F24A69002D6742 /* InfoPlist.strings in Resources */,
-				196E1E0B1A25C60B00D0688D /* splash.png in Resources */,
-				B7A0CBFF1A65480C002803B4 /* unitedLatinos.png in Resources */,
-				B72FB49E1A66B59C00C40825 /* united_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,7 +478,7 @@
 				GCC_PREFIX_HEADER = "UFCW-5/UFCW 5-Prefix.pch";
 				INFOPLIST_FILE = "UFCW-5/UFCW 5-Info.plist";
 				PRODUCT_NAME = "UFCW 5";
-				PROVISIONING_PROFILE = "9fafd105-1d65-491e-bfe3-9330b2d050f7";
+				PROVISIONING_PROFILE = "d0025b8c-09a2-45c6-9d09-81b461550b43";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -538,7 +498,7 @@
 				GCC_PREFIX_HEADER = "UFCW-5/UFCW 5-Prefix.pch";
 				INFOPLIST_FILE = "UFCW-5/UFCW 5-Info.plist";
 				PRODUCT_NAME = "UFCW 5";
-				PROVISIONING_PROFILE = "9fafd105-1d65-491e-bfe3-9330b2d050f7";
+				PROVISIONING_PROFILE = "d0025b8c-09a2-45c6-9d09-81b461550b43";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

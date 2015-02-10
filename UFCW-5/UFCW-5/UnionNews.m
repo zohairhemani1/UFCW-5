@@ -14,7 +14,7 @@
 #import <CoreText/CoreText.h>
 
 @interface UnionNews (){
-    NSArray * NewsUnionArray;
+    NSMutableArray * NewsUnionArray;
     checkInternet *checkInternetObj;
     UIActivityIndicatorView *loader;
     NSString *descriptionFromJson;
@@ -67,7 +67,7 @@
         if([checkInternetObj internetstatus] == TRUE && [checkInternetObj hoststatus]== TRUE){
             WebService *NewsUnionService = [[WebService alloc] init];
             NSLog(@"the category is %@",self.category);
-            NewsUnionArray = [[NSArray alloc] initWithArray:[NewsUnionService FilePath:BaseURL NEWS_CATEGORY parameterOne:self.category parameterTwo:APP_ID]];
+            NewsUnionArray = [[NSMutableArray alloc] initWithArray:[NewsUnionService FilePath:BaseURL NEWS_CATEGORY parameterOne:self.category parameterTwo:APP_ID]];
         }
         //NSString *subString = [@"" substringToIndex:rangeOfYourString.location];
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -112,9 +112,12 @@
         cell = [[UITableViewCell alloc]initWithStyle:
                 UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    
+
     descriptionFromJson = [[NewsUnionArray valueForKey:@"description"] objectAtIndex:indexPath.section];
+    if(![descriptionFromJson isKindOfClass:[NSNull class]])
+    {
         cell.textLabel.text = descriptionFromJson;
+    }
     return cell;
 }
 
@@ -129,7 +132,10 @@
     UILabel *myLabel = [[UILabel alloc] init];
     myLabel.frame = CGRectMake(15, 3, 300, 20);
     myLabel.font = [UIFont boldSystemFontOfSize:14];
-    myLabel.text = [[NewsUnionArray valueForKey:@"title"] objectAtIndex:section];
+    if(![[[NewsUnionArray valueForKey:@"title"] objectAtIndex:section] isKindOfClass:[NSNull class]])
+    {
+        myLabel.text = [[NewsUnionArray valueForKey:@"title"] objectAtIndex:section];
+    }
     
     UIView *headerView = [[UIView alloc] init];
     [headerView setBackgroundColor:[UIColor lightTextColor]];

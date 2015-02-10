@@ -27,7 +27,7 @@
  #define NAV_GREEN_COLOR 43
  #define NAV_BLUE_COLOR 127
  #define LOGO_NAME @"logo_ufcw5"
- 
+ #define UlUpdateArrayValue @"Negotiation Updates"
  */
 
 /*
@@ -44,5 +44,5 @@
 #define NAV_TITLE_RED_COLOR 0
 #define NAV_TITLE_GREEN_COLOR 73
 #define NAV_TITLE_BLUE_COLOR 144
-
+#define UlUpdateArrayValue @"UL Updates"
 #endif

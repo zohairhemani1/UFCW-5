@@ -11,11 +11,11 @@
 
 @implementation WebService{
     checkInternet *checkInternetObj;
-    NSArray *jsonArray;
+    NSMutableArray *jsonArray;
 }
 
 
--(NSArray*)FilePath:(NSString*)filepath parameterOne:(NSString*)parameterOne parameterTwo:(NSString*)parameterTwo parameterThree:(NSString*)parameterThree
+-(NSMutableArray*)FilePath:(NSString*)filepath parameterOne:(NSString*)parameterOne parameterTwo:(NSString*)parameterTwo parameterThree:(NSString*)parameterThree
 {
     checkInternetObj = [[checkInternet alloc] init];
     NSLog(@"out of condition %d",[checkInternetObj internetstatus]);
@@ -57,15 +57,15 @@
     
 }
 
--(NSArray*)FilePath:(NSString*)filepath parameterOne:(NSString*)parameterOne
+-(NSMutableArray*)FilePath:(NSString*)filepath parameterOne:(NSString*)parameterOne
 {
-    NSArray * responseArray = [self FilePath:filepath parameterOne:parameterOne parameterTwo:nil parameterThree:nil];
+    NSMutableArray * responseArray = [self FilePath:filepath parameterOne:parameterOne parameterTwo:nil parameterThree:nil];
     return responseArray;
 }
 
--(NSArray*)FilePath:(NSString*)filepath parameterOne:(NSString*)parameterOne parameterTwo:(NSString*)parameterTwo
+-(NSMutableArray*)FilePath:(NSString*)filepath parameterOne:(NSString*)parameterOne parameterTwo:(NSString*)parameterTwo
 {
-    NSArray * responseArray = [self FilePath:filepath parameterOne:parameterOne parameterTwo:parameterTwo parameterThree:nil];
+    NSMutableArray * responseArray = [self FilePath:filepath parameterOne:parameterOne parameterTwo:parameterTwo parameterThree:nil];
     return responseArray;
 }
 

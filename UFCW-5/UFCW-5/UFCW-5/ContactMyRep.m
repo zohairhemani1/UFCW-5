@@ -18,10 +18,10 @@
     UILabel * name;
     UILabel * designation;
     UILabel * address;
-    UILabel * phoneNumberOne;
-    UILabel * phoneNumberTwo;
-    UILabel * faxNumber;
-    UILabel * email;
+    UIButton * phoneNumberOne;
+    UIButton * phoneNumberTwo;
+    UIButton * faxNumber;
+    UIButton * email;
 
 }
 
@@ -109,6 +109,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+   /* UITapGestureRecognizer *EmailTapRecognizer = [[UITapGestureRecognizer alloc]
+                                                  initWithTarget:self action:@selector(emailTap:)];
+    [EmailTapRecognizer setNumberOfTouchesRequired:1];
+    [EmailTapRecognizer setDelegate:self];
+    
+    UITapGestureRecognizer *CallTapRecognizer = [[UITapGestureRecognizer alloc]
+                                             initWithTarget:self action:@selector(callTap)];
+    [CallTapRecognizer setNumberOfTouchesRequired:1];
+    [CallTapRecognizer setDelegate:self];
+    
+    */
     
     static NSString *cellIdentifier = @"Stay Connected";
     
@@ -134,27 +145,99 @@
     [cell addSubview:address];
     
     
-    phoneNumberOne = [[UILabel alloc] initWithFrame:CGRectMake(20, 70, 200, 15)];
-    phoneNumberOne.text = [@"Cell: " stringByAppendingString:[[stayConnectedArray valueForKey:@"phone_no1"] objectAtIndex:indexPath.row]];
-    phoneNumberOne.font= [UIFont fontWithName:@"Calibri" size:16];
+    phoneNumberOne = [[UIButton alloc] initWithFrame:CGRectMake(20, 70, 200, 15)];
+    [phoneNumberOne setTitle:[@"Cell: " stringByAppendingString:[[stayConnectedArray valueForKey:@"phone_no1"] objectAtIndex:indexPath.row]] forState:normal];
+        [phoneNumberOne setTitleColor:[UIColor blackColor] forState:normal];
+    phoneNumberOne.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    phoneNumberOne.titleLabel.font= [UIFont fontWithName:@"Calibri" size:16];
+    //[phoneNumberOne addGestureRecognizer:CallTapRecognizer];
+    [phoneNumberOne addTarget:self action:@selector(callTap:) forControlEvents:UIControlEventTouchUpInside];
+    [phoneNumberOne setTag:indexPath.row];
     [cell addSubview:phoneNumberOne];
 
-    email = [[UILabel alloc] initWithFrame:CGRectMake(20, 90, 200, 15)];
-    email.text = [@"Email: " stringByAppendingString:[[stayConnectedArray valueForKey:@"email"] objectAtIndex:indexPath.row]];
-    email.font= [UIFont fontWithName:@"Calibri" size:16];
+    email = [[UIButton alloc] initWithFrame:CGRectMake(20, 90, 200, 15)];
+    [email setTitle:[@"Email: " stringByAppendingString:[[stayConnectedArray valueForKey:@"email"] objectAtIndex:indexPath.row]] forState:UIControlStateNormal];
+    email.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    [email setTitleColor:[UIColor blackColor] forState:normal];
+    email.titleLabel.font = [UIFont fontWithName:@"Calibri" size:16];
+    [email addTarget:self action:@selector(emailTap:) forControlEvents:UIControlEventTouchUpInside];
+    [email setTag:indexPath.row];
+    
+    //[email addGestureRecognizer:EmailTapRecognizer];
     [cell addSubview:email];
     
-    faxNumber = [[UILabel alloc] initWithFrame:CGRectMake(20, 110, 200, 15)];
-    faxNumber.text = [@"Fax: " stringByAppendingString:[[stayConnectedArray valueForKey:@"fax_no"] objectAtIndex:indexPath.row]];
-    faxNumber.font= [UIFont fontWithName:@"Calibri" size:16];
+    faxNumber = [[UIButton alloc] initWithFrame:CGRectMake(20, 110, 200, 15)];
+    [faxNumber setTitle:[@"Fax: " stringByAppendingString:[[stayConnectedArray valueForKey:@"fax_no"] objectAtIndex:indexPath.row]] forState:normal];
+        [faxNumber setTitleColor:[UIColor blackColor] forState:normal];
+    faxNumber.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    faxNumber.titleLabel.font= [UIFont fontWithName:@"Calibri" size:16];
     [cell addSubview:faxNumber];
-
-
     
     return cell;
 }
 
+-(void)emailTap :(id)sender{
+    NSLog(@"tag number is = %d",[sender tag]);
+    //NSLog(@"in email part");
+    // Email Subject
+    NSString *emailTitle = @"";
+    // Email Content
+    NSString *messageBody = @"";
+    // To address
+    NSString *email_recipent = [[stayConnectedArray valueForKey:@"email"] objectAtIndex:[sender tag]];
+    NSArray *toRecipents = [NSArray arrayWithObject:email_recipent];
+    
+    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+    mc.mailComposeDelegate = self;
+    [mc setSubject:emailTitle];
+    [mc setMessageBody:messageBody isHTML:NO];
+    [mc setToRecipients:toRecipents];
+    
+    // Present mail view controller on screen
+    [self presentViewController:mc animated:YES completion:NULL];
+    
+}
 
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Mail cancelled");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Mail saved");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Mail sent");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            break;
+        default:
+            break;
+    }
+    
+    // Close the Mail Interface
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+-(void)callTap:(id)sender {
+    
+    NSString *call_reipent = [[stayConnectedArray valueForKey:@"phone_no1"] objectAtIndex:[sender tag]];
+    
+    call_reipent = [call_reipent stringByReplacingOccurrencesOfString:@"(" withString:@""];
+    call_reipent = [call_reipent stringByReplacingOccurrencesOfString:@")" withString:@""];
+    call_reipent = [call_reipent stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    call_reipent = [call_reipent stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    
+    call_reipent = [@"telprompt://" stringByAppendingString:call_reipent];
+    
+    NSLog(@"call rep: %@", call_reipent);
+    
+    NSURL *url = [NSURL URLWithString:call_reipent];
+    [[UIApplication  sharedApplication] openURL:url];
+}
 /*
 #pragma mark - Navigation
 

@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
 @interface ContactMyRep : UIViewController<UITableViewDataSource,
-UITableViewDelegate>{
+UITableViewDelegate,MFMailComposeViewControllerDelegate,UIGestureRecognizerDelegate>{
     IBOutlet UITableView *stayConnected;
 }
 

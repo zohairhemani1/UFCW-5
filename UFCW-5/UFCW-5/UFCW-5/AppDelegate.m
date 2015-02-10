@@ -33,7 +33,7 @@
     //-- Set Notification
     
     //for back button text colour//
-    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0]];
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:NAV_TITLE_RED_COLOR/255.0 green:NAV_TITLE_GREEN_COLOR/255.0 blue:NAV_TITLE_BLUE_COLOR/255.0 alpha:1.0]];
     
     //for navigation bar colour//
     [[UINavigationBar appearance]setBarTintColor:[UIColor colorWithRed:NAV_RED_COLOR/255.0 green:NAV_GREEN_COLOR/255.0 blue:NAV_BLUE_COLOR/255.0 alpha:1.0]];
