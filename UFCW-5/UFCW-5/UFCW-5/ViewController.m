@@ -11,6 +11,7 @@
 #import "UnionNews.h"
 #import "Constants.h"
 #import "checkInternet.h"
+#import "ExtendedTableView.h"
 
 @interface ViewController ()
 {
@@ -38,7 +39,7 @@
     
     menuItemsArray = [[NSMutableArray alloc]initWithObjects:
               listViewItem1,listViewItem2,listViewItem3,listViewItem4,listViewItem5,listViewItem6,listViewItem7,listViewItem8,listViewItem9, nil];
-    MenuItemIcons = [[NSArray alloc] initWithObjects:@"news",@"negotiation",@"member",@"events",@"contact",@"connected",@"location",@"union",@"union", nil];
+    MenuItemIcons = [[NSArray alloc] initWithObjects:@"news",@"negotiation",@"member",@"member",@"connected",@"member",@"contact",@"union",@"events", nil];
     
     [ImageView setBackgroundColor:[UIColor colorWithRed:NAV_RED_COLOR/255.0 green:NAV_GREEN_COLOR/255.0 blue:NAV_BLUE_COLOR/255.0 alpha:1.0]];
     
@@ -91,23 +92,23 @@
     return cell;
 }
 
-
-#pragma mark - TableView delegate
-
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.row == 4)
+    if(indexPath.row == 5)
     {
         [self performSegueWithIdentifier:@"Contact_my_rep" sender:self];
     }
-    else if(indexPath.row == 5)
+    else if(indexPath.row == 4)
     {
         [self performSegueWithIdentifier:@"Stay Connected" sender:self];
     }
     else if(indexPath.row == 6)
     {
         [self performSegueWithIdentifier:@"Office Location" sender:self];
+    }
+    else if(indexPath.row == 1 || indexPath.row == 2 || indexPath.row ==3)
+    {
+        [self performSegueWithIdentifier:@"MemberResources" sender:self];
     }
     else
     {
@@ -119,7 +120,14 @@
     
     NSIndexPath *indexPath = [menuItems indexPathForSelectedRow];
     
-    if(indexPath.row != 4 && indexPath.row !=6 && indexPath.row !=5)
+    if(indexPath.row >=1 && indexPath.row <=3)
+    {
+        ExtendedTableView *e = segue.destinationViewController;
+        NSString *theValue = [NSString stringWithFormat:@"%d",(int)(indexPath.row +1)];
+        e.index = theValue;
+        NSLog(@"the is is %@",theValue);
+    }
+    if(indexPath.row >6)
     {
         UnionNews *news = segue.destinationViewController;
         news.category = [MenuItemIcons objectAtIndex:indexPath.row];
