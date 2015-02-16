@@ -177,7 +177,7 @@
 }
 
 -(void)emailTap :(id)sender{
-    NSLog(@"tag number is = %d",[sender tag]);
+    NSLog(@"tag number is = %ld",(long)[sender tag]);
     //NSLog(@"in email part");
     // Email Subject
     NSString *emailTitle = @"";

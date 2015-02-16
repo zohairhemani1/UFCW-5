@@ -13,12 +13,12 @@
 #import "DetailedNewsWebView.h"
 #import <CoreText/CoreText.h>
 
-@interface UnionNews (){
+@interface UnionNews ()
+{
     NSMutableArray * NewsUnionArray;
     checkInternet *checkInternetObj;
     UIActivityIndicatorView *loader;
     NSString *descriptionFromJson;
-   
 }
 
 @end

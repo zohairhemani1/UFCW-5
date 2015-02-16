@@ -29,11 +29,14 @@
 		196E1E121A25D8EE00D0688D /* ContactMyRep.m in Sources */ = {isa = PBXBuildFile; fileRef = 196E1E111A25D8EE00D0688D /* ContactMyRep.m */; };
 		197621DF19F25E14005C8494 /* Calibri.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 197621DE19F25E14005C8494 /* Calibri.ttf */; };
 		19E8DCD21A0B9A1200A20898 /* OfficeLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E8DCD11A0B9A1200A20898 /* OfficeLocations.m */; };
-		B7259AD51A88EEE3006C38B8 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = B7259AD41A88EEE3006C38B8 /* Images */; };
+		B74254101A8B9E8700AD2AD8 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = B742540D1A8B9E8700AD2AD8 /* splash.png */; };
+		B74254111A8B9E8700AD2AD8 /* splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B742540E1A8B9E8700AD2AD8 /* splash@2x.png */; };
+		B742541A1A8BAC5A00AD2AD8 /* icons.png in Resources */ = {isa = PBXBuildFile; fileRef = B74254191A8BAC5A00AD2AD8 /* icons.png */; };
 		B771CFAD1A78C7F800B3982C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B771CFAC1A78C7F800B3982C /* MapKit.framework */; };
 		B773ADAB1A7BD2A000127E5B /* StayConnected.m in Sources */ = {isa = PBXBuildFile; fileRef = B773ADAA1A7BD2A000127E5B /* StayConnected.m */; };
 		B773ADAE1A7BDCD200127E5B /* SocialWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = B773ADAD1A7BDCD200127E5B /* SocialWebView.m */; };
 		B777613B1A77F296008C2C00 /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = B777613A1A77F296008C2C00 /* Map.m */; };
+		B7779EC31A91C6EC0029E1CA /* splash-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7779EC21A91C6EC0029E1CA /* splash-568h@2x.png */; };
 		DC05E85919F6B38C00944CDB /* UnionNews.m in Sources */ = {isa = PBXBuildFile; fileRef = DC05E85819F6B38C00944CDB /* UnionNews.m */; };
 		DC21700A19FA35CF00207D57 /* checkInternet.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21700719FA35CF00207D57 /* checkInternet.m */; };
 		DC21700B19FA35CF00207D57 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21700919FA35CF00207D57 /* Reachability.m */; };
@@ -79,7 +82,9 @@
 		199F61BC1A612D95002FA3CA /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19E8DCD01A0B9A1200A20898 /* OfficeLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfficeLocations.h; sourceTree = "<group>"; };
 		19E8DCD11A0B9A1200A20898 /* OfficeLocations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfficeLocations.m; sourceTree = "<group>"; };
-		B7259AD41A88EEE3006C38B8 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
+		B742540D1A8B9E8700AD2AD8 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash.png; path = "UFCW-5/Images/splash.png"; sourceTree = "<group>"; };
+		B742540E1A8B9E8700AD2AD8 /* splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "splash@2x.png"; path = "UFCW-5/Images/splash@2x.png"; sourceTree = "<group>"; };
+		B74254191A8BAC5A00AD2AD8 /* icons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icons.png; path = "UFCW-5/Images/icons.png"; sourceTree = "<group>"; };
 		B771CFAC1A78C7F800B3982C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B773ADA91A7BD26E00127E5B /* StayConnected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StayConnected.h; sourceTree = "<group>"; };
 		B773ADAA1A7BD2A000127E5B /* StayConnected.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StayConnected.m; sourceTree = "<group>"; };
@@ -87,6 +92,7 @@
 		B773ADAD1A7BDCD200127E5B /* SocialWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialWebView.m; sourceTree = "<group>"; };
 		B77761391A77F296008C2C00 /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
 		B777613A1A77F296008C2C00 /* Map.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Map.m; sourceTree = "<group>"; };
+		B7779EC21A91C6EC0029E1CA /* splash-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "splash-568h@2x.png"; path = "UFCW-5/Images/splash-568h@2x.png"; sourceTree = "<group>"; };
 		DC05E85719F6B38C00944CDB /* UnionNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnionNews.h; path = ../UnionNews.h; sourceTree = "<group>"; };
 		DC05E85819F6B38C00944CDB /* UnionNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnionNews.m; path = ../UnionNews.m; sourceTree = "<group>"; };
 		DC21700619FA35CF00207D57 /* checkInternet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = checkInternet.h; path = ../checkInternet.h; sourceTree = "<group>"; };
@@ -141,6 +147,7 @@
 		19219DB519F24A69002D6742 = {
 			isa = PBXGroup;
 			children = (
+				B74254121A8B9EA400AD2AD8 /* Images */,
 				191796F119F2557100D73A84 /* Fonts */,
 				19219DC719F24A69002D6742 /* UFCW-5 */,
 				19219DE619F24A69002D6742 /* UFCW-5Tests */,
@@ -197,7 +204,6 @@
 			isa = PBXGroup;
 			children = (
 				19219DC919F24A69002D6742 /* UFCW 5-Info.plist */,
-				B7259AD41A88EEE3006C38B8 /* Images */,
 				19219DCA19F24A69002D6742 /* InfoPlist.strings */,
 				19219DCD19F24A69002D6742 /* main.m */,
 				19219DCF19F24A69002D6742 /* UFCW 5-Prefix.pch */,
@@ -221,6 +227,17 @@
 				19219DE919F24A69002D6742 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B74254121A8B9EA400AD2AD8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B7779EC21A91C6EC0029E1CA /* splash-568h@2x.png */,
+				B74254191A8BAC5A00AD2AD8 /* icons.png */,
+				B742540D1A8B9E8700AD2AD8 /* splash.png */,
+				B742540E1A8B9E8700AD2AD8 /* splash@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		DC21700C19FA35DA00207D57 /* Views */ = {
@@ -326,10 +343,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B742541A1A8BAC5A00AD2AD8 /* icons.png in Resources */,
 				19162FEB1A5972CA00751C14 /* Main.storyboard in Resources */,
-				B7259AD51A88EEE3006C38B8 /* Images in Resources */,
+				B7779EC31A91C6EC0029E1CA /* splash-568h@2x.png in Resources */,
+				B74254101A8B9E8700AD2AD8 /* splash.png in Resources */,
 				19219DDA19F24A69002D6742 /* Images.xcassets in Resources */,
 				197621DF19F25E14005C8494 /* Calibri.ttf in Resources */,
+				B74254111A8B9E8700AD2AD8 /* splash@2x.png in Resources */,
 				19219DCC19F24A69002D6742 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,8 +488,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Steve Jones (GXCMNN84DL)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Steve Jones (GXCMNN84DL)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: 44Connections Corp (66QY56XQA9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: 44Connections Corp (66QY56XQA9)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -478,7 +498,7 @@
 				GCC_PREFIX_HEADER = "UFCW-5/UFCW 5-Prefix.pch";
 				INFOPLIST_FILE = "UFCW-5/UFCW 5-Info.plist";
 				PRODUCT_NAME = "UFCW 5";
-				PROVISIONING_PROFILE = "d0025b8c-09a2-45c6-9d09-81b461550b43";
+				PROVISIONING_PROFILE = "e56f5b6a-ed50-407a-b6ce-8e5167939f1c";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -488,8 +508,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Steve Jones (GXCMNN84DL)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Steve Jones (GXCMNN84DL)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: 44Connections Corp (66QY56XQA9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: 44Connections Corp (66QY56XQA9)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -498,7 +518,7 @@
 				GCC_PREFIX_HEADER = "UFCW-5/UFCW 5-Prefix.pch";
 				INFOPLIST_FILE = "UFCW-5/UFCW 5-Info.plist";
 				PRODUCT_NAME = "UFCW 5";
-				PROVISIONING_PROFILE = "d0025b8c-09a2-45c6-9d09-81b461550b43";
+				PROVISIONING_PROFILE = "e56f5b6a-ed50-407a-b6ce-8e5167939f1c";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

@@ -32,11 +32,13 @@
     checkInternetObj = [[checkInternet alloc] init];
     [checkInternetObj viewWillAppear:YES];
     
+    CGRect z = CGRectMake(0, 83, 320, 200);
+    menuItems.frame = z;
     self.logo_image.image = [UIImage imageNamed:LOGO_NAME];
     
     menuItemsArray = [[NSMutableArray alloc]initWithObjects:
-              @"Union News",UlUpdateArrayValue,@"Member Resources",@"Upcoming Events",@"Contact Representatives",@"Stay Connected",@"Office Locations",@"Shop Union", nil];
-    MenuItemIcons = [[NSArray alloc] initWithObjects:@"news",@"negotiation",@"member",@"events",@"contact",@"connected",@"location",@"union", nil];
+              listViewItem1,listViewItem2,listViewItem3,listViewItem4,listViewItem5,listViewItem6,listViewItem7,listViewItem8,listViewItem9, nil];
+    MenuItemIcons = [[NSArray alloc] initWithObjects:@"news",@"negotiation",@"member",@"events",@"contact",@"connected",@"location",@"union",@"union", nil];
     
     [ImageView setBackgroundColor:[UIColor colorWithRed:NAV_RED_COLOR/255.0 green:NAV_GREEN_COLOR/255.0 blue:NAV_BLUE_COLOR/255.0 alpha:1.0]];
     
@@ -63,8 +65,7 @@
     
     static NSString *cellIdentifier = @"cellID";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
-                             cellIdentifier];
+    UITableViewCell *cell;
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:
