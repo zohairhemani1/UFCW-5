@@ -67,7 +67,7 @@
         if([checkInternetObj internetstatus] == TRUE && [checkInternetObj hoststatus]== TRUE){
             WebService *NewsUnionService = [[WebService alloc] init];
             NSLog(@"the category is %@",self.category);
-            NewsUnionArray = [[NSMutableArray alloc] initWithArray:[NewsUnionService FilePath:BaseURL NEWS_CATEGORY parameterOne:self.category parameterTwo:APP_ID]];
+            NewsUnionArray = [[NSMutableArray alloc] initWithArray:[NewsUnionService FilePath:BaseURL NEWS_CATEGORY parameterOne:@"7" parameterTwo:APP_ID]];
         }
         //NSString *subString = [@"" substringToIndex:rangeOfYourString.location];
         dispatch_async(dispatch_get_main_queue(), ^{

@@ -44,6 +44,7 @@
 		DC54F2E61A0687300079C758 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC54F2E31A0687300079C758 /* Bolts.framework */; };
 		DC54F2E71A0687300079C758 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC54F2E41A0687300079C758 /* Parse.framework */; };
 		DC54F2E81A0687300079C758 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC54F2E51A0687300079C758 /* ParseFacebookUtils.framework */; };
+		DC9D986D1A939E8C00C412B4 /* About.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9D986C1A939E8C00C412B4 /* About.m */; };
 		DCDFEC8919F92DF400BB9E3C /* WebService.m in Sources */ = {isa = PBXBuildFile; fileRef = DCDFEC8819F92DF400BB9E3C /* WebService.m */; };
 		DCF7721D19F543FF000B5C6D /* SubPage.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF7721C19F543FF000B5C6D /* SubPage.m */; };
 /* End PBXBuildFile section */
@@ -105,6 +106,8 @@
 		DC54F2E31A0687300079C758 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		DC54F2E41A0687300079C758 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		DC54F2E51A0687300079C758 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		DC9D986B1A939E8C00C412B4 /* About.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = About.h; path = ../About.h; sourceTree = "<group>"; };
+		DC9D986C1A939E8C00C412B4 /* About.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = About.m; path = ../About.m; sourceTree = "<group>"; };
 		DCDFEC8719F92DF400BB9E3C /* WebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebService.h; sourceTree = "<group>"; };
 		DCDFEC8819F92DF400BB9E3C /* WebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebService.m; sourceTree = "<group>"; };
 		DCDFEC8C19F9503400BB9E3C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = ../Constants.h; sourceTree = "<group>"; };
@@ -261,6 +264,7 @@
 				DCF7721B19F543FF000B5C6D /* SubPage.h */,
 				B773ADAC1A7BDC0B00127E5B /* SocialWebView.h */,
 				DC3F05211A923FCA007FAF97 /* ExtendedTableView.h */,
+				DC9D986B1A939E8C00C412B4 /* About.h */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -282,6 +286,7 @@
 				DCF7721C19F543FF000B5C6D /* SubPage.m */,
 				B773ADAD1A7BDCD200127E5B /* SocialWebView.m */,
 				DC3F05221A923FCA007FAF97 /* ExtendedTableView.m */,
+				DC9D986C1A939E8C00C412B4 /* About.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -379,6 +384,7 @@
 				DC05E85919F6B38C00944CDB /* UnionNews.m in Sources */,
 				DCF7721D19F543FF000B5C6D /* SubPage.m in Sources */,
 				B773ADAE1A7BDCD200127E5B /* SocialWebView.m in Sources */,
+				DC9D986D1A939E8C00C412B4 /* About.m in Sources */,
 				DC3F05231A923FCA007FAF97 /* ExtendedTableView.m in Sources */,
 				1920252E1A03751D004C79F7 /* DetailedNewsWebView.m in Sources */,
 			);

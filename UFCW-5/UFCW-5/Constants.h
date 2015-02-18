@@ -31,6 +31,7 @@
  #define NAV_TITLE_RED_COLOR 255
  #define NAV_TITLE_GREEN_COLOR 255
  #define NAV_TITLE_BLUE_COLOR 255
+
  #define listViewItem1 @"About UFCW Local 5"
  #define listViewItem2 @"Get Educated"
  #define listViewItem3 @"Member Benefits"
@@ -40,7 +41,10 @@
  #define listViewItem7 @"Negotiation Updates*"
  #define listViewItem8 @"Union News*"
  #define listViewItem9 @"Upcoming Events*"
- 
+
+ #define MemberResourcesArray @"Stewards",@"Union Representatives",@"Office Location"
+ #define GetEducatedArray @"Collective Bargaining",@"New Members",@"Organizing",@"Register To Vote",@"Support Union Shops"
+ #define MemberBenefitsArray @"Health & Welfare",@"Scholarship Applications"
 
 /*
  - UNITEDLATINOS APPLICATION -

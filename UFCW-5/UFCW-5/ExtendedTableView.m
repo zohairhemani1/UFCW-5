@@ -7,11 +7,15 @@
 //
 
 #import "ExtendedTableView.h"
-#import "WebService.h"
+#import "Constants.h"
 
 @interface ExtendedTableView ()
 {
     NSMutableArray *values;
+    UIImage * MenuIconImage;
+    UIImageView *MenuIconImageView;
+    UILabel *MenuItemLabel;
+    NSArray * MenuItemIcons;
 }
 @end
 
@@ -30,10 +34,21 @@
 {
     [super viewDidLoad];
     
-    WebService *w = [[WebService alloc]init];
-    values = [w FilePath:@"http://fajjemobile.info/ufcw5/mobile_app/WebServices/sub-categories.php" parameterOne:self.index];
+    MenuItemIcons = [[NSArray alloc] initWithObjects:@"news",@"negotiation",@"member",@"member",@"connected",@"member",@"contact",@"union",@"events", nil];
     
+    if([self.index isEqualToString:@"2"])
+    {
+        values = [[NSMutableArray alloc]initWithObjects:GetEducatedArray, nil];
     }
+    else if ([self.index isEqualToString:@"3"])
+    {
+        values = [[NSMutableArray alloc]initWithObjects:MemberBenefitsArray, nil];
+    }
+    else
+    {
+        values = [[NSMutableArray alloc]initWithObjects:MemberResourcesArray, nil];
+    }
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -53,11 +68,49 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ExtendedCell" forIndexPath:indexPath];
+    MenuIconImage = [UIImage imageNamed:[MenuItemIcons objectAtIndex:indexPath.row]];
     
-    cell.textLabel.text = [[values valueForKey:@"name"] objectAtIndex:indexPath.row];
+    tableView.separatorColor = [UIColor colorWithRed:204.0f/255.0f green:208.0f/255.0f blue:211.0f/255.0f alpha:1.0f];
+    
+    
+    UITableViewCell *cell;
+    
+    if (cell == nil) {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"ExtendedCell" forIndexPath:indexPath];
+    }
+    
+    MenuIconImageView = [[UIImageView alloc]initWithFrame:CGRectMake(15, 10, 25, 25)];
+    
+    MenuIconImageView.image = MenuIconImage;
+    [cell addSubview:MenuIconImageView];
+
+    
+    MenuItemLabel = [[UILabel alloc]initWithFrame:CGRectMake(50, 10, 200, 30)];
+    MenuItemLabel.text = [values objectAtIndex:indexPath.row];
+    MenuItemLabel.font = [UIFont fontWithName:@"Calibri" size:18];
+    MenuItemLabel.textColor = [UIColor colorWithRed:168.0f/255.0f green:175.0f/255.0f blue:181.0f/255.0f alpha:1.0f];
+    
+    [cell addSubview:MenuItemLabel];
     
     return cell;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if([[values objectAtIndex:indexPath.row] isEqualToString:@"Office Location"] )
+    {
+        [self performSegueWithIdentifier:@"officeSegue" sender:self];
+    }
+    else if ([[values objectAtIndex:indexPath.row] isEqualToString:@"Union Representatives"])
+    {
+        [self performSegueWithIdentifier:@"unionRepresentativesSegue" sender:self];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
 }
 
 
@@ -99,15 +152,6 @@
 }
 */
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

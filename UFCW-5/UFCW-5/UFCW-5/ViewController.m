@@ -73,6 +73,7 @@
                 UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     NSString *stringForCell;
  
     stringForCell= [menuItemsArray objectAtIndex:indexPath.row];
@@ -94,21 +95,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.row == 5)
-    {
-        [self performSegueWithIdentifier:@"Contact_my_rep" sender:self];
-    }
-    else if(indexPath.row == 4)
+    if(indexPath.row == 4)
     {
         [self performSegueWithIdentifier:@"Stay Connected" sender:self];
     }
-    else if(indexPath.row == 6)
-    {
-        [self performSegueWithIdentifier:@"Office Location" sender:self];
-    }
     else if(indexPath.row == 1 || indexPath.row == 2 || indexPath.row ==3)
     {
-        [self performSegueWithIdentifier:@"MemberResources" sender:self];
+        [self performSegueWithIdentifier:@"MemberResourcesSegue" sender:self];
     }
     else
     {
@@ -125,9 +118,9 @@
         ExtendedTableView *e = segue.destinationViewController;
         NSString *theValue = [NSString stringWithFormat:@"%d",(int)(indexPath.row +1)];
         e.index = theValue;
-        NSLog(@"the is is %@",theValue);
+        e.title = [menuItemsArray objectAtIndex:indexPath.row];
     }
-    if(indexPath.row >6)
+    if(indexPath.row >4)
     {
         UnionNews *news = segue.destinationViewController;
         news.category = [MenuItemIcons objectAtIndex:indexPath.row];
