@@ -8,6 +8,7 @@
 
 #import "ExtendedTableView.h"
 #import "Constants.h"
+#import "ExtendedWebView.h"
 
 @interface ExtendedTableView ()
 {
@@ -16,6 +17,7 @@
     UIImageView *MenuIconImageView;
     UILabel *MenuItemLabel;
     NSArray * MenuItemIcons;
+    int indexNumber;
 }
 @end
 
@@ -36,7 +38,12 @@
     
     MenuItemIcons = [[NSArray alloc] initWithObjects:@"news",@"negotiation",@"member",@"member",@"connected",@"member",@"contact",@"union",@"events", nil];
     
-    if([self.index isEqualToString:@"2"])
+    indexNumber = [self.index intValue];
+    
+    if ([self.index isEqualToString:@"1"]) {
+        values = [[NSMutableArray alloc]initWithObjects:AboutArray, nil];
+    }
+    else if([self.index isEqualToString:@"2"])
     {
         values = [[NSMutableArray alloc]initWithObjects:GetEducatedArray, nil];
     }
@@ -106,11 +113,23 @@
     {
         [self performSegueWithIdentifier:@"unionRepresentativesSegue" sender:self];
     }
+    else
+    {
+        [self performSegueWithIdentifier:@"webViewSegue" sender:self];
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    NSIndexPath *indexPath = [self.extendedTableView indexPathForSelectedRow];
     
+    if([segue.identifier isEqualToString:@"webViewSegue"])
+    {
+        ExtendedWebView *e = segue.destinationViewController;
+        NSString *theValue = [NSString stringWithFormat:@"%d.%d",indexNumber,(int)(indexPath.row +1)];
+        e.CategoryIndex = theValue;
+        e.title = [values objectAtIndex:indexPath.row];
+    }
 }
 
 

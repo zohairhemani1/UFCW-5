@@ -17,6 +17,7 @@
 #define CONTACT_REPRESENTATIVES @"stay_connected.php"
 #define SOCIAL_LINKS @"social_networks.php"
 #define DETAILED_NEWS_URL_SECOND_PARAMETER @"&&app_id="
+#define EXTENDED_DETAILED_URL @"view.php?category="
 
  /*
  
@@ -42,6 +43,7 @@
  #define listViewItem8 @"Union News*"
  #define listViewItem9 @"Upcoming Events*"
 
+ #define AboutArray @"Who is UFCW",@"What is a Union",@"Why Join the Union",@"Benefits of Being a Union Member"
  #define MemberResourcesArray @"Stewards",@"Union Representatives",@"Office Location"
  #define GetEducatedArray @"Collective Bargaining",@"New Members",@"Organizing",@"Register To Vote",@"Support Union Shops"
  #define MemberBenefitsArray @"Health & Welfare",@"Scholarship Applications"

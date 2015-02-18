@@ -33,8 +33,6 @@
     checkInternetObj = [[checkInternet alloc] init];
     [checkInternetObj viewWillAppear:YES];
     
-    CGRect z = CGRectMake(0, 83, 320, 200);
-    menuItems.frame = z;
     self.logo_image.image = [UIImage imageNamed:LOGO_NAME];
     
     menuItemsArray = [[NSMutableArray alloc]initWithObjects:
@@ -99,7 +97,7 @@
     {
         [self performSegueWithIdentifier:@"Stay Connected" sender:self];
     }
-    else if(indexPath.row == 1 || indexPath.row == 2 || indexPath.row ==3)
+    else if(indexPath.row >=0 && indexPath.row <=3)
     {
         [self performSegueWithIdentifier:@"MemberResourcesSegue" sender:self];
     }
@@ -113,7 +111,7 @@
     
     NSIndexPath *indexPath = [menuItems indexPathForSelectedRow];
     
-    if(indexPath.row >=1 && indexPath.row <=3)
+    if(indexPath.row >=0 && indexPath.row <=3)
     {
         ExtendedTableView *e = segue.destinationViewController;
         NSString *theValue = [NSString stringWithFormat:@"%d",(int)(indexPath.row +1)];

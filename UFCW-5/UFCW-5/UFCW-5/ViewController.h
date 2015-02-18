@@ -10,7 +10,6 @@
 
 @interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 {
-    
     IBOutlet UITableView *menuItems;
     NSMutableArray *menuItemsArray;
     __weak IBOutlet UIView *ImageView;

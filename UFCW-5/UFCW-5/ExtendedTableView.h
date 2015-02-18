@@ -11,5 +11,6 @@
 @interface ExtendedTableView : UITableViewController
 
 @property (weak, nonatomic) NSString *index;
+@property (strong, nonatomic) IBOutlet UITableView *extendedTableView;
 
 @end
