@@ -33,19 +33,14 @@
  #define NAV_TITLE_GREEN_COLOR 255
  #define NAV_TITLE_BLUE_COLOR 255
 
- #define listViewItem1 @"About UFCW Local 5"
- #define listViewItem2 @"Get Educated"
- #define listViewItem3 @"Member Benefits"
- #define listViewItem4 @"Member Resources"
- #define listViewItem5 @"Stay Connected*"
- #define listViewItem6 @"Member Discounts"
- #define listViewItem7 @"Negotiation Updates*"
- #define listViewItem8 @"Union News*"
- #define listViewItem9 @"Upcoming Events*"
+ #define ListItemArray @"About UFCW Local 5",@"Get Educated",@"Member Benefits",@"Member Resources",@"Stay Connected*",@"Member Discounts",@"Negotiation Updates*",@"Union News*",@"Upcoming Events*"
 
- #define AboutArray @"Who is UFCW",@"What is a Union",@"Why Join the Union",@"Benefits of Being a Union Member"
+ #define AboutArray @"Who is UFCW",@"What is a Union",@"Why Join the Union",@"Union Advantage"
+
  #define MemberResourcesArray @"Stewards",@"Union Representatives",@"Office Location"
+
  #define GetEducatedArray @"Collective Bargaining",@"New Members",@"Organizing",@"Register To Vote",@"Support Union Shops"
+
  #define MemberBenefitsArray @"Health & Welfare",@"Scholarship Applications"
 
 /*
@@ -59,13 +54,7 @@
 #define NAV_TITLE_RED_COLOR 0
 #define NAV_TITLE_GREEN_COLOR 73
 #define NAV_TITLE_BLUE_COLOR 144
-#define listViewItem1 @"Union News"
-#define listViewItem2 @"UL Updates"
-#define listViewItem3 @"Member Resources"
-#define listViewItem4 @"Upcoming Events"
-#define listViewItem5 @"Contact Representatives"
-#define listViewItem6 @"Stay Connected"
-#define listViewItem7 @"Office Locations"
-#define listViewItem8 @"Shop Union"
- */
+ 
+#define ListItemArray @"Union News",@"UL Updates",@"Member Resources",@"Upcoming Events",@"Contact Representatives",@"Stay Connected",@"Office Locations",@"Shop Union"
+*/
 #endif

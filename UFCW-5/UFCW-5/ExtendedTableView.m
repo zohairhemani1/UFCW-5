@@ -16,7 +16,6 @@
     UIImage * MenuIconImage;
     UIImageView *MenuIconImageView;
     UILabel *MenuItemLabel;
-    NSArray * MenuItemIcons;
     int indexNumber;
 }
 @end
@@ -36,7 +35,6 @@
 {
     [super viewDidLoad];
     
-    MenuItemIcons = [[NSArray alloc] initWithObjects:@"news",@"negotiation",@"member",@"member",@"connected",@"member",@"contact",@"union",@"events", nil];
     
     indexNumber = [self.index intValue];
     
@@ -75,10 +73,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MenuIconImage = [UIImage imageNamed:[MenuItemIcons objectAtIndex:indexPath.row]];
+    MenuIconImage = [UIImage imageNamed:self.imageName];
     
     tableView.separatorColor = [UIColor colorWithRed:204.0f/255.0f green:208.0f/255.0f blue:211.0f/255.0f alpha:1.0f];
-    
     
     UITableViewCell *cell;
     

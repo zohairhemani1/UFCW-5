@@ -109,17 +109,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-   /* UITapGestureRecognizer *EmailTapRecognizer = [[UITapGestureRecognizer alloc]
-                                                  initWithTarget:self action:@selector(emailTap:)];
-    [EmailTapRecognizer setNumberOfTouchesRequired:1];
-    [EmailTapRecognizer setDelegate:self];
-    
-    UITapGestureRecognizer *CallTapRecognizer = [[UITapGestureRecognizer alloc]
-                                             initWithTarget:self action:@selector(callTap)];
-    [CallTapRecognizer setNumberOfTouchesRequired:1];
-    [CallTapRecognizer setDelegate:self];
-    
-    */
     
     static NSString *cellIdentifier = @"Stay Connected";
     

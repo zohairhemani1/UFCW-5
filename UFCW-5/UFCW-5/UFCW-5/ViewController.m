@@ -36,7 +36,7 @@
     self.logo_image.image = [UIImage imageNamed:LOGO_NAME];
     
     menuItemsArray = [[NSMutableArray alloc]initWithObjects:
-              listViewItem1,listViewItem2,listViewItem3,listViewItem4,listViewItem5,listViewItem6,listViewItem7,listViewItem8,listViewItem9, nil];
+              ListItemArray, nil];
     MenuItemIcons = [[NSArray alloc] initWithObjects:@"news",@"negotiation",@"member",@"member",@"connected",@"member",@"contact",@"union",@"events", nil];
     
     [ImageView setBackgroundColor:[UIColor colorWithRed:NAV_RED_COLOR/255.0 green:NAV_GREEN_COLOR/255.0 blue:NAV_BLUE_COLOR/255.0 alpha:1.0]];
@@ -59,8 +59,6 @@
 (NSIndexPath *)indexPath{
     
     MenuIconImage = [UIImage imageNamed:[MenuItemIcons objectAtIndex:indexPath.row]];
-    
-    tableView.separatorColor = [UIColor colorWithRed:204.0f/255.0f green:208.0f/255.0f blue:211.0f/255.0f alpha:1.0f];
     
     static NSString *cellIdentifier = @"cellID";
     
@@ -117,6 +115,7 @@
         NSString *theValue = [NSString stringWithFormat:@"%d",(int)(indexPath.row +1)];
         e.index = theValue;
         e.title = [menuItemsArray objectAtIndex:indexPath.row];
+        e.imageName = [MenuItemIcons objectAtIndex:indexPath.row];
     }
     if(indexPath.row >4)
     {

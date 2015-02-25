@@ -12,5 +12,5 @@
 
 @property (weak, nonatomic) NSString *index;
 @property (strong, nonatomic) IBOutlet UITableView *extendedTableView;
-
+@property (weak, nonatomic) NSString *imageName;
 @end

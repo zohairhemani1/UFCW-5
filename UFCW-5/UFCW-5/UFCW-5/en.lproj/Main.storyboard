@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="jbf-g1-SpV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12E4022" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="jbf-g1-SpV">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Member Resources-->
+        <!--Extended Table View - Member Resources-->
         <scene sceneID="8Tq-GF-9LS">
             <objects>
                 <tableViewController id="888-oa-mjT" customClass="ExtendedTableView" sceneMemberID="viewController">
@@ -21,6 +20,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -28,7 +28,9 @@
                             <outlet property="delegate" destination="888-oa-mjT" id="2If-FJ-qgr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Member Resources" id="fxq-lJ-ZYq"/>
+                    <navigationItem key="navigationItem" title="Member Resources" id="fxq-lJ-ZYq">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="m2b-Bt-d4Z"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="extendedTableView" destination="f91-Ld-41K" id="6vT-LL-3AB"/>
                         <segue destination="eV5-OE-LyK" kind="push" identifier="officeSegue" id="5re-oH-o0p"/>
@@ -38,9 +40,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f9i-W4-tvo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1017" y="-1256"/>
+            <point key="canvasLocation" x="941" y="-1302"/>
         </scene>
-        <!--Main Menu-->
+        <!--View Controller - Main Menu-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -174,7 +176,7 @@
             </objects>
             <point key="canvasLocation" x="1409" y="51"/>
         </scene>
-        <!--Union Representatives-->
+        <!--Contact My Rep - Union Representatives-->
         <scene sceneID="R3h-Bm-vbz">
             <objects>
                 <viewController restorationIdentifier="Stay Connected" storyboardIdentifier="Stay Connected" id="dMx-Sz-Qwy" customClass="ContactMyRep" sceneMemberID="viewController">
@@ -198,14 +200,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Union Representatives" id="wCW-U9-Miy"/>
+                    <navigationItem key="navigationItem" title="Union Representatives" id="wCW-U9-Miy">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="LYY-OT-OYN"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="stayConnected" destination="6eI-R6-tfd" id="2NO-wB-kAa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IWp-iJ-cIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1483" y="-1256"/>
+            <point key="canvasLocation" x="1409" y="-1302"/>
         </scene>
         <!--Extended Web View-->
         <scene sceneID="D9M-pu-0Bj">
@@ -216,7 +220,7 @@
                         <viewControllerLayoutGuide type="bottom" id="8Rp-Dy-zhU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9hH-f9-9sW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ee4-a2-9j5">
@@ -233,9 +237,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MoJ-UJ-h26" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1483" y="-1912"/>
+            <point key="canvasLocation" x="1409" y="-1950"/>
         </scene>
-        <!--Stay Connected-->
+        <!--Stay Connected - Stay Connected-->
         <scene sceneID="TdE-oX-zw3">
             <objects>
                 <viewController id="629-DI-x5J" customClass="StayConnected" sceneMemberID="viewController">
@@ -255,7 +259,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Stay Connected" id="2Vi-x9-972"/>
+                    <navigationItem key="navigationItem" title="Stay Connected" id="2Vi-x9-972">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="A78-6P-PvD"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="stay_connected" destination="Gl0-7e-0vn" id="j8Z-Ef-AVR"/>
                         <segue destination="t0q-Yr-C1q" kind="push" identifier="callWebView" id="B7a-66-b7R"/>
@@ -263,7 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ph7-N5-nQy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1033" y="754"/>
+            <point key="canvasLocation" x="967" y="747"/>
         </scene>
         <!--Social Web View-->
         <scene sceneID="Oaz-xa-aSv">
@@ -291,9 +297,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Brf-Eg-upW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1452" y="754"/>
+            <point key="canvasLocation" x="1409" y="747"/>
         </scene>
-        <!--Office Locations-->
+        <!--Office Locations - Office Locations-->
         <scene sceneID="74O-i3-0il">
             <objects>
                 <viewController restorationIdentifier="Office Locations" storyboardIdentifier="Office Locations" title="Office Locations" id="eV5-OE-LyK" customClass="OfficeLocations" sceneMemberID="viewController">
@@ -318,7 +324,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Office Locations" id="KbH-ZC-mMe">
-                        <barButtonItem key="backBarButtonItem" title="Main Menu" id="VXI-4I-eoj"/>
+                        <barButtonItem key="backBarButtonItem" title="Back" id="VXI-4I-eoj"/>
                     </navigationItem>
                     <connections>
                         <outlet property="office" destination="V7P-pV-bcP" id="lsy-a4-UkG"/>
@@ -327,7 +333,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="baa-Gq-xtx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1483" y="-580"/>
+            <point key="canvasLocation" x="1409" y="-626"/>
         </scene>
         <!--Map-->
         <scene sceneID="UXg-jZ-JzL">
@@ -354,7 +360,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ByQ-PY-IfO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1974" y="-580"/>
+            <point key="canvasLocation" x="1938" y="-626"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y03-XC-8ng">
@@ -380,10 +386,10 @@
             <point key="canvasLocation" x="114" y="45"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
