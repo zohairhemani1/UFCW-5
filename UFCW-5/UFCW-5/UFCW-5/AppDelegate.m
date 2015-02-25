@@ -38,6 +38,8 @@
     //for navigation bar colour//
     [[UINavigationBar appearance]setBarTintColor:[UIColor colorWithRed:NAV_RED_COLOR/255.0 green:NAV_GREEN_COLOR/255.0 blue:NAV_BLUE_COLOR/255.0 alpha:1.0]];
     
+    [[UINavigationBar appearance]setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1.0],NSForegroundColorAttributeName,[UIFont fontWithName:@"Calibri" size:17],NSFontAttributeName, nil]];
+    
     return YES;
 }
 							

@@ -91,10 +91,9 @@
     MenuIconImageView.image = MenuIconImage;
     [cell addSubview:MenuIconImageView];
 
-    
     MenuItemLabel = [[UILabel alloc]initWithFrame:CGRectMake(50, 10, 200, 30)];
     MenuItemLabel.text = [values objectAtIndex:indexPath.row];
-    MenuItemLabel.font = [UIFont fontWithName:@"Calibri" size:18];
+    MenuItemLabel.font = [UIFont fontWithName:@"Calibri" size:17];
     MenuItemLabel.textColor = [UIColor colorWithRed:168.0f/255.0f green:175.0f/255.0f blue:181.0f/255.0f alpha:1.0f];
     
     [cell addSubview:MenuItemLabel];
