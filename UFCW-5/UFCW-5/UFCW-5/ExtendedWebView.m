@@ -61,8 +61,6 @@
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     return requestObj;
 
-    
-    return requestObj;
 }
 
 

@@ -10,10 +10,8 @@
 
 @interface UnionNews : UITableViewController
 
-//@property (nonatomic, weak) IBOutlet UILabel *headingLabel;
-//@property (nonatomic, weak) IBOutlet UILabel *descriptionLabel;
-//@property (nonatomic, weak) IBOutlet UIImageView *thumbnailImageView;
 @property (strong, nonatomic) IBOutlet UITableView *unionTable;
 @property (weak,nonatomic) NSString *category;
+@property (weak, nonatomic) NSString *index;
 
 @end

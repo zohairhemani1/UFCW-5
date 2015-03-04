@@ -17,12 +17,12 @@
 #define CONTACT_REPRESENTATIVES @"stay_connected.php"
 #define SOCIAL_LINKS @"social_networks.php"
 #define DETAILED_NEWS_URL_SECOND_PARAMETER @"&&app_id="
-#define EXTENDED_DETAILED_URL @"view.php?category="
+#define EXTENDED_DETAILED_URL @"master-service.php?category="
 
  /*
  
  - UFCW5 APPLICATION -
-*/
+
 
  #define APP_ID @"1"
  #define NAV_RED_COLOR 0
@@ -35,13 +35,21 @@
 
  #define ListItemArray @"About UFCW Local 5",@"Get Educated",@"Member Benefits",@"Member Resources",@"Stay Connected*",@"Member Discounts",@"Negotiation Updates*",@"Union News*",@"Upcoming Events*"
 
- #define AboutArray @"Who is UFCW",@"What is a Union",@"Why Join the Union",@"Union Advantage"
+  
 
- #define MemberResourcesArray @"Stewards",@"Union Representatives",@"Office Location"
+ #define Item1Array @"Who is UFCW",@"What is a Union",@"Why Join the Union",@"Union Advantage"
 
- #define GetEducatedArray @"Collective Bargaining",@"New Members",@"Organizing",@"Register To Vote",@"Support Union Shops"
+ #define Item2Array @"Stewards",@"Union Representatives",@"Office Location"
 
- #define MemberBenefitsArray @"Health & Welfare",@"Scholarship Applications"
+ #define Item3Array @"Collective Bargaining",@"New Members",@"Organizing",@"Register To Vote",@"Support Union Shops"
+
+ #define Item4Array @"Health & Welfare",@"Scholarship Applications"
+
+ #define CategoriesArray @"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"
+  
+  #define menuItemIcons @"news",@"negotiation",@"member",@"member",@"connected",@"member",@"contact",@"union",@"events"
+*/
+
 
 /*
  - UNITEDLATINOS APPLICATION -
@@ -56,5 +64,42 @@
 #define NAV_TITLE_BLUE_COLOR 144
  
 #define ListItemArray @"Union News",@"UL Updates",@"Member Resources",@"Upcoming Events",@"Contact Representatives",@"Stay Connected",@"Office Locations",@"Shop Union"
+ 
+ #define Item1Array @"Who is UFCW",@"What is a Union",@"Why Join the Union",@"Union Advantage"
+ 
+ #define Item2Array @"Stewards",@"Union Representatives",@"Office Location"
+ 
+ #define Item3Array @"Collective Bargaining",@"New Members",@"Organizing",@"Register To Vote",@"Support Union Shops"
+ 
+ #define Item4Array @"Health & Welfare",@"Scholarship Applications"
+ 
+ #define CategoriesArray @"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8"
+ 
+ #define menuItemIcons @"news",@"negotiation",@"member",@"member",@"connected",@"member",@"contact",@"union",@"events"
 */
+
+/*
+ - SCBTC APPLICATION -
+*/
+
+#define APP_ID @"3"
+#define NAV_RED_COLOR 0
+#define NAV_GREEN_COLOR 43
+#define NAV_BLUE_COLOR 127
+#define LOGO_NAME @"logo_scbtc"
+#define NAV_TITLE_RED_COLOR 255
+#define NAV_TITLE_GREEN_COLOR 255
+#define NAV_TITLE_BLUE_COLOR 255
+ 
+#define ListItemArray @"About Us",@"Politics",@"Get Involved",@"Projects",@"Contact Us"
+
+#define Item1Array @"What is the SCBTC?",@"Affiliates"
+#define Item2Array @"Endorsements",@"Volunteer"
+#define Item3Array @"Upcoming Events",@"Building Trade Meetings"
+#define Item4Array @"Meeting Volunteer"
+
+#define CategoriesArray @"10",@"11",@"12",@"13",@"14"
+
+#define menuItemIcons @"about",@"politics",@"get_involved",@"projects",@"contactUs"
+
 #endif

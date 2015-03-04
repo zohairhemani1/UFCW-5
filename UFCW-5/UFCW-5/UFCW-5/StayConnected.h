@@ -15,5 +15,5 @@ UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *stay_connected;
 
 +(NSArray *) social_links_array_function;
-
+@property (weak, nonatomic) NSString *categoryNumber;
 @end

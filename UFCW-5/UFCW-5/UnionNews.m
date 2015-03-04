@@ -19,6 +19,8 @@
     checkInternet *checkInternetObj;
     UIActivityIndicatorView *loader;
     NSString *descriptionFromJson;
+    NSMutableArray *categories;
+    int indexNumber;
 }
 
 @end
@@ -38,20 +40,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"Cat: %@", self.category);
    
     self.unionTable.delegate =self;
     self.unionTable.dataSource = self;
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:YES];
+    indexNumber = [self.index intValue];
     
     checkInternetObj = [[checkInternet alloc] init];
     [checkInternetObj viewWillAppear:YES];
@@ -60,6 +53,10 @@
     [self.view addSubview:loader];
     [loader bringSubviewToFront:self.view];
     
+    categories = [[NSMutableArray alloc]initWithObjects:CategoriesArray, nil];
+    
+    NSString *path = [[[[BaseURL stringByAppendingString:EXTENDED_DETAILED_URL]stringByAppendingString:[categories objectAtIndex:indexNumber-1]]stringByAppendingString:@"&app_id="]stringByAppendingString:APP_ID];
+    
     dispatch_queue_t myqueue = dispatch_queue_create("myqueue", NULL);
     dispatch_async(myqueue, ^(void) {
         
@@ -67,7 +64,7 @@
         if([checkInternetObj internetstatus] == TRUE && [checkInternetObj hoststatus]== TRUE){
             WebService *NewsUnionService = [[WebService alloc] init];
             NSLog(@"the category is %@",self.category);
-            NewsUnionArray = [[NSMutableArray alloc] initWithArray:[NewsUnionService FilePath:BaseURL NEWS_CATEGORY parameterOne:@"7" parameterTwo:APP_ID]];
+            NewsUnionArray = [[NSMutableArray alloc] initWithArray:[NewsUnionService FilePath:path parameterOne:nil]];
         }
         //NSString *subString = [@"" substringToIndex:rangeOfYourString.location];
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -78,6 +75,10 @@
         });
         
     });
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:YES];
     
 }
 
@@ -100,7 +101,6 @@
     // Return the number of rows in the section.
     return 1;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

@@ -17,6 +17,7 @@
     UIImageView *MenuIconImageView;
     UILabel *MenuItemLabel;
     int indexNumber;
+    NSMutableArray *categories;
 }
 @end
 
@@ -34,24 +35,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
+    categories = [[NSMutableArray alloc]initWithObjects:CategoriesArray, nil];
     indexNumber = [self.index intValue];
     
-    if ([self.index isEqualToString:@"1"]) {
-        values = [[NSMutableArray alloc]initWithObjects:AboutArray, nil];
+    if ([self.index isEqualToString:@"10"]) {
+        values = [[NSMutableArray alloc]initWithObjects:Item1Array, nil];
     }
-    else if([self.index isEqualToString:@"2"])
+    else if([self.index isEqualToString:@"11"])
     {
-        values = [[NSMutableArray alloc]initWithObjects:GetEducatedArray, nil];
+        values = [[NSMutableArray alloc]initWithObjects:Item2Array, nil];
     }
-    else if ([self.index isEqualToString:@"3"])
+    else if ([self.index isEqualToString:@"12"])
     {
-        values = [[NSMutableArray alloc]initWithObjects:MemberBenefitsArray, nil];
+        values = [[NSMutableArray alloc]initWithObjects:Item3Array, nil];
     }
     else
     {
-        values = [[NSMutableArray alloc]initWithObjects:MemberResourcesArray, nil];
+        values = [[NSMutableArray alloc]initWithObjects:Item4Array, nil];
     }
 }
 

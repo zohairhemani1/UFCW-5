@@ -20,6 +20,7 @@
     UIImageView *MenuIconImageView;
     UILabel *MenuItemLabel;
     checkInternet *checkInternetObj;
+    NSMutableArray *categories;
 }
 
 @end
@@ -30,6 +31,8 @@
 {
     [super viewDidLoad];
     
+    categories = [[NSMutableArray alloc]initWithObjects:CategoriesArray, nil];
+    
     checkInternetObj = [[checkInternet alloc] init];
     [checkInternetObj viewWillAppear:YES];
     
@@ -37,9 +40,9 @@
     
     menuItemsArray = [[NSMutableArray alloc]initWithObjects:
               ListItemArray, nil];
-    MenuItemIcons = [[NSArray alloc] initWithObjects:@"news",@"negotiation",@"member",@"member",@"connected",@"member",@"contact",@"union",@"events", nil];
+    MenuItemIcons = [[NSArray alloc] initWithObjects:menuItemIcons, nil];
     
-    [ImageView setBackgroundColor:[UIColor colorWithRed:NAV_RED_COLOR/255.0 green:NAV_GREEN_COLOR/255.0 blue:NAV_BLUE_COLOR/255.0 alpha:1.0]];
+    //[ImageView setBackgroundColor:[UIColor colorWithRed:NAV_RED_COLOR/255.0 green:NAV_GREEN_COLOR/255.0 blue:NAV_BLUE_COLOR/255.0 alpha:1.0]];
     
 }
 
@@ -108,12 +111,11 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
     NSIndexPath *indexPath = [menuItems indexPathForSelectedRow];
-    
+    NSString *theValue = [NSString stringWithFormat:@"%d",(int)(indexPath.row +1)];
     if(indexPath.row >=0 && indexPath.row <=3)
     {
         ExtendedTableView *e = segue.destinationViewController;
-        NSString *theValue = [NSString stringWithFormat:@"%d",(int)(indexPath.row +1)];
-        e.index = theValue;
+        e.index = [categories objectAtIndex:indexPath.row];
         e.title = [menuItemsArray objectAtIndex:indexPath.row];
         e.imageName = [MenuItemIcons objectAtIndex:indexPath.row];
     }
@@ -122,6 +124,7 @@
         UnionNews *news = segue.destinationViewController;
         news.category = [MenuItemIcons objectAtIndex:indexPath.row];
         news.title = [menuItemsArray objectAtIndex:indexPath.row];
+        news.index = theValue;
     }
 }
 
