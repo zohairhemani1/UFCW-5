@@ -119,13 +119,13 @@
         e.title = [menuItemsArray objectAtIndex:indexPath.row];
         e.imageName = [MenuItemIcons objectAtIndex:indexPath.row];
     }
-//    if(indexPath.row >4)
-//    {
-//        UnionNews *news = segue.destinationViewController;
-//        news.category = [MenuItemIcons objectAtIndex:indexPath.row];
-//        news.title = [menuItemsArray objectAtIndex:indexPath.row];
-//        news.index = theValue;
-//    }
+    if(indexPath.row >4)
+    {
+        UnionNews *news = segue.destinationViewController;
+        news.category = [MenuItemIcons objectAtIndex:indexPath.row];
+        news.title = [menuItemsArray objectAtIndex:indexPath.row];
+        news.index = theValue;
+    }
 }
 
 @end

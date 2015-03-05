@@ -22,7 +22,7 @@
  /*
  
  - UFCW5 APPLICATION -
-
+*/
 
  #define APP_ID @"1"
  #define NAV_RED_COLOR 0
@@ -48,7 +48,7 @@
  #define CategoriesArray @"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"
   
   #define menuItemIcons @"news",@"negotiation",@"member",@"member",@"connected",@"member",@"contact",@"union",@"events"
-*/
+
 
 
 /*
@@ -80,7 +80,7 @@
 
 /*
  - SCBTC APPLICATION -
-*/
+
 
 #define APP_ID @"3"
 #define NAV_RED_COLOR 0
@@ -101,5 +101,5 @@
 #define CategoriesArray @"10",@"11",@"12",@"13",@"14"
 
 #define menuItemIcons @"about",@"politics",@"get_involved",@"projects",@"contactUs"
-
+*/
 #endif
