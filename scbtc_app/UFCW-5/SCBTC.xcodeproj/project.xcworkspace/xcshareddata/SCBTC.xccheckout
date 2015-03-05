@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4A564B2F-F578-4B78-AAEF-D58BFB7ED282</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SCBTC</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3E91BFCB-6B2B-4F75-B386-6E836B319B64</key>
+		<string>https://github.com/zohairhemani1/UFCW-5.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>scbtc_app/UFCW-5/SCBTC.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3E91BFCB-6B2B-4F75-B386-6E836B319B64</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/zohairhemani1/UFCW-5.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3E91BFCB-6B2B-4F75-B386-6E836B319B64</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3E91BFCB-6B2B-4F75-B386-6E836B319B64</string>
+			<key>IDESourceControlWCCName</key>
+			<string>UFCW-5</string>
+		</dict>
+	</array>
+</dict>
+</plist>
