@@ -34,13 +34,12 @@
                     <connections>
                         <outlet property="extendedTableView" destination="f91-Ld-41K" id="6vT-LL-3AB"/>
                         <segue destination="eV5-OE-LyK" kind="push" identifier="officeSegue" id="5re-oH-o0p"/>
-                        <segue destination="dMx-Sz-Qwy" kind="push" identifier="unionRepresentativesSegue" id="3eP-tz-Vgl"/>
                         <segue destination="Kuv-9N-Xic" kind="push" identifier="webViewSegue" id="3tn-zZ-zwc"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f9i-W4-tvo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="941" y="-1302"/>
+            <point key="canvasLocation" x="967" y="-1302"/>
         </scene>
         <!--View Controller - Main Menu-->
         <scene sceneID="ufC-wZ-h7g">
@@ -87,11 +86,12 @@
                         <segue destination="h98-HW-mTh" kind="push" identifier="Union News" id="x4t-Gd-X57"/>
                         <segue destination="629-DI-x5J" kind="push" identifier="Stay Connected" id="Tqv-bL-avK"/>
                         <segue destination="888-oa-mjT" kind="push" identifier="MemberResourcesSegue" id="kSg-3D-KsS"/>
+                        <segue destination="dMx-Sz-Qwy" kind="push" identifier="unionRepresentativesSegue" id="toT-32-VMd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="525" y="45"/>
+            <point key="canvasLocation" x="391" y="31"/>
         </scene>
         <!--Union News-->
         <scene sceneID="s08-PI-oVq">
@@ -207,7 +207,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IWp-iJ-cIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1409" y="-1302"/>
+            <point key="canvasLocation" x="967" y="-626"/>
         </scene>
         <!--Extended Web View-->
         <scene sceneID="D9M-pu-0Bj">
@@ -235,7 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MoJ-UJ-h26" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1409" y="-1950"/>
+            <point key="canvasLocation" x="1409" y="-1968"/>
         </scene>
         <!--Stay Connected - Stay Connected-->
         <scene sceneID="TdE-oX-zw3">
@@ -331,7 +331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="baa-Gq-xtx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1409" y="-626"/>
+            <point key="canvasLocation" x="1409" y="-1302"/>
         </scene>
         <!--Map-->
         <scene sceneID="UXg-jZ-JzL">
@@ -358,7 +358,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ByQ-PY-IfO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1938" y="-626"/>
+            <point key="canvasLocation" x="1934" y="-1302"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y03-XC-8ng">
@@ -381,7 +381,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vi5-SB-4cl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114" y="45"/>
+            <point key="canvasLocation" x="-82" y="31"/>
         </scene>
     </scenes>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

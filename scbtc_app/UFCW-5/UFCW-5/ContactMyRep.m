@@ -22,6 +22,7 @@
     UIButton * phoneNumberTwo;
     UIButton * faxNumber;
     UIButton * email;
+    NSMutableArray *categories;
 
 }
 
@@ -54,13 +55,17 @@
     [self.view addSubview:loader];
     [loader bringSubviewToFront:self.view];
     
+    categories = [[NSMutableArray alloc]initWithObjects:CategoriesArray, nil];
+    
+    NSString *path = [[[[BaseURL stringByAppendingString:EXTENDED_DETAILED_URL]stringByAppendingString:[categories objectAtIndex:4]]stringByAppendingString:@"&app_id="]stringByAppendingString:APP_ID];
+    
     dispatch_queue_t myqueue = dispatch_queue_create("myqueue", NULL);
     dispatch_async(myqueue, ^(void) {
         
         [loader startAnimating];
         if([checkInternetObj internetstatus] == TRUE){
             WebService *stayConnectedRest = [[WebService alloc] init];
-            stayConnectedArray = [[NSArray alloc] initWithArray:[stayConnectedRest FilePath:BaseURL CONTACT_REPRESENTATIVES parameterOne:APP_ID]];
+            stayConnectedArray = [[NSArray alloc] initWithArray:[stayConnectedRest FilePath:path parameterOne:nil]];
         }
         //NSString *subString = [@"" substringToIndex:rangeOfYourString.location];
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -120,21 +125,21 @@
                 UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    name = [[UILabel alloc]initWithFrame:CGRectMake(20, 10, 200, 15)];
+    name = [[UILabel alloc]initWithFrame:CGRectMake(20, 10, 300, 15)];
     name.text = [[stayConnectedArray valueForKey:@"name"] objectAtIndex:indexPath.row];
     name.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:16];
     
     [cell addSubview:name];
     
     
-    address = [[UILabel alloc] initWithFrame:CGRectMake(20, 30, 300, 35)];
+    address = [[UILabel alloc] initWithFrame:CGRectMake(20, 30, 300, 55)];
     address.text = [[stayConnectedArray valueForKey:@"address"] objectAtIndex:indexPath.row];
     address.numberOfLines = 3;
     address.font = [UIFont fontWithName:@"Calibri" size:16];
     [cell addSubview:address];
     
     
-    phoneNumberOne = [[UIButton alloc] initWithFrame:CGRectMake(20, 70, 200, 15)];
+    phoneNumberOne = [[UIButton alloc] initWithFrame:CGRectMake(20, 90, 200, 15)];
     [phoneNumberOne setTitle:[@"Cell: " stringByAppendingString:[[stayConnectedArray valueForKey:@"phone_no1"] objectAtIndex:indexPath.row]] forState:normal];
         [phoneNumberOne setTitleColor:[UIColor blackColor] forState:normal];
     phoneNumberOne.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
@@ -144,18 +149,23 @@
     [phoneNumberOne setTag:indexPath.row];
     [cell addSubview:phoneNumberOne];
 
-    email = [[UIButton alloc] initWithFrame:CGRectMake(20, 90, 200, 15)];
-    [email setTitle:[@"Email: " stringByAppendingString:[[stayConnectedArray valueForKey:@"email"] objectAtIndex:indexPath.row]] forState:UIControlStateNormal];
+    email = [[UIButton alloc] initWithFrame:CGRectMake(20, 110, 200, 15)];
+    //[email setTitle:[@"Email: " stringByAppendingString:[[stayConnectedArray valueForKey:@"email"] objectAtIndex:indexPath.row]] forState:UIControlStateNormal];
     email.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [email setTitleColor:[UIColor blackColor] forState:normal];
     email.titleLabel.font = [UIFont fontWithName:@"Calibri" size:16];
     [email addTarget:self action:@selector(emailTap:) forControlEvents:UIControlEventTouchUpInside];
     [email setTag:indexPath.row];
     
+    NSMutableAttributedString *commentString = [[NSMutableAttributedString alloc] initWithString:[@"Email: " stringByAppendingString:[[stayConnectedArray valueForKey:@"email"] objectAtIndex:indexPath.row]]];
+    
+    [commentString addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:NSMakeRange(0, [commentString length])];
+    
+    [email setAttributedTitle:commentString forState:normal];
     //[email addGestureRecognizer:EmailTapRecognizer];
     [cell addSubview:email];
     
-    faxNumber = [[UIButton alloc] initWithFrame:CGRectMake(20, 110, 200, 15)];
+    faxNumber = [[UIButton alloc] initWithFrame:CGRectMake(20, 130, 200, 15)];
     [faxNumber setTitle:[@"Fax: " stringByAppendingString:[[stayConnectedArray valueForKey:@"fax_no"] objectAtIndex:indexPath.row]] forState:normal];
         [faxNumber setTitleColor:[UIColor blackColor] forState:normal];
     faxNumber.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;

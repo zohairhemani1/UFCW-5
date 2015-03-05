@@ -96,7 +96,7 @@
 {
     if(indexPath.row == 4)
     {
-        [self performSegueWithIdentifier:@"Stay Connected" sender:self];
+        [self performSegueWithIdentifier:@"unionRepresentativesSegue" sender:self];
     }
     else if(indexPath.row >=0 && indexPath.row <=3)
     {
@@ -111,7 +111,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
     NSIndexPath *indexPath = [menuItems indexPathForSelectedRow];
-    NSString *theValue = [NSString stringWithFormat:@"%d",(int)(indexPath.row +1)];
+   // NSString *theValue = [NSString stringWithFormat:@"%d",(int)(indexPath.row +1)];
     if(indexPath.row >=0 && indexPath.row <=3)
     {
         ExtendedTableView *e = segue.destinationViewController;
