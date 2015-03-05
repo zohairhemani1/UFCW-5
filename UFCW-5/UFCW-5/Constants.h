@@ -63,7 +63,7 @@
 #define NAV_TITLE_GREEN_COLOR 73
 #define NAV_TITLE_BLUE_COLOR 144
  
-#define ListItemArray @"Union News",@"UL Updates",@"Member Resources",@"Upcoming Events",@"Contact Representatives",@"Stay Connected",@"Office Locations",@"Shop Union"
+#define ListItemArray @"About Us",@"Political Participation",@"Education",@"Community Involvement",@"Join the UL of UFCW",@"Contact Us"
  
  #define Item1Array @"Who is UFCW",@"What is a Union",@"Why Join the Union",@"Union Advantage"
  
@@ -75,7 +75,7 @@
  
  #define CategoriesArray @"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8"
  
- #define menuItemIcons @"news",@"negotiation",@"member",@"member",@"connected",@"member",@"contact",@"union",@"events"
+ #define menuItemIcons @"about",@"politics",@"get_involved",@"projects",@"contactUs",@"contactUs"
 */
 
 /*
