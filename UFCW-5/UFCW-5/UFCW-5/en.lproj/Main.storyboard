@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12E4022" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="jbf-g1-SpV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="jbf-g1-SpV">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--Extended Table View - Member Resources-->
+        <!--Member Resources-->
         <scene sceneID="8Tq-GF-9LS">
             <objects>
                 <tableViewController id="888-oa-mjT" customClass="ExtendedTableView" sceneMemberID="viewController">
@@ -42,7 +42,7 @@
             </objects>
             <point key="canvasLocation" x="941" y="-1302"/>
         </scene>
-        <!--View Controller - Main Menu-->
+        <!--Main Menu-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -65,11 +65,9 @@
                             </tableView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sgl-FR-qfw">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DAc-9Q-3wp">
                                         <rect key="frame" x="79" y="17" width="163" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -174,7 +172,7 @@
             </objects>
             <point key="canvasLocation" x="1409" y="51"/>
         </scene>
-        <!--Contact My Rep - Union Representatives-->
+        <!--Union Representatives-->
         <scene sceneID="R3h-Bm-vbz">
             <objects>
                 <viewController restorationIdentifier="Stay Connected" storyboardIdentifier="Stay Connected" id="dMx-Sz-Qwy" customClass="ContactMyRep" sceneMemberID="viewController">
@@ -237,7 +235,7 @@
             </objects>
             <point key="canvasLocation" x="1409" y="-1950"/>
         </scene>
-        <!--Stay Connected - Stay Connected-->
+        <!--Stay Connected-->
         <scene sceneID="TdE-oX-zw3">
             <objects>
                 <viewController id="629-DI-x5J" customClass="StayConnected" sceneMemberID="viewController">
@@ -297,7 +295,7 @@
             </objects>
             <point key="canvasLocation" x="1409" y="747"/>
         </scene>
-        <!--Office Locations - Office Locations-->
+        <!--Office Locations-->
         <scene sceneID="74O-i3-0il">
             <objects>
                 <viewController restorationIdentifier="Office Locations" storyboardIdentifier="Office Locations" title="Office Locations" id="eV5-OE-LyK" customClass="OfficeLocations" sceneMemberID="viewController">
@@ -384,10 +382,10 @@
             <point key="canvasLocation" x="114" y="45"/>
         </scene>
     </scenes>
-    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

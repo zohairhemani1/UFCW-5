@@ -45,7 +45,7 @@
 
  #define CategoriesArray @"1",@"2",@"3",@"6",@"4",@"7",@"15",@"5",@"8",@"9"
 
-  #define menuItemIcons @"news",@"negotiation",@"member",@"member",@"connected",@"member",@"contact",@"union",@"events",@"union"
+  #define menuItemIcons @"news",@"member",@"member",@"member",@"connected",@"negotiation",@"union",@"contact",@"news",@"events"
 
 /*
  - UNITEDLATINOS APPLICATION -
