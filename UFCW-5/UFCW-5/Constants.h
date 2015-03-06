@@ -11,12 +11,12 @@
 
 #define BaseURL @"http://fajjemobile.info/ufcw5/mobile_app/WebServices/"
 #define NEWS_CATEGORY @"news-category.php"
-#define DETAILED_NEWS_URL @"view.php?news_id="
+#define DETAILED_NEWS_URL @"view.php?newsID="
 #define BASEURL_WEBDASHBOARD @"http://fajjemobile.info/ufcw5/mobile_app/"
 #define OFFICE_LOCATION @"office_location.php"
 #define CONTACT_REPRESENTATIVES @"stay_connected.php"
 #define SOCIAL_LINKS @"social_networks.php"
-#define DETAILED_NEWS_URL_SECOND_PARAMETER @"&&app_id="
+#define DETAILED_NEWS_URL_SECOND_PARAMETER @"&&appID="
 #define EXTENDED_DETAILED_URL @"master-service.php?category="
 
  /*
@@ -33,23 +33,19 @@
  #define NAV_TITLE_GREEN_COLOR 255
  #define NAV_TITLE_BLUE_COLOR 255
 
- #define ListItemArray @"About UFCW Local 5",@"Get Educated",@"Member Benefits",@"Member Resources",@"Stay Connected*",@"Member Discounts",@"Negotiation Updates*",@"Union News*",@"Upcoming Events*"
-
-  
+ #define ListItemArray @"About UFCW Local 5",@"Get Educated",@"Member Benefits",@"Member Discounts",@"Member Resources",@"Negotiation Updates",@"Shop Union",@"Stay Connected",@"Union News",@"Upcoming Events"
 
  #define Item1Array @"Who is UFCW",@"What is a Union",@"Why Join the Union",@"Union Advantage"
 
- #define Item2Array @"Stewards",@"Union Representatives",@"Office Location"
+ #define Item2Array @"Collective Bargaining",@"New Members",@"Organizing",@"Register To Vote",@"Support Union Shops"
 
- #define Item3Array @"Collective Bargaining",@"New Members",@"Organizing",@"Register To Vote",@"Support Union Shops"
+ #define Item3Array @"Health & Welfare",@"Scholarship Applications"
 
- #define Item4Array @"Health & Welfare",@"Scholarship Applications"
+ #define Item4Array @"Stewards",@"Union Representatives",@"Office Location"
 
- #define CategoriesArray @"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9"
-  
-  #define menuItemIcons @"news",@"negotiation",@"member",@"member",@"connected",@"member",@"contact",@"union",@"events"
+ #define CategoriesArray @"1",@"2",@"3",@"6",@"4",@"7",@"15",@"5",@"8",@"9"
 
-
+  #define menuItemIcons @"news",@"negotiation",@"member",@"member",@"connected",@"member",@"contact",@"union",@"events",@"union"
 
 /*
  - UNITEDLATINOS APPLICATION -

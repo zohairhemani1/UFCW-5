@@ -10,6 +10,8 @@
 
 @interface OfficeLocations : UIViewController<UITableViewDataSource,
 UITableViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UITableView *office;
+@property (weak, nonatomic) NSString *CategoryIndex;
 
 @end

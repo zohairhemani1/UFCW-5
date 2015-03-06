@@ -30,18 +30,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-}
-
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:YES];
-    
     checkInternetObj = [[checkInternet alloc] init];
     [checkInternetObj viewWillAppear:YES];
     
     loader = [checkInternetObj indicatorprogress:loader];
     [self.view addSubview:loader];
     [loader bringSubviewToFront:self.view];
+    
+    NSString *path = [[[[BaseURL stringByAppendingString:EXTENDED_DETAILED_URL]stringByAppendingString:self.CategoryIndex]stringByAppendingString:@"&app_id="]stringByAppendingString:APP_ID];
     
     dispatch_queue_t myqueue = dispatch_queue_create("myqueue", NULL);
     dispatch_async(myqueue, ^(void) {
@@ -50,18 +46,18 @@
         if([checkInternetObj internetstatus] == TRUE){
             [loader startAnimating];
             WebService *officeLocation = [[WebService alloc] init];
-            officeLocationArray = [[NSArray alloc] initWithArray:[officeLocation FilePath:BaseURL OFFICE_LOCATION parameterOne:APP_ID]];
+            officeLocationArray = [[NSArray alloc] initWithArray:[officeLocation FilePath:path parameterOne:nil]];
         }
-            //NSString *subString = [@"" substringToIndex:rangeOfYourString.location];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                // Update UI on main queue
-                
-                [self.office reloadData];
-                [loader stopAnimating];
-            });
+        //NSString *subString = [@"" substringToIndex:rangeOfYourString.location];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // Update UI on main queue
             
+            [self.office reloadData];
+            [loader stopAnimating];
         });
-    
+        
+    });
+
 }
 
 - (void)didReceiveMemoryWarning

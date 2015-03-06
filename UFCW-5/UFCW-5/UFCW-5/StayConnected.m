@@ -71,7 +71,7 @@ static NSArray *social_links_array;
     
     categories = [[NSMutableArray alloc]initWithObjects:CategoriesArray, nil];
     
-    NSString *path = [[[[BaseURL stringByAppendingString:EXTENDED_DETAILED_URL]stringByAppendingString:[categories objectAtIndex:4]]stringByAppendingString:@"&app_id="]stringByAppendingString:APP_ID];
+    NSString *path = [[[[BaseURL stringByAppendingString:EXTENDED_DETAILED_URL]stringByAppendingString:[categories objectAtIndex:7]]stringByAppendingString:@"&app_id="]stringByAppendingString:APP_ID];
     
     dispatch_queue_t myqueue = dispatch_queue_create("myqueue", NULL);
     dispatch_async(myqueue, ^(void) {

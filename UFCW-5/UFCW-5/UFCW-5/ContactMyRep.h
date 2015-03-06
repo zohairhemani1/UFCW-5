@@ -14,5 +14,6 @@ UITableViewDelegate,MFMailComposeViewControllerDelegate,UIGestureRecognizerDeleg
     IBOutlet UITableView *stayConnected;
 }
 
+@property (weak, nonatomic) NSString *CategoryIndex;
 
 @end

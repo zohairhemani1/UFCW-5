@@ -9,6 +9,7 @@
 #import "ExtendedTableView.h"
 #import "Constants.h"
 #import "ExtendedWebView.h"
+#import "OfficeLocations.h"
 
 @interface ExtendedTableView ()
 {
@@ -38,14 +39,14 @@
     categories = [[NSMutableArray alloc]initWithObjects:CategoriesArray, nil];
     indexNumber = [self.index intValue];
     
-    if ([self.index isEqualToString:@"10"]) {
+    if ([self.index isEqualToString:@"1"]) {
         values = [[NSMutableArray alloc]initWithObjects:Item1Array, nil];
     }
-    else if([self.index isEqualToString:@"11"])
+    else if([self.index isEqualToString:@"2"])
     {
         values = [[NSMutableArray alloc]initWithObjects:Item2Array, nil];
     }
-    else if ([self.index isEqualToString:@"12"])
+    else if ([self.index isEqualToString:@"3"])
     {
         values = [[NSMutableArray alloc]initWithObjects:Item3Array, nil];
     }
@@ -125,6 +126,20 @@
         NSString *theValue = [NSString stringWithFormat:@"%d.%d",indexNumber,(int)(indexPath.row +1)];
         e.CategoryIndex = theValue;
         e.title = [values objectAtIndex:indexPath.row];
+    }
+    if([segue.identifier isEqualToString:@"officeSegue"])
+    {
+        OfficeLocations *off = segue.destinationViewController;
+        NSString *theValue = [NSString stringWithFormat:@"%d.%d",indexNumber,(int)(indexPath.row +1)];
+        off.CategoryIndex = theValue;
+        off.title = [values objectAtIndex:indexPath.row];
+    }
+    if([segue.identifier isEqualToString:@"unionRepresentativesSegue"])
+    {
+        OfficeLocations *off = segue.destinationViewController;
+        NSString *theValue = [NSString stringWithFormat:@"%d.%d",indexNumber,(int)(indexPath.row +1)];
+        off.CategoryIndex = theValue;
+        off.title = [values objectAtIndex:indexPath.row];
     }
 }
 
