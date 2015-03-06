@@ -130,15 +130,15 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
     UILabel *myLabel = [[UILabel alloc] init];
-    myLabel.frame = CGRectMake(15, 3, 300, 20);
-    myLabel.font = [UIFont boldSystemFontOfSize:14];
+    myLabel.frame = CGRectMake(10, 3, 300, 20);
+    myLabel.font = [UIFont fontWithName:@"Calibri" size:13];
     if(![[[NewsUnionArray valueForKey:@"title"] objectAtIndex:section] isKindOfClass:[NSNull class]])
     {
         myLabel.text = [[NewsUnionArray valueForKey:@"title"] objectAtIndex:section];
     }
     
     UIView *headerView = [[UIView alloc] init];
-    [headerView setBackgroundColor:[UIColor lightTextColor]];
+    [headerView setBackgroundColor:[UIColor colorWithRed:240.0/255.0f green:240.0/255.0f blue:240.0/255.0f alpha:1.0f]];
     [headerView addSubview:myLabel];
     
     return headerView;

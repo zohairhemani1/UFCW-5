@@ -23,7 +23,7 @@
     UIButton * faxNumber;
     UIButton * email;
     NSMutableArray *categories;
-
+    NSMutableAttributedString *commentString;
 }
 
 @end
@@ -126,7 +126,7 @@
     }
     
     name = [[UILabel alloc]initWithFrame:CGRectMake(20, 10, 300, 15)];
-    name.text = [[stayConnectedArray valueForKey:@"name"] objectAtIndex:indexPath.row];
+    name.text = [[[[stayConnectedArray valueForKey:@"name"] objectAtIndex:indexPath.row]stringByAppendingString:@" - "]stringByAppendingString:[[stayConnectedArray valueForKey:@"designation"] objectAtIndex:indexPath.row]];
     name.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:16];
     
     [cell addSubview:name];
@@ -140,13 +140,20 @@
     
     
     phoneNumberOne = [[UIButton alloc] initWithFrame:CGRectMake(20, 90, 200, 15)];
-    [phoneNumberOne setTitle:[@"Cell: " stringByAppendingString:[[stayConnectedArray valueForKey:@"phone_no1"] objectAtIndex:indexPath.row]] forState:normal];
+   // [phoneNumberOne setTitle:[@"Cell: " stringByAppendingString:[[stayConnectedArray valueForKey:@"phone_no1"] objectAtIndex:indexPath.row]] forState:normal];
         [phoneNumberOne setTitleColor:[UIColor blackColor] forState:normal];
     phoneNumberOne.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     phoneNumberOne.titleLabel.font= [UIFont fontWithName:@"Calibri" size:16];
     //[phoneNumberOne addGestureRecognizer:CallTapRecognizer];
     [phoneNumberOne addTarget:self action:@selector(callTap:) forControlEvents:UIControlEventTouchUpInside];
     [phoneNumberOne setTag:indexPath.row];
+    
+    commentString = [[NSMutableAttributedString alloc] initWithString:[@"Cell: " stringByAppendingString:[[stayConnectedArray valueForKey:@"phone_no1"] objectAtIndex:indexPath.row]]];
+    
+    [commentString addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:NSMakeRange(0, [commentString length])];
+    
+    [phoneNumberOne setAttributedTitle:commentString forState:normal];
+    
     [cell addSubview:phoneNumberOne];
 
     email = [[UIButton alloc] initWithFrame:CGRectMake(20, 110, 200, 15)];
@@ -157,7 +164,7 @@
     [email addTarget:self action:@selector(emailTap:) forControlEvents:UIControlEventTouchUpInside];
     [email setTag:indexPath.row];
     
-    NSMutableAttributedString *commentString = [[NSMutableAttributedString alloc] initWithString:[@"Email: " stringByAppendingString:[[stayConnectedArray valueForKey:@"email"] objectAtIndex:indexPath.row]]];
+    commentString = [[NSMutableAttributedString alloc] initWithString:[@"Email: " stringByAppendingString:[[stayConnectedArray valueForKey:@"email"] objectAtIndex:indexPath.row]]];
     
     [commentString addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:NSMakeRange(0, [commentString length])];
     

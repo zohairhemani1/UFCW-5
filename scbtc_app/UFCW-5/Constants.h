@@ -91,15 +91,15 @@
 #define NAV_TITLE_GREEN_COLOR 255
 #define NAV_TITLE_BLUE_COLOR 255
  
-#define ListItemArray @"About Us",@"Politics",@"Get Involved",@"Projects",@"Contact Us"
+#define ListItemArray @"About Us",@"Politics",@"Get Involved",@"Projects",@"Contact Us",@"Shop Union"
 
 #define Item1Array @"What is the SCBTC?",@"Affiliates"
 #define Item2Array @"Endorsements",@"Volunteer"
 #define Item3Array @"Upcoming Events",@"Building Trade Meetings"
 #define Item4Array @"Meeting Volunteer"
 
-#define CategoriesArray @"10",@"11",@"12",@"13",@"14"
+#define CategoriesArray @"10",@"11",@"12",@"13",@"14",@"16"
 
-#define menuItemIcons @"about",@"politics",@"get_involved",@"projects",@"contactUs"
+#define menuItemIcons @"about",@"politics",@"get_involved",@"projects",@"contactUs",@"union"
 
 #endif
