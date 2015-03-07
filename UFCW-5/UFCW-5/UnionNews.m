@@ -159,6 +159,7 @@
     DetailedNewsWebView *webView = segue.destinationViewController;
     //webView.newsID = [[self.unionTable indexPathForSelectedRow] row];
     webView.newsID = [[NewsUnionArray valueForKey:@"news_id"] objectAtIndex:[indexPath section]];
+    webView.title = self.title;
 }
 
 /*

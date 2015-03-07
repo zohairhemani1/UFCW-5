@@ -159,6 +159,7 @@ static NSArray *social_links_array;
     if([segue.identifier isEqualToString:@"callWebView"])
     {
         s.webViewNumber = (int)indexPath.row;
+        s.title = [[[StayConnected social_links_array_function] valueForKey:@"name"] objectAtIndex:indexPath.row];
         
     }
 }
