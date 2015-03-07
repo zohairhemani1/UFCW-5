@@ -24,7 +24,7 @@
  - UFCW5 APPLICATION -
 */
 
- #define APP_ID @"1"
+ #define APP_ID @"4"
  #define NAV_RED_COLOR 19
  #define NAV_GREEN_COLOR 75
  #define NAV_BLUE_COLOR 142
