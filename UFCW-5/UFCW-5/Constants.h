@@ -59,20 +59,21 @@
 #define NAV_TITLE_GREEN_COLOR 73
 #define NAV_TITLE_BLUE_COLOR 144
  
-#define ListItemArray @"About Us",@"Political Participation",@"Education",@"Community Involvement",@"Join the UL of UFCW",@"Contact Us"
+#define ListItemArray @"About Us",@"Community Involvement",@"Contact Us",@"Education",@"Join the UL of UFCW",@"Political Participation",@"Shop Union"
  
- #define Item1Array @"Who is UFCW",@"What is a Union",@"Why Join the Union",@"Union Advantage"
+#define Item1Array @"Who are the UL of UFCW?",@"Empowerment",@"Pride",@"We Can Help!",@"JOIN US!",@"UFCW UL Leadership"
  
- #define Item2Array @"Stewards",@"Union Representatives",@"Office Location"
+#define Item2Array @"UL Endorsements",@"Volunteer"
  
- #define Item3Array @"Collective Bargaining",@"New Members",@"Organizing",@"Register To Vote",@"Support Union Shops"
+ #define Item3Array @"Upcoming Events"
  
- #define Item4Array @"Health & Welfare",@"Scholarship Applications"
+#define Item4Array @"Join the United Latinos",@"UFCW United Latino Sponsors"
  
  #define CategoriesArray @"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8"
  
- #define menuItemIcons @"about",@"politics",@"get_involved",@"projects",@"contactUs",@"contactUs"
-*/
+ #define menuItemIcons @"about",@"projects",@"contactUs",@"get_involved",@"contactUs",@"politics",@"union"
+ */
+
 
 /*
  - SCBTC APPLICATION -
