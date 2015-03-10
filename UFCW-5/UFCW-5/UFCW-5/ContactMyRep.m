@@ -23,6 +23,7 @@
     UIButton * faxNumber;
     UIButton * email;
     NSMutableAttributedString *commentString;
+    NSMutableArray *categories;
 
 }
 
@@ -49,7 +50,9 @@
     [self.view addSubview:loader];
     [loader bringSubviewToFront:self.view];
     
-    NSString *path = [[[[BaseURL stringByAppendingString:EXTENDED_DETAILED_URL]stringByAppendingString:self.CategoryIndex]stringByAppendingString:@"&app_id="]stringByAppendingString:APP_ID];
+    categories = [[NSMutableArray alloc]initWithObjects:CategoriesArray, nil];
+    
+    NSString *path = [[[[BaseURL stringByAppendingString:EXTENDED_DETAILED_URL]stringByAppendingString:[categories objectAtIndex:2]]stringByAppendingString:@"&app_id="]stringByAppendingString:APP_ID];
     
     dispatch_queue_t myqueue = dispatch_queue_create("myqueue", NULL);
     dispatch_async(myqueue, ^(void) {

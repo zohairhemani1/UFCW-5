@@ -51,6 +51,7 @@
 /*
  - UNITEDLATINOS APPLICATION -
  */
+
 #define APP_ID @"2"
 #define NAV_RED_COLOR 134
 #define NAV_GREEN_COLOR 183
@@ -62,19 +63,17 @@
  
 #define ListItemArray @"About Us",@"Community Involvement",@"Contact Us",@"Education",@"Join the UL of UFCW",@"Political Participation",@"Shop Union"
  
-#define Item1Array @"Who are the UL of UFCW?",@"Empowerment",@"Pride",@"We Can Help!",@"JOIN US!",@"UFCW UL Leadership"
+#define Item1Array @"Who are the United Latinos?",@"Empowerment",@"Pride",@"We Can Help!",@"JOIN US!",@"UFCW UL Leadership"
  
 #define Item2Array @"UL Endorsements",@"Volunteer"
  
- #define Item3Array @"Upcoming Events"
+#define Item3Array @"Upcoming Events"
  
-#define Item4Array @"Join the United Latinos",@"UFCW United Latino Sponsors"
+#define Item4Array @"Join the United Latinos",@"United Latino Sponsors"
  
- #define CategoriesArray @"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8"
+#define CategoriesArray @"32",@"35",@"37",@"34",@"36",@"33",@"38"
  
- #define menuItemIcons @"about",@"projects",@"contactUs",@"get_involved",@"contactUs",@"politics",@"union"
-
-
+#define menuItemIcons @"about",@"projects",@"contactUs",@"get_involved",@"join",@"politics",@"union"
 
 /*
  - SCBTC APPLICATION -

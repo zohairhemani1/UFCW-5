@@ -94,11 +94,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.row == 7)
+    if(indexPath.row == 2)
     {
-        [self performSegueWithIdentifier:@"Stay Connected" sender:self];
+        [self performSegueWithIdentifier:@"unionRepresentativesSegue" sender:self];
     }
-    else if(indexPath.row <=2 || indexPath.row == 4)
+    else if(indexPath.row <=1 || indexPath.row == 4 || indexPath.row == 5)
     {
         [self performSegueWithIdentifier:@"MemberResourcesSegue" sender:self];
     }
@@ -112,14 +112,14 @@
     
     NSIndexPath *indexPath = [menuItems indexPathForSelectedRow];
     NSString *theValue = [NSString stringWithFormat:@"%d",(int)(indexPath.row +1)];
-    if(indexPath.row <=2 || indexPath.row == 4)
+    if(indexPath.row <=1 || indexPath.row == 4 || indexPath.row == 5)
     {
         ExtendedTableView *e = segue.destinationViewController;
         e.index = [categories objectAtIndex:indexPath.row];
         e.title = [menuItemsArray objectAtIndex:indexPath.row];
         e.imageName = [MenuItemIcons objectAtIndex:indexPath.row];
     }
-    if(indexPath.row ==3 || indexPath.row ==5 || indexPath.row ==6 || indexPath.row >7)
+    if(indexPath.row >5 || indexPath.row == 3)
     {
         UnionNews *news = segue.destinationViewController;
         news.category = [MenuItemIcons objectAtIndex:indexPath.row];

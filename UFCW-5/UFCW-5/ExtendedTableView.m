@@ -39,14 +39,14 @@
     categories = [[NSMutableArray alloc]initWithObjects:CategoriesArray, nil];
     indexNumber = [self.index intValue];
     
-    if ([self.index isEqualToString:@"1"]) {
+    if ([self.index isEqualToString:@"32"]) {
         values = [[NSMutableArray alloc]initWithObjects:Item1Array, nil];
     }
-    else if([self.index isEqualToString:@"2"])
+    else if([self.index isEqualToString:@"33"])
     {
         values = [[NSMutableArray alloc]initWithObjects:Item2Array, nil];
     }
-    else if ([self.index isEqualToString:@"3"])
+    else if ([self.index isEqualToString:@"35"])
     {
         values = [[NSMutableArray alloc]initWithObjects:Item3Array, nil];
     }
@@ -127,14 +127,14 @@
         e.CategoryIndex = theValue;
         e.title = [values objectAtIndex:indexPath.row];
     }
-    if([segue.identifier isEqualToString:@"officeSegue"])
+    else if([segue.identifier isEqualToString:@"officeSegue"])
     {
         OfficeLocations *off = segue.destinationViewController;
         NSString *theValue = [NSString stringWithFormat:@"%d.%d",indexNumber,(int)(indexPath.row +1)];
         off.CategoryIndex = theValue;
         off.title = [values objectAtIndex:indexPath.row];
     }
-    if([segue.identifier isEqualToString:@"unionRepresentativesSegue"])
+    else if([segue.identifier isEqualToString:@"unionRepresentativesSegue"])
     {
         OfficeLocations *off = segue.destinationViewController;
         NSString *theValue = [NSString stringWithFormat:@"%d.%d",indexNumber,(int)(indexPath.row +1)];
