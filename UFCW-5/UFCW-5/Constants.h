@@ -16,7 +16,7 @@
 #define OFFICE_LOCATION @"office_location.php"
 #define CONTACT_REPRESENTATIVES @"stay_connected.php"
 #define SOCIAL_LINKS @"social_networks.php"
-#define DETAILED_NEWS_URL_SECOND_PARAMETER @"&&appID="
+#define DETAILED_NEWS_URL_SECOND_PARAMETER @"&appID="
 #define EXTENDED_DETAILED_URL @"master-service.php?category="
 
  /*

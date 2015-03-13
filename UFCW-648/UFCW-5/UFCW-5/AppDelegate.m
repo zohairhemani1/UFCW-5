@@ -40,6 +40,8 @@
     
     [[UINavigationBar appearance]setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1.0],NSForegroundColorAttributeName,[UIFont fontWithName:@"Calibri" size:17],NSFontAttributeName, nil]];
     
+    [NSThread sleepForTimeInterval:2.0];
+    
     return YES;
 }
 							

@@ -3,16 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "logo_resize.png"
+      "filename" : "Android Above Home Screen.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "logo_resize-1.png"
+      "filename" : "Android Above Home Screen-1.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "Android Above Home Screen-2.png"
     }
   ],
   "info" : {

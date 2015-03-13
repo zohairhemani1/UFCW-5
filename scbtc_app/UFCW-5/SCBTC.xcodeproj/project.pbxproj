@@ -31,8 +31,8 @@
 		19E8DCD21A0B9A1200A20898 /* OfficeLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E8DCD11A0B9A1200A20898 /* OfficeLocations.m */; };
 		B74254101A8B9E8700AD2AD8 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = B742540D1A8B9E8700AD2AD8 /* splash.png */; };
 		B74254111A8B9E8700AD2AD8 /* splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B742540E1A8B9E8700AD2AD8 /* splash@2x.png */; };
-		B742541A1A8BAC5A00AD2AD8 /* icons.png in Resources */ = {isa = PBXBuildFile; fileRef = B74254191A8BAC5A00AD2AD8 /* icons.png */; };
 		B749D2DA1A94C3D000D9D1D2 /* ExtendedWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = B749D2D91A94C3D000D9D1D2 /* ExtendedWebView.m */; };
+		B7606A111AB024370022A902 /* icons.png in Resources */ = {isa = PBXBuildFile; fileRef = B7606A101AB024370022A902 /* icons.png */; };
 		B771CFAD1A78C7F800B3982C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B771CFAC1A78C7F800B3982C /* MapKit.framework */; };
 		B773ADAB1A7BD2A000127E5B /* StayConnected.m in Sources */ = {isa = PBXBuildFile; fileRef = B773ADAA1A7BD2A000127E5B /* StayConnected.m */; };
 		B773ADAE1A7BDCD200127E5B /* SocialWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = B773ADAD1A7BDCD200127E5B /* SocialWebView.m */; };
@@ -86,9 +86,9 @@
 		19E8DCD11A0B9A1200A20898 /* OfficeLocations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfficeLocations.m; sourceTree = "<group>"; };
 		B742540D1A8B9E8700AD2AD8 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash.png; path = "UFCW-5/Images/splash.png"; sourceTree = "<group>"; };
 		B742540E1A8B9E8700AD2AD8 /* splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "splash@2x.png"; path = "UFCW-5/Images/splash@2x.png"; sourceTree = "<group>"; };
-		B74254191A8BAC5A00AD2AD8 /* icons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icons.png; path = "UFCW-5/Images/icons.png"; sourceTree = "<group>"; };
 		B749D2D81A94C3CA00D9D1D2 /* ExtendedWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtendedWebView.h; sourceTree = "<group>"; };
 		B749D2D91A94C3D000D9D1D2 /* ExtendedWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtendedWebView.m; sourceTree = "<group>"; };
+		B7606A101AB024370022A902 /* icons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icons.png; sourceTree = "<group>"; };
 		B771CFAC1A78C7F800B3982C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B773ADA91A7BD26E00127E5B /* StayConnected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StayConnected.h; sourceTree = "<group>"; };
 		B773ADAA1A7BD2A000127E5B /* StayConnected.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StayConnected.m; sourceTree = "<group>"; };
@@ -243,8 +243,8 @@
 		B74254121A8B9EA400AD2AD8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B7606A101AB024370022A902 /* icons.png */,
 				B7779EC21A91C6EC0029E1CA /* splash-568h@2x.png */,
-				B74254191A8BAC5A00AD2AD8 /* icons.png */,
 				B742540D1A8B9E8700AD2AD8 /* splash.png */,
 				B742540E1A8B9E8700AD2AD8 /* splash@2x.png */,
 			);
@@ -355,11 +355,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B742541A1A8BAC5A00AD2AD8 /* icons.png in Resources */,
 				19162FEB1A5972CA00751C14 /* Main.storyboard in Resources */,
 				B7779EC31A91C6EC0029E1CA /* splash-568h@2x.png in Resources */,
 				B74254101A8B9E8700AD2AD8 /* splash.png in Resources */,
 				19219DDA19F24A69002D6742 /* Images.xcassets in Resources */,
+				B7606A111AB024370022A902 /* icons.png in Resources */,
 				197621DF19F25E14005C8494 /* Calibri.ttf in Resources */,
 				B74254111A8B9E8700AD2AD8 /* splash@2x.png in Resources */,
 				19219DCC19F24A69002D6742 /* InfoPlist.strings in Resources */,

@@ -11,12 +11,12 @@
 
 #define BaseURL @"http://fajjemobile.info/ufcw5/mobile_app/WebServices/"
 #define NEWS_CATEGORY @"news-category.php"
-#define DETAILED_NEWS_URL @"view.php?news_id="
+#define DETAILED_NEWS_URL @"view.php?newsID="
 #define BASEURL_WEBDASHBOARD @"http://fajjemobile.info/ufcw5/mobile_app/"
 #define OFFICE_LOCATION @"office_location.php"
 #define CONTACT_REPRESENTATIVES @"stay_connected.php"
 #define SOCIAL_LINKS @"social_networks.php"
-#define DETAILED_NEWS_URL_SECOND_PARAMETER @"&&app_id="
+#define DETAILED_NEWS_URL_SECOND_PARAMETER @"&&appID="
 #define EXTENDED_DETAILED_URL @"master-service.php?category="
 
  /*
@@ -90,11 +90,11 @@
 #define NAV_TITLE_RED_COLOR 255
 #define NAV_TITLE_GREEN_COLOR 255
 #define NAV_TITLE_BLUE_COLOR 255
- 
-#define ListItemArray @"About Us",@"Politics",@"Get Involved",@"Projects",@"Contact Us",@"Shop Union"
+
+#define ListItemArray @"About Us",@"Political Participation",@"Get Involved",@"Projects",@"Contact Us",@"Shop Union"
 
 #define Item1Array @"What is the SCBTC?",@"Affiliates"
-#define Item2Array @"Endorsements",@"Volunteer"
+#define Item2Array @"Endorsements",@"Volunteer",@"Labor Vote"
 #define Item3Array @"Upcoming Events",@"Building Trade Meetings"
 #define Item4Array @"Meeting Volunteer"
 

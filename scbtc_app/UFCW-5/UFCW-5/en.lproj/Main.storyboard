@@ -67,7 +67,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DAc-9Q-3wp">
-                                        <rect key="frame" x="70" y="5" width="180" height="74"/>
+                                        <rect key="frame" x="60" y="13" width="200" height="55"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -173,7 +173,7 @@
             </objects>
             <point key="canvasLocation" x="1409" y="51"/>
         </scene>
-        <!--Union Representatives-->
+        <!--Contact Us-->
         <scene sceneID="R3h-Bm-vbz">
             <objects>
                 <viewController restorationIdentifier="Stay Connected" storyboardIdentifier="Stay Connected" id="dMx-Sz-Qwy" customClass="ContactMyRep" sceneMemberID="viewController">
@@ -197,7 +197,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Union Representatives" id="wCW-U9-Miy">
+                    <navigationItem key="navigationItem" title="Contact Us" id="wCW-U9-Miy">
                         <barButtonItem key="backBarButtonItem" title="Back" id="LYY-OT-OYN"/>
                     </navigationItem>
                     <connections>

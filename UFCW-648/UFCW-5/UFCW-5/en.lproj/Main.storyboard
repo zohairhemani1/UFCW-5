@@ -68,7 +68,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DAc-9Q-3wp">
-                                        <rect key="frame" x="79" y="17" width="163" height="50"/>
+                                        <rect key="frame" x="79" y="26" width="163" height="30"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

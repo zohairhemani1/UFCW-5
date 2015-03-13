@@ -21,7 +21,7 @@
 
  /*
  
- - UFCW5 APPLICATION -
+ - UFCW648 APPLICATION -
 */
 
  #define APP_ID @"4"
@@ -33,7 +33,7 @@
  #define NAV_TITLE_GREEN_COLOR 255
  #define NAV_TITLE_BLUE_COLOR 255
 
- #define ListItemArray @"About UFCW Local 648",@"Get Educated",@"Member Benefits",@"Member Discounts",@"Member Resources",@"Negotiation Updates",@"Shop Union",@"Stay Connected",@"Union News",@"Upcoming Events"
+ #define ListItemArray @"About UFCW Local 648",@"Be Informed",@"Member Benefits",@"Member Discounts",@"Member Resources",@"Negotiation Updates",@"Shop Union",@"Stay Connected",@"Union News",@"Upcoming Events"
 
  #define Item1Array @"Who is UFCW",@"What is a Union",@"Why Join the Union",@"Union Advantage"
 
@@ -45,7 +45,7 @@
 
  #define CategoriesArray @"17",@"18",@"19",@"22",@"20",@"23",@"26",@"21",@"24",@"25"
 
-  #define menuItemIcons @"news",@"book",@"member",@"member",@"connected",@"negotiation",@"union",@"contact",@"news",@"events"
+  #define menuItemIcons @"news",@"book",@"member",@"member",@"connected",@"negotiation",@"union_gray",@"contact",@"news",@"events"
 
 /*
  - UNITEDLATINOS APPLICATION -
