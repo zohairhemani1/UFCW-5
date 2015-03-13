@@ -17,15 +17,15 @@
     if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
         // use registerUserNotificationSettings
         
-       /* [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
-        [application registerForRemoteNotifications]; */
+        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+        [application registerForRemoteNotifications];
         
     } else {
         // use registerForRemoteNotifications
         
-      /*  [application registerForRemoteNotificationTypes:
+        [application registerForRemoteNotificationTypes:
                   (UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert)];
-   */ }
+    }
     
     [Parse setApplicationId:@"Lr8VBQHTUyzw4RoFpcyHQnCcHJAQb1PPhBVzDtqK"
                   clientKey:@"CHhHCo1TO0shdXvmhFywuNbFDVpalWvj9s6FqcM2"];
